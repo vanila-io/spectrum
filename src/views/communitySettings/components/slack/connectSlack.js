@@ -38,22 +38,22 @@ class ImportSlackTeam extends React.Component<Props> {
     return (
       <SectionCard>
         <SectionTitleWithIcon>
-          <Icon glyph={'slack-colored'} size={32} />
-          Connect a Slack team
-        </SectionTitleWithIcon>
+          <Icon glyph="slack-colored" size={32} />
+          Connect a Slack team{' '}
+        </SectionTitleWithIcon>{' '}
         <SectionSubtitle>
           Invite your Slack team to your community or get notified when new
-          conversations are created.
+          conversations are created.{' '}
         </SectionSubtitle>
-
         <SectionCardFooter>
           <a href={url}>
-            <Button>Connect a Slack team</Button>
-          </a>
-        </SectionCardFooter>
+            <Button> Connect a Slack team </Button>{' '}
+          </a>{' '}
+        </SectionCardFooter>{' '}
       </SectionCard>
     );
   }
 }
 
 export default ImportSlackTeam;
+
