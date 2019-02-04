@@ -1,5 +1,4 @@
 // @flow
-require('now-env');
 import * as React from 'react';
 import type { GetSlackSettingsType } from 'shared/graphql/queries/community/getCommunitySlackSettings';
 import {

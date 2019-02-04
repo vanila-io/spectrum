@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 const debug = require('debug')('hyperion');
 import 'raf/polyfill';

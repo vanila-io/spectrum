@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 import type { GraphQLContext } from '../../';
 import type { DBThread } from 'shared/types';

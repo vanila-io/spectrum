@@ -1,3 +1,4 @@
+require('now-env');
 import data from '../../../../shared/testing/data';
 
 const user = data.users[0];

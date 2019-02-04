@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 const debug = require('debug')('athena:queue:new-thread-notification');
 import Raven from 'shared/raven';

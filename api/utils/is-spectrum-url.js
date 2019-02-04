@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 import { URL } from 'url';
 import { RELATIVE_URL } from 'shared/regexps';
