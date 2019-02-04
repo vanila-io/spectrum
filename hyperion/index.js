@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 const debug = require('debug')('hyperion');
 import 'raf/polyfill';
@@ -58,7 +59,7 @@ app.use('/api', (req: express$Request, res: express$Response) => {
   const redirectUrl = `${req.baseUrl}${req.path}`;
   res.redirect(
     req.method === 'POST' || req.xhr ? 307 : 301,
-    `https://spectrum.chat${redirectUrl}`
+    `https://${process.env.PROD_DOMAIN}${redirectUrl}`
   );
 });
 
@@ -66,7 +67,7 @@ app.use('/auth', (req: express$Request, res: express$Response) => {
   const redirectUrl = `${req.baseUrl}${req.path}`;
   res.redirect(
     req.method === 'POST' || req.xhr ? 307 : 301,
-    `https://spectrum.chat${redirectUrl}`
+    `https://${process.env.PROD_DOMAIN}${redirectUrl}`
   );
 });
 
@@ -74,7 +75,7 @@ app.use('/websocket', (req: express$Request, res: express$Response) => {
   const redirectUrl = `${req.baseUrl}${req.path}`;
   res.redirect(
     req.method === 'POST' || req.xhr ? 307 : 301,
-    `https://spectrum.chat${redirectUrl}`
+    `https://${process.env.PROD_DOMAIN}${redirectUrl}`
   );
 });
 

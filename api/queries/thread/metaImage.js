@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 import type { GraphQLContext } from '../../';
 import type { DBThread } from 'shared/types';
@@ -15,7 +16,7 @@ export default async (thread: DBThread, _: any, ctx: GraphQLContext) => {
     title: watercooler
       ? `Chat with the ${community.name} community`
       : content.title,
-    footer: `spectrum.chat/${community.slug}`,
+    footer: `${process.env.PROD_DOMAIN}/${community.slug}`,
   });
 
   if (!imageUrl) return null;

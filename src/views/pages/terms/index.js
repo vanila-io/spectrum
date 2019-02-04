@@ -75,7 +75,7 @@ class Terms extends React.Component<{}> {
             <SectionDescription>
               For information about how we collect and use information about
               users of the Service, please check out our privacy policy
-              available at https://spectrum.chat/privacy.html.
+              available at https://${process.env.PROD_DOMAIN}/privacy.html.
             </SectionDescription>
           </Section>
 
