@@ -7,6 +7,7 @@
  * facebookRouter.get('/', main);
  * facebookRouter.get('/callback', ...callbacks);
  */
+require('now-env');
 import passport from 'passport';
 import { URL } from 'url';
 import isSpectrumUrl from '../../utils/is-spectrum-url';

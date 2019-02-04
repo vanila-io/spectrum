@@ -289,7 +289,9 @@ class ActionBar extends React.Component<Props, State> {
                   <a
                     href={`https://www.facebook.com/sharer/sharer.php?t=${encodeURIComponent(
                       thread.content.title
-                    )}&u=https://spectrum.chat/${getThreadLink(thread)}`}
+                    )}&u=https://${process.env.PROD_DOMAIN}/${getThreadLink(
+                      thread
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -310,9 +312,9 @@ class ActionBar extends React.Component<Props, State> {
                   data-cy="thread-tweet-button"
                 >
                   <a
-                    href={`https://twitter.com/share?url=https://spectrum.chat/${getThreadLink(
-                      thread
-                    )}&text=${encodeURIComponent(
+                    href={`https://twitter.com/share?url=https://${
+                      process.env.PROD_DOMAIN
+                    }/${getThreadLink(thread)}&text=${encodeURIComponent(
                       thread.content.title
                     )} on @withspectrum`}
                     target="_blank"
@@ -359,9 +361,9 @@ class ActionBar extends React.Component<Props, State> {
               <ShareButtons>
                 <Clipboard
                   style={{ background: 'none' }}
-                  data-clipboard-text={`https://spectrum.chat/${getThreadLink(
-                    thread
-                  )}`}
+                  data-clipboard-text={`https://${
+                    process.env.PROD_DOMAIN
+                  }/${getThreadLink(thread)}`}
                   onSuccess={() =>
                     this.props.dispatch(
                       addToastWithTimeout('success', 'Copied to clipboard')

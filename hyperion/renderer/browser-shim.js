@@ -1,6 +1,7 @@
 // @flow
 // Shim some browser stuff we use in the client for server-side rendering
 // NOTE(@mxstbr): We should be getting rid of this over time
+require('now-env');
 global.window = {
   location: {
     protocol: 'https:',
