@@ -2,6 +2,7 @@
 /**
  * The entry point for the server, this is where everything starts
  */
+require('now-env');
 const compression = require('compression');
 const debug = require('debug')('api');
 debug('Server starting...');
@@ -65,7 +66,7 @@ apolloServer.applyMiddleware({ app, path: '/api', cors: corsOptions });
 app.use('/', (req: express$Request, res: express$Response) => {
   res.redirect(
     process.env.NODE_ENV === 'production' && !process.env.FORCE_DEV
-      ? 'https://spectrum.chat'
+      ? `https://${process.env.PROD_DOMAIN}`
       : 'http://localhost:3000'
   );
 });

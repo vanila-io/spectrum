@@ -1,4 +1,5 @@
 // @flow
+require('now-env');
 import { ApolloClient } from 'apollo-client';
 import { createUploadLink } from 'apollo-upload-client';
 import {
@@ -14,7 +15,7 @@ import getSharedApolloClientOptions from './apollo-options';
 const IS_PROD = process.env.NODE_ENV === 'production';
 // In production the API is at the same URL, in development it's at a different port
 const API_URI = IS_PROD
-  ? 'https://spectrum.chat/api'
+  ? `https://${process.env.PROD_DOMAIN}/api`
   : 'http://localhost:3001/api';
 
 const cache = new InMemoryCache({

@@ -89,7 +89,7 @@ const init = () => {
         consumerKey: TWITTER_OAUTH_CLIENT_ID,
         consumerSecret: TWITTER_OAUTH_CLIENT_SECRET,
         callbackURL: IS_PROD
-          ? 'https://spectrum.chat/auth/twitter/callback'
+          ? `https://${process.env.PROD_DOMAIN}/auth/twitter/callback`
           : 'http://localhost:3001/auth/twitter/callback',
         includeEmail: true,
       },
@@ -403,4 +403,3 @@ const init = () => {
 module.exports = {
   init,
 };
-

@@ -19,6 +19,7 @@ import { decryptString } from 'shared/encryption';
 import { trackQueue } from 'shared/bull/queues';
 import { events } from 'shared/analytics';
 import { signThread, signUser } from 'shared/imgix';
+require('now-env');
 
 export default async (job: Job<ThreadNotificationJobData>) => {
   const { thread: incomingThread } = job.data;
@@ -110,29 +111,38 @@ export default async (job: Job<ThreadNotificationJobData>) => {
               channel.name
             }:`,
             author_name: `${author.name} (@${author.username})`,
-            author_link: `https://spectrum.chat/users/${author.username}`,
+            author_link: `https://${process.env.PROD_DOMAIN}/users/${
+              author.username
+            }`,
             author_icon: signedAuthor.profilePhoto,
             pretext: `New conversation published in ${community.name} #${
               channel.name
             }:`,
             title: truncateString(incomingThread.content.title, 80),
-            title_link: `https://spectrum.chat/thread/${incomingThread.id}`,
+            title_link: `https://${process.env.PROD_DOMAIN}/thread/${
+              incomingThread.id
+            }`,
             text: truncateString(plainTextBody, 140),
             footer: 'Spectrum',
-            footer_icon:
-              'https://spectrum.chat/img/apple-icon-57x57-precomposed.png',
+            footer_icon: `https://${
+              process.env.PROD_DOMAIN
+            }/img/apple-icon-57x57-precomposed.png`,
             ts: new Date(incomingThread.createdAt).getTime() / 1000,
             color: '#4400CC',
             actions: [
               {
                 type: 'button',
                 text: 'View conversation',
-                url: `https://spectrum.chat/thread/${incomingThread.id}`,
+                url: `https://${process.env.PROD_DOMAIN}/thread/${
+                  incomingThread.id
+                }`,
               },
               {
                 type: 'button',
                 text: `Message ${author.name}`,
-                url: `https://spectrum.chat/users/${author.username}`,
+                url: `https://${process.env.PROD_DOMAIN}/users/${
+                  author.username
+                }`,
               },
             ],
           },

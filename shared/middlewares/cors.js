@@ -1,15 +1,16 @@
 // @flow
 import cors from 'cors';
+require('now-env');
 
 export const corsOptions = {
   origin:
     process.env.NODE_ENV === 'production' && !process.env.FORCE_DEV
       ? [
-          'https://spectrum.chat',
-          'https://alpha.spectrum.chat',
-          'https://admin.spectrum.chat',
-          'https://hyperion.workers.spectrum.chat',
-          'https://hyperion.alpha.spectrum.chat',
+          `https://${process.env.PROD_DOMAIN}`,
+          `https://alpha.${process.env.PROD_DOMAIN}`,
+          `https://admin.${process.env.PROD_DOMAIN}`,
+          `https://hyperion.workers.${process.env.PROD_DOMAIN}`,
+          `https://hyperion.alpha.${process.env.PROD_DOMAIN}`,
           process.env.NOW_URL,
         ].filter(Boolean)
       : [/localhost/],

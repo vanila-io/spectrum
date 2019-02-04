@@ -1,3 +1,4 @@
+require('now-env');
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -24,7 +25,7 @@ export const CommunityProfile = ({ community }) => {
         src={community.profilePhoto}
       />
       <ProfileHeaderLink
-        to={`https://spectrum.chat/${community.slug}`}
+        to={`https://${process.env.PROD_DOMAIN}/${community.slug}`}
         target={'_blank'}
       >
         <ProfileHeaderMeta>
@@ -48,7 +49,7 @@ export const MiniUserProfile = ({ user }) => {
     <MiniProfileHeader>
       <CommunityAvatar size={16} radius={36} user src={user.profilePhoto} />
       <ProfileHeaderLink
-        to={`https://spectrum.chat/users/${user.username}`}
+        to={`https://${process.env.PROD_DOMAIN}/users/${user.username}`}
         target={'_blank'}
       >
         <MiniProfileHeaderMeta>
