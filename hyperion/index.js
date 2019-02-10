@@ -51,33 +51,35 @@ if (process.env.NODE_ENV === 'production' && !process.env.FORCE_DEV) {
 import cors from 'shared/middlewares/cors';
 app.use(cors);
 
-// Redirect requests to /api and /auth to the production API
-// This allows deploy previews to work, as this route would only be called
-// if there's no path alias in Now for hyperionurl.com/api, which would only
-// happen on deploy previews
-app.use('/api', (req: express$Request, res: express$Response) => {
-  const redirectUrl = `${req.baseUrl}${req.path}`;
-  res.redirect(
-    req.method === 'POST' || req.xhr ? 307 : 301,
-    `https://${process.env.PROD_DOMAIN}${redirectUrl}`
-  );
-});
+if (process.env.DEPLOYED_ON_NOW) {
+  // Redirect requests to /api and /auth to the production API
+  // This allows deploy previews to work, as this route would only be called
+  // if there's no path alias in Now for hyperionurl.com/api, which would only
+  // happen on deploy previews
+  app.use('/api', (req: express$Request, res: express$Response) => {
+    const redirectUrl = `${req.baseUrl}${req.path}`;
+    res.redirect(
+      req.method === 'POST' || req.xhr ? 307 : 301,
+      `https://${process.env.PROD_DOMAIN}${redirectUrl}`
+    );
+  });
 
-app.use('/auth', (req: express$Request, res: express$Response) => {
-  const redirectUrl = `${req.baseUrl}${req.path}`;
-  res.redirect(
-    req.method === 'POST' || req.xhr ? 307 : 301,
-    `https://${process.env.PROD_DOMAIN}${redirectUrl}`
-  );
-});
+  app.use('/auth', (req: express$Request, res: express$Response) => {
+    const redirectUrl = `${req.baseUrl}${req.path}`;
+    res.redirect(
+      req.method === 'POST' || req.xhr ? 307 : 301,
+      `https://${process.env.PROD_DOMAIN}${redirectUrl}`
+    );
+  });
 
-app.use('/websocket', (req: express$Request, res: express$Response) => {
-  const redirectUrl = `${req.baseUrl}${req.path}`;
-  res.redirect(
-    req.method === 'POST' || req.xhr ? 307 : 301,
-    `https://${process.env.PROD_DOMAIN}${redirectUrl}`
-  );
-});
+  app.use('/websocket', (req: express$Request, res: express$Response) => {
+    const redirectUrl = `${req.baseUrl}${req.path}`;
+    res.redirect(
+      req.method === 'POST' || req.xhr ? 307 : 301,
+      `https://${process.env.PROD_DOMAIN}${redirectUrl}`
+    );
+  });
+}
 
 // In development the Webpack HMR server requests /sockjs-node constantly,
 // so let's patch that through to it!
