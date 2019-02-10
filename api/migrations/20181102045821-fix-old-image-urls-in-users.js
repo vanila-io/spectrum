@@ -1,3 +1,4 @@
+require('now-env');
 exports.up = async function(r, conn) {
   const users = await r
     .db('spectrum')
@@ -8,8 +9,8 @@ exports.up = async function(r, conn) {
     )
     .filter(row =>
       row('profilePhoto')
-        .match('spectrum.imgix.net')
-        .or(row('coverPhoto').match('spectrum.imgix.net'))
+        .match(`${process.env.IMGIX_SUB_DOMAIN}`)
+        .or(row('coverPhoto').match(`${process.env.IMGIX_SUB_DOMAIN}`))
     )
     .filter(row =>
       row('profilePhoto')
@@ -28,7 +29,7 @@ exports.up = async function(r, conn) {
   const userPromises = users.map(async obj => {
     const { profilePhoto, coverPhoto } = obj;
 
-    const LEGACY_PREFIX = 'https://spectrum.imgix.net/';
+    const LEGACY_PREFIX = `https: //${process.env.IMGIX_SUB_DOMAIN}`;
     const hasLegacyPrefix = url => url.startsWith(LEGACY_PREFIX, 0);
     const stripLegacyPrefix = url => url.replace(LEGACY_PREFIX, '');
 

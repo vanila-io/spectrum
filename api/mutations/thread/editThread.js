@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 import type { GraphQLContext } from '../../';
 import type { EditThreadInput } from '../../models/thread';
@@ -98,8 +99,8 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
 
     const stripQueryParams = (str: string): string => {
       if (
-        str.indexOf('https://spectrum.imgix.net') < 0 &&
-        str.indexOf('https://spectrum-proxy.imgix.net') < 0
+        str.indexOf(`https://${process.env.IMGIX_SUB_DOMAIN}`) < 0 &&
+        str.indexOf(`https://${process.env.IMGIX_SUB_DOMAIN}`) < 0
       ) {
         return str;
       }
