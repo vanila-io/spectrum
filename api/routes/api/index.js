@@ -18,7 +18,7 @@ apiRouter.use('/email', email);
 import userExportRouter from './export-user-data';
 apiRouter.use('/user.json', userExportRouter);
 
-// import graphql from './graphql';
-// apiRouter.use('/', graphql);
+import graphql from './graphql';
+apiRouter.use('/', graphql);
 
 export default apiRouter;
