@@ -8,7 +8,7 @@ import inspect from 'rethinkdb-inspector';
 import { statsd } from '../statsd';
 
 const IS_PROD = !process.env.FORCE_DEV && process.env.NODE_ENV === 'production';
-const LOCALDB = !!process.env.LOCALDB;
+const LOCALDB = true; // TODO: Add option for localhosted databases
 
 const DEFAULT_CONFIG = {
   // Connect to the test database when, well, testing
