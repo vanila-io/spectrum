@@ -41,6 +41,7 @@
     "GITHUB_OAUTH_CLIENT_SECRET": "@github-oauth-client-secret",
     "GITHUB_OAUTH_CLIENT_SECRET_DEVELOPMENT": "@github-oauth-client-secret-development",
     "SLACK_CLIENT": "@slack-client",
+    "SLACK_CLIENT_DEVELOPMENT": "@slack-client-development",
     "SLACK_SECRET": "@slack-secret",
     "SLACK_SECRET_DEVELOPMENT": "@slack-secret-development",
     "SENDGRID_API_KEY": "@sendgrid:::-api-key",
