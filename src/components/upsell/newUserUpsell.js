@@ -152,7 +152,7 @@ class UpsellNewUser extends Component {
           <ButtonRow>
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=https://${
-                process.env.PROD_DOMAIN
+                process.env.REACT_APP_PROD_DOMAIN
               }&t=Come hang out with me on Spectrum, a new place on the internet for communities!`}
               target="_blank"
               rel="noopener noreferrer"
@@ -168,7 +168,7 @@ class UpsellNewUser extends Component {
             </a>
             <a
               href={`https://twitter.com/share?text=Come hang out with me on @withspectrum, a new place on the internet for communities!&url=https://${
-                process.env.PROD_DOMAIN
+                process.env.REACT_APP_PROD_DOMAIN
               }`}
               target="_blank"
               rel="noopener noreferrer"

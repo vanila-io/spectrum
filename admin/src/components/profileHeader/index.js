@@ -1,4 +1,3 @@
-require('now-env');
 import React from 'react';
 import Link from '../../../src/components/link';
 import { Avatar } from '../avatar';
@@ -17,7 +16,9 @@ export const ProfileHeader = ({ user }: any) => {
       </Row>
 
       <Link
-        to={`https://${process.env.PROD_DOMAIN}/users/${user.username}`}
+        to={`https://${process.env.REACT_APP_PROD_DOMAIN}/users/${
+          user.username
+        }`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -39,7 +40,7 @@ export const CommunityProfileHeader = ({ community }) => {
       </Row>
 
       <Link
-        to={`https://${process.env.PROD_DOMAIN}/${community.slug}`}
+        to={`https://${process.env.REACT_APP_PROD_DOMAIN}/${community.slug}`}
         target="_blank"
         rel="noopener noreferrer"
       >

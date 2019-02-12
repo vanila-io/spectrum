@@ -508,9 +508,9 @@ class ThreadContainer extends React.Component<Props, State> {
               >
                 <link
                   rel="canonical"
-                  href={`https://${process.env.PROD_DOMAIN}/${getThreadLink(
-                    thread
-                  )}`}
+                  href={`https://${
+                    process.env.REACT_APP_PROD_DOMAIN
+                  }/${getThreadLink(thread)}`}
                 />
                 {metaImage && (
                   <meta name="twitter:card" content="summary_large_image" />
@@ -527,9 +527,9 @@ class ThreadContainer extends React.Component<Props, State> {
                 />
                 <meta
                   property="article:author"
-                  content={`https://${process.env.PROD_DOMAIN}/users/@${
-                    thread.author.user.username
-                  }`}
+                  content={`https://${
+                    process.env.REACT_APP_PROD_DOMAIN
+                  }/users/@${thread.author.user.username}`}
                 />
                 <meta
                   property="article:section"

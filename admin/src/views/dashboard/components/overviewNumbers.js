@@ -1,5 +1,5 @@
 // @flow
-require('now-env');
+
 import React from 'react';
 import compose from 'recompose/compose';
 import { overviewQuery } from '../../../api/queries';
@@ -25,7 +25,7 @@ import {
 
 const IS_PROD = process.env.NODE_ENV === 'production';
 const LOGIN_URL = IS_PROD
-  ? `https://${process.env.PROD_DOMAIN}/auth/twitter?r=https://${
+  ? `https://${process.env.REACT_APP_PROD_DOMAIN}/auth/twitter?r=https://${
       window.location.host
     }`
   : 'http://localhost:3001/auth/twitter?r=http://localhost:3000';

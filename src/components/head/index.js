@@ -22,7 +22,7 @@ export default ({ title, description, image, type, children }: Props) => {
           image
             ? image
             : `https://${
-                process.env.PROD_DOMAIN
+                process.env.REACT_APP_PROD_DOMAIN
               }/img/apple-icon-144x144-precomposed.png`
         }
       />
@@ -35,7 +35,7 @@ export default ({ title, description, image, type, children }: Props) => {
           image
             ? image
             : `${
-                process.env.PROD_DOMAIN
+                process.env.REACT_APP_PROD_DOMAIN
               }/img/apple-icon-144x144-precomposed.png`
         }
       />
