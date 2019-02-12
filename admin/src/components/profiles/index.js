@@ -25,7 +25,7 @@ export const CommunityProfile = ({ community }) => {
         src={community.profilePhoto}
       />
       <ProfileHeaderLink
-        to={`https://${process.env.PROD_DOMAIN}/${community.slug}`}
+        to={`https://${process.env.REACT_APP_PROD_DOMAIN}/${community.slug}`}
         target={'_blank'}
       >
         <ProfileHeaderMeta>
@@ -49,7 +49,9 @@ export const MiniUserProfile = ({ user }) => {
     <MiniProfileHeader>
       <CommunityAvatar size={16} radius={36} user src={user.profilePhoto} />
       <ProfileHeaderLink
-        to={`https://${process.env.PROD_DOMAIN}/users/${user.username}`}
+        to={`https://${process.env.REACT_APP_PROD_DOMAIN}/users/${
+          user.username
+        }`}
         target={'_blank'}
       >
         <MiniProfileHeaderMeta>

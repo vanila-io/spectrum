@@ -48,7 +48,7 @@ class ThreadListItem extends React.Component<Props> {
     return (
       <StyledThreadListItem>
         <a
-          href={`https://${process.env.PROD_DOMAIN}/thread/${id}`}
+          href={`https://${process.env.REACT_APP_PROD_DOMAIN}/thread/${id}`}
           target="_blank"
         >
           <ThreadListItemTitle>{title}</ThreadListItemTitle>
@@ -61,23 +61,27 @@ class ThreadListItem extends React.Component<Props> {
         <ThreadListItemSubtitle>
           By{' '}
           <a
-            href={`https://${process.env.PROD_DOMAIN}/users/${username}`}
+            href={`https://${
+              process.env.REACT_APP_PROD_DOMAIN
+            }/users/${username}`}
             target="_blank"
           >
             {name}
           </a>{' '}
           ·{' '}
           <a
-            href={`https://${process.env.PROD_DOMAIN}/${community.slug}`}
+            href={`https://${process.env.REACT_APP_PROD_DOMAIN}/${
+              community.slug
+            }`}
             target="_blank"
           >
             {community.name}
           </a>{' '}
           ·{' '}
           <a
-            href={`https://${process.env.PROD_DOMAIN}/${community.slug}/${
-              channel.slug
-            }`}
+            href={`https://${process.env.REACT_APP_PROD_DOMAIN}/${
+              community.slug
+            }/${channel.slug}`}
             target="_blank"
           >
             {channel.name}

@@ -3,10 +3,15 @@ exports.up = async function(r, conn) {
     .db('spectrum')
     .table('threads')
     .filter(row => row('modifiedAt').lt(r.epochTime(1540929600)))
-    .filter(row => row('content')('body').match('spectrum.imgix.net'))
+    .filter(row =>
+      row('content')('body').match(`${process.env.IMGIX_SUB_DOMAIN}`)
+    )
     .filter(row => row('content')('body').match('%20'))
     .filter(row => row.hasFields('deletedAt').not())
-    .map(row => ({ id: row('id'), body: row('content')('body') }))
+    .map(row => ({
+      id: row('id'),
+      body: row('content')('body'),
+    }))
     .run(conn)
     .then(cursor => cursor.toArray());
 
@@ -17,7 +22,7 @@ exports.up = async function(r, conn) {
       key => newBody.entityMap[key].type.toLowerCase() === 'image'
     );
 
-    const LEGACY_PREFIX = 'https://spectrum.imgix.net/';
+    const LEGACY_PREFIX = `https://${process.env.IMGIX_SUB_DOMAIN}`;
     const hasLegacyPrefix = url => url.startsWith(LEGACY_PREFIX, 0);
     const stripLegacyPrefix = url => url.replace(LEGACY_PREFIX, '');
 

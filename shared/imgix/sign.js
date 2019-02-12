@@ -5,14 +5,14 @@ import decodeUriComponent from 'decode-uri-component';
 import { getDefaultExpires } from './getDefaultExpires';
 
 const IS_PROD = process.env.NODE_ENV === 'production';
-export const LEGACY_PREFIX = 'https://spectrum.imgix.net/';
+export const LEGACY_PREFIX = `https://${process.env.IMGIX_SUB_DOMAIN}`;
 
 // prettier-ignore
 const isLocalUpload = (url: string): boolean => url.startsWith('/uploads/', 0) && !IS_PROD
 // prettier-ignore
 export const hasLegacyPrefix = (url: string): boolean => url.startsWith(LEGACY_PREFIX, 0)
 // prettier-ignore
-const useProxy = (url: string): boolean => url.indexOf('spectrum.imgix.net') < 0 && url.startsWith('http', 0)
+const useProxy = (url: string): boolean => url.indexOf(`${process.env.IMGIX_SUB_DOMAIN}`) < 0 && url.startsWith('http', 0)
 
 /*
   When an image is uploaded to s3, we generate a url to be stored in our db
@@ -36,7 +36,7 @@ const defaultOpts = {
 
 const signPrimary = (url: string, opts: Opts = defaultOpts): string => {
   const client = new ImgixClient({
-    domains: ['spectrum.imgix.net'],
+    domains: [`${process.env.IMGIX_SUB_DOMAIN}`],
     secureURLToken: process.env.IMGIX_SECURITY_KEY,
   });
   return client.buildURL(url, opts);
@@ -44,7 +44,7 @@ const signPrimary = (url: string, opts: Opts = defaultOpts): string => {
 
 const signProxy = (url: string, opts?: Opts = defaultOpts): string => {
   const client = new ImgixClient({
-    domains: ['spectrum-proxy.imgix.net'],
+    domains: [`${process.env.IMGIX_SUB_DOMAIN}`],
     secureURLToken: process.env.IMGIX_PROXY_SECURITY_KEY,
   });
   return client.buildURL(url, opts);

@@ -15,7 +15,9 @@ const Share = ({ community, history, onboarding }) => {
     <div>
       <ButtonRow>
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=https://${process.env.PROD_DOMAIN}/${encodeURIComponent(
+          href={`https://www.facebook.com/sharer/sharer.php?u=https://${
+            process.env.REACT_APP_PROD_DOMAIN
+          }/${encodeURIComponent(
             community.slug
           )}&t=Come hang out with me in the ${
             community.name
@@ -35,9 +37,9 @@ const Share = ({ community, history, onboarding }) => {
         <a
           href={`https://twitter.com/share?text=Come hang out with me in the ${
             community.name
-            } community on @withspectrum!&url=https://${process.env.PROD_DOMAIN}/${encodeURIComponent(
-            community.slug
-          )}`}
+          } community on @withspectrum!&url=https://${
+            process.env.REACT_APP_PROD_DOMAIN
+          }/${encodeURIComponent(community.slug)}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -54,10 +56,14 @@ const Share = ({ community, history, onboarding }) => {
 
       <Clipboard
         component="div"
-        data-clipboard-text={`https://${process.env.PROD_DOMAIN}/${community.slug}`}
+        data-clipboard-text={`https://${process.env.REACT_APP_PROD_DOMAIN}/${
+          community.slug
+        }`}
       >
         <InputRow>
-          <Input>{`https://${process.env.PROD_DOMAIN}/${community.slug}`}</Input>
+          <Input>{`https://${process.env.REACT_APP_PROD_DOMAIN}/${
+            community.slug
+          }`}</Input>
         </InputRow>
       </Clipboard>
 
