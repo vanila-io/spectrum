@@ -43,6 +43,7 @@ export const createSigninRoutes = (
     callbacks: [
       passport.authenticate(strategy, {
         failureRedirect: IS_PROD ? '/' : 'http://localhost:3000/',
+        failureFlash: true,
       }),
       (req: express$Request, res: express$Response) => {
         // $FlowIssue
