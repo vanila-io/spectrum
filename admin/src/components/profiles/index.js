@@ -1,4 +1,3 @@
-require('now-env');
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -14,6 +13,7 @@ import {
   Subtitle,
   Description,
 } from './style';
+require('now-env');
 
 export const CommunityProfile = ({ community }) => {
   return (

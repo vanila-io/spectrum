@@ -1,10 +1,10 @@
-require('now-env');
 import * as React from 'react';
 import {
   StyledThreadListItem,
   ThreadListItemTitle,
   ThreadListItemSubtitle,
 } from '../style';
+require('now-env');
 
 type ThreadProps = {
   id: string,
