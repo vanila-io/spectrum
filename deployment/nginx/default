@@ -1,0 +1,64 @@
+server {
+
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  server_name _;
+  return 301 https://$host$request_uri;
+}
+
+server {
+
+  listen 443 ssl;
+  server_name community.vanila.io;
+
+  access_log /var/log/nginx/community.access.log;
+  error_log /var/log/nginx/community.error.log;
+
+  client_max_body_size 50M;
+
+  ssl on;
+  ssl_certificate /etc/ssl/vanila.pem;
+  ssl_certificate_key /etc/ssl/vanila.key;
+
+  location / {
+
+    proxy_pass http://127.0.0.1:3006;
+    include sites-available/proxy.conf;
+  }
+
+  location /api {
+
+    proxy_pass http://127.0.0.1:3001/api;
+    include sites-available/proxy.conf;
+  }
+
+  location /auth {
+
+    proxy_pass http://127.0.0.1:3001/auth;
+    include sites-available/proxy.conf;
+  }
+
+  location /websocket {
+
+    proxy_pass http://127.0.0.1:3001/websocket;
+    include sites-available/proxy.conf;
+  }
+}
+
+
+server {
+
+  listen 80;
+  server_name api.community.vanila.io;
+
+  access_log /var/log/nginx/community.access.log;
+  error_log /var/log/nginx/community.error.log;
+
+  client_max_body_size 50M;
+
+  location / {
+
+    proxy_pass http://127.0.0.1:3001/api/;
+    include sites-available/proxy.conf;
+  }
+}
