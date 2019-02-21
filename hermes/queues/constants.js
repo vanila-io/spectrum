@@ -45,8 +45,8 @@ export const NEW_MENTION_MESSAGE_TEMPLATE = IS_PROD
   ? 'd-5ef46b71baee4c67bc46ab867e14d5bb'
   : 'd-637189bc871744e9846694bff9f572ae';
 export const NEW_DIRECT_MESSAGE_TEMPLATE = IS_PROD
-  ? 'd-d959535dd2304830ad14e1850297f46d'
-  : 'd-3e289af9efe748308be2dde1d3786c0d';
+  ? 'd-f2e518b1bf4347478bfe62bebcdcb85f'
+  : 'd-f2e518b1bf4347478bfe62bebcdcb85f';
 export const NEW_USER_WELCOME_TEMPLATE = IS_PROD
   ? 'd-57c4111b847d4554b5d71f9fcf9170f8'
   : 'd-2e46e5b65abc42b78941fbe027be4cd5';
