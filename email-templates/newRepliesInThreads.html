@@ -498,13 +498,13 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-community-header">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" width="32">
-                          <a href="https://spectrum.chat/{{community.slug}}" class="block">
+                          <a href="https://community.vanila.io/{{community.slug}}" class="block">
                             <img src={{community.profilePhoto}} width="24" height="24" />
                           </a>
                         </td>
 
                         <td valign="middle">
-                          <a href="https://spectrum.chat/{{community.slug}}" class="block">
+                          <a href="https://community.vanila.io/{{community.slug}}" class="block">
                             <p>{{community.name}} ({{channel.name}})</p>
                           </a>
                         </td>
@@ -514,7 +514,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-title">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle">
-                          <a href="https://spectrum.chat/thread/{{id}}" class="block">
+                          <a href="https://community.vanila.io/thread/{{id}}" class="block">
                             <h3>{{content.title}}</h3>
                           </a>
                         </td>
@@ -525,13 +525,13 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-byline">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" width="32">
-                          <a href="https://spectrum.chat/users/{{sender.username}}" class="block">
+                          <a href="https://community.vanila.io/users/{{sender.username}}" class="block">
                             <img src={{sender.profilePhoto}} width="24" height="24" />
                           </a>
                         </td>
 
                         <td valign="middle">
-                          <a href="https://spectrum.chat/users/{{sender.username}}" class="block">
+                          <a href="https://community.vanila.io/users/{{sender.username}}" class="block">
                             <p>{{sender.name}}</p>
                           </a>
                         </td>
@@ -545,7 +545,7 @@
                           <table cellpadding="0" cellspacing="0" class="reply-body">
                             <tr width="100%" cellpadding="0" cellspacing="0">
                               <td valign="middle">
-                                <a href="https://spectrum.chat/thread/{{../id}}" class="block">
+                                <a href="https://community.vanila.io/thread/{{../id}}" class="block">
                                   {{{content.body}}}
                                 </a>
                               </td>
@@ -560,14 +560,14 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-actions multi">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" class="action-top">
-                          <a href="https://spectrum.chat/thread/{{id}}" class="button">
+                          <a href="https://community.vanila.io/thread/{{id}}" class="button">
                             View conversation
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td valign="middle">
-                          <a href="https://spectrum.chat/api/email/unsubscribe?token={{muteThreadToken}}" class="button-textonly">
+                          <a href="https://community.vanila.io/api/email/unsubscribe?token={{muteThreadToken}}" class="button-textonly">
                             Mute conversation
                           </a>
                         </td>
@@ -592,26 +592,26 @@
           <tr>
             <td>
               <p>
-                You are receiving this email because you joined <a href="https://spectrum.chat">Spectrum</a>. If you no
+                You are receiving this email because you joined <a href="https://community.vanila.io">Spectrum</a>. If you no
                 longer want to receive emails like this, you can:
               </p>
 
               <ul>
                 {{#singleThreadMuteToken}}
                 <li>
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{.}}">Unsubscribe from this thread
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{.}}">Unsubscribe from this thread
                     (including future @mentions)</a>
                 </li>
                 {{/singleThreadMuteToken}}
 
                 <li>
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{unsubscribeToken}}">Unsubscribe from all
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{unsubscribeToken}}">Unsubscribe from all
                     new reply notifications in conversations where I'm active</a>
                 </li>
 
                 {{#recipient.username}}
                 <li>
-                  <a href="https://spectrum.chat/users/{{.}}/settings">Manage your email preferences on Spectrum</a>
+                  <a href="https://community.vanila.io/users/{{.}}/settings">Manage your email preferences on Spectrum</a>
                 </li>
                 {{/recipient.username}}
               </ul>
@@ -622,7 +622,7 @@
                 </li>
 
                 <li>
-                  <a href="https://spectrum.chat/spectrum/hugs-n-bugs">Report bugs</a> · <a href="https://spectrum.chat/spectrum/feature-requests">Request
+                  <a href="https://community.vanila.io/spectrum/hugs-n-bugs">Report bugs</a> · <a href="https://community.vanila.io/spectrum/feature-requests">Request
                     a feature</a>
                 </li>
               </ul>

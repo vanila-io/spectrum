@@ -21,8 +21,8 @@ sg.setApiKey(SENDGRID_API_KEY);
 const sendEmail = (templateId, dynamic_template_data) => {
   return sg.send({
     from: {
-      email: 'hi@spectrum.chat',
-      name: 'Spectrum',
+      email: 'community@vanila.io',
+      name: 'Vanila Community',
     },
     tracking_settings: {
       click_tracking: {

@@ -52,7 +52,7 @@
 
 
   <p><strong>User:</strong></p>
-  <p><a href="https://spectrum.chat/users/{{data.user.username}}">{{data.user.name}}</a></p>
+  <p><a href="https://community.vanila.io/users/{{data.user.username}}">{{data.user.name}}</a></p>
 
   <br />
   <br />
@@ -66,14 +66,14 @@
 
   <p><strong>Previous threads published:</strong></p>
   {{#each data.threads}}
-  <p><a href="https://spectrum.chat/thread/{{id}}">{{content.title}}</a></p>
+  <p><a href="https://community.vanila.io/thread/{{id}}">{{content.title}}</a></p>
   {{/each}}
 
   <br />
   <br />
 
   <p><strong>Publishing in </strong></p>
-  <a href="https://spectrum.chat/{{data.community.slug}}">{{data.community.name}}</a> / <a href="https://spectrum.chat/{{data.community.slug}}/{{data.channel.slug}}">{{data.channel.name}}</a>
+  <a href="https://community.vanila.io/{{data.community.slug}}">{{data.community.name}}</a> / <a href="https://community.vanila.io/{{data.community.slug}}/{{data.channel.slug}}">{{data.channel.name}}</a>
 </body>
 
 </html>
