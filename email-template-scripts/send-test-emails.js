@@ -39,7 +39,7 @@ const init = () => {
   const templates = [
     {
       filename: 'message-in-threads',
-      id: 'd-7a4c14fd440146f1b1cfcafb633bb040',
+      id: 'd-ad36bf63f0e447ae8ae2681f5eb14418',
     },
     {
       filename: 'mention-in-thread',
@@ -114,6 +114,7 @@ const init = () => {
     },
   ];
 
+  // NOTE: SENDS 1 TEST EMAIL
   return templates.slice(0, 1).map(template => {
     const json = require(`./test-email-data/${template.filename}`);
     console.error(`✅ Sending test email for ${template.filename}`);
