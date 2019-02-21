@@ -21,7 +21,7 @@ sg.setApiKey(SENDGRID_API_KEY);
 const sendEmail = (templateId, dynamic_template_data) => {
   return sg.send({
     from: {
-      email: 'community@vanila.io',
+      email: 'hi@spectrum.chat',
       name: 'Spectrum',
     },
     tracking_settings: {
@@ -41,16 +41,22 @@ const init = () => {
       filename: 'message-in-threads',
       id: 'd-7a4c14fd440146f1b1cfcafb633bb040',
     },
-    { filename: 'mention-in-thread', id: 'd-ff421ea0112a4525b6615bcc666ede00' },
+    {
+      filename: 'mention-in-thread',
+      id: 'd-ad36bf63f0e447ae8ae2681f5eb14418',
+    },
     {
       filename: 'mention-in-message',
-      id: 'd-637189bc871744e9846694bff9f572ae',
+      id: 'd-798f75bcfc424ea797aeecf1bf788879',
     },
     {
       filename: 'direct-message-received',
       id: 'd-3e289af9efe748308be2dde1d3786c0d',
     },
-    { filename: 'new-user-welcome', id: 'd-2e46e5b65abc42b78941fbe027be4cd5' },
+    {
+      filename: 'new-user-welcome',
+      id: 'd-584544303d44469081181d96e66146a9',
+    },
     {
       filename: 'community-invitation',
       id: 'd-69b2e17b7a0f46048dcf4083ad4f9c48',
@@ -68,19 +74,19 @@ const init = () => {
     },
     {
       filename: 'private-community-request-approved',
-      id: 'd-d91de18c257344d2bf9ff0c628d1a92e',
+      id: 'd-7f4e67e918d14e73962249825b1faf1a',
     },
     {
       filename: 'private-community-request-sent',
-      id: 'd-743d07e016ee4798a87c06b5dd0a27a1',
+      id: '74831f98-5144-4b2a-9f12-fc33f5e01d27',
     },
     {
       filename: 'private-channel-request-approved',
-      id: 'd-6bc3fffa3fa64e369035bc906b3975dd',
+      id: 'd-42f319a0d18c474c8e7cdb6ad01304f0',
     },
     {
       filename: 'private-channel-request-sent',
-      id: 'd-29f3f62815004e0bb3b9f884c9fb3901',
+      id: 'd-1d863d2d96844fd49fae8429f09c3ee6',
     },
     {
       filename: 'admin-user-reported-alert',
@@ -92,7 +98,7 @@ const init = () => {
     },
     {
       filename: 'admin-active-community-report',
-      id: 'd-82812e47e2ea458c8ded5be8d3de4f48',
+      id: 'd-f8458ee08cb54001aa530f6a5d4874a7',
     },
     {
       filename: 'admin-slack-import-completed',
@@ -100,7 +106,7 @@ const init = () => {
     },
     {
       filename: 'admin-toxic-content',
-      id: 'd-f6e52c81dd8d49e29f23c5c6112d676b',
+      id: 'd-5cb8a34555d0497c8093dbace5a1f0d1',
     },
     {
       filename: 'admin-community-created-notification',
@@ -108,7 +114,7 @@ const init = () => {
     },
   ];
 
-  return templates.map(template => {
+  return templates.slice(0, 1).map(template => {
     const json = require(`./test-email-data/${template.filename}`);
     console.error(`✅ Sending test email for ${template.filename}`);
     return sendEmail(template.id, json);
