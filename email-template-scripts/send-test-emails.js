@@ -38,10 +38,6 @@ const sendEmail = (templateId, dynamic_template_data) => {
 const init = () => {
   const templates = [
     {
-      filename: 'message-in-threads',
-      id: 'd-ad36bf63f0e447ae8ae2681f5eb14418',
-    },
-    {
       filename: 'mention-in-thread',
       id: 'd-ad36bf63f0e447ae8ae2681f5eb14418',
     },
