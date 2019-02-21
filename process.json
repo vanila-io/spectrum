@@ -29,6 +29,11 @@
       "name": "vulcan",
       "script": "yarn",
       "args": "start:vulcan"
+    },
+    {
+      "name": "hermes",
+      "script": "yarn",
+      "args": "start:hermes"
     }
   ]
 }
