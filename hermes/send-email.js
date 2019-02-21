@@ -23,7 +23,7 @@ type Options = {
 
 const defaultOptions = {
   from: {
-    email: 'hi@spectrum.chat',
+    email: 'community@vanila.io',
     name: 'Spectrum',
   },
   tracking_settings: {
