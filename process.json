@@ -1,0 +1,34 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "npm",
+      "args": "start:api"
+    },
+    {
+      "name": "athena",
+      "script": "npm",
+      "args": "start:athena"
+    },
+    {
+      "name": "chronos",
+      "script": "npm",
+      "args": "start:chronos"
+    },
+    {
+      "name": "hyperion",
+      "script": "npm",
+      "args": "start"
+    },
+    {
+      "name": "mercury",
+      "script": "npm",
+      "args": "start:mercury"
+    },
+    {
+      "name": "vulcan",
+      "script": "npm",
+      "args": "start:vulcan"
+    }
+  ]
+}
