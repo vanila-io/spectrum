@@ -2,32 +2,32 @@
   "apps": [
     {
       "name": "api",
-      "script": "npm",
+      "script": "yarn",
       "args": "start:api"
     },
     {
       "name": "athena",
-      "script": "npm",
+      "script": "yarn",
       "args": "start:athena"
     },
     {
       "name": "chronos",
-      "script": "npm",
+      "script": "yarn",
       "args": "start:chronos"
     },
     {
       "name": "hyperion",
-      "script": "npm",
+      "script": "yarn",
       "args": "start"
     },
     {
       "name": "mercury",
-      "script": "npm",
+      "script": "yarn",
       "args": "start:mercury"
     },
     {
       "name": "vulcan",
-      "script": "npm",
+      "script": "yarn",
       "args": "start:vulcan"
     }
   ]
