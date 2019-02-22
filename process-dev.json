@@ -1,0 +1,39 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "yarn",
+      "args": "dev:api"
+    },
+    {
+      "name": "athena",
+      "script": "yarn",
+      "args": "dev:athena"
+    },
+    {
+      "name": "chronos",
+      "script": "yarn",
+      "args": "dev:chronos"
+    },
+    {
+      "name": "hyperion",
+      "script": "yarn",
+      "args": "dev:hyperion"
+    },
+    {
+      "name": "mercury",
+      "script": "yarn",
+      "args": "dev:mercury"
+    },
+    {
+      "name": "vulcan",
+      "script": "yarn",
+      "args": "dev:vulcan"
+    },
+    {
+      "name": "hermes",
+      "script": "yarn",
+      "args": "dev:hermes"
+    }
+  ]
+}
