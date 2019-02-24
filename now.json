@@ -44,7 +44,7 @@
     "SLACK_CLIENT_DEVELOPMENT": "@slack-client-development",
     "SLACK_SECRET": "@slack-secret",
     "SLACK_SECRET_DEVELOPMENT": "@slack-secret-development",
-    "SENDGRID_API_KEY": "@sendgrid:::-api-key",
+    "SENDGRID_API_KEY": "@sendgrid-api-key",
     "EMAIL_JWT_SIGNATURE": "@email-jwt-signature",
     "PERSPECTIVE_API_KEY": "@perspective-api-key",
     "SESSION_COOKIE_SECRET": "@session-cookie-secret",
