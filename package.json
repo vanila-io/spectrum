@@ -231,6 +231,7 @@
     "dev:analytics": "cross-env NODE_PATH=./ cross-env NODE_ENV=development cross-env DEBUG=build*,analytics*,shared:middlewares*,-analytics:resolvers cross-env DIR=analytics backpack",
     "dev:desktop": "(cd desktop && yarn run dev)",
     "build": "npm run build:web && npm run build:hyperion",
+    "build:all": "npm run build:api && npm run build:web && npm run build:athena && npm run build:hermes && npm run build:chronos && npm run build:hyperion && npm run build:mercury && npm run build:vulcan",
     "prebuild:api": "rimraf build-api",
     "build:api": "cross-env NODE_PATH=./ cross-env DIR=api backpack build",
     "postbuild:api": "cp api/package.json build-api/package.json && cp now.json build-api/now.json && cpy cacert build-api",
