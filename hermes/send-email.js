@@ -24,7 +24,7 @@ type Options = {
 const defaultOptions = {
   from: {
     email: 'community@vanila.io',
-    name: 'Spectrum',
+    name: 'Vanila Community',
   },
   tracking_settings: {
     click_tracking: {

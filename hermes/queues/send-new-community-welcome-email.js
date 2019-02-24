@@ -24,7 +24,7 @@ export default (job: Job<NewCommunityWelcomeEmailJobData>): Promise<void> => {
       dynamic_template_data: {
         user,
         community,
-        subject: 'Your new community is live on Spectrum!',
+        subject: 'Your new community is live on Vanila Community!',
       },
     });
   } catch (err) {

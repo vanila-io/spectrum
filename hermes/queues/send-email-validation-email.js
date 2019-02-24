@@ -34,7 +34,7 @@ export default async (job: SendEmailValidationJob): Promise<void> => {
       templateId: EMAIL_VALIDATION_TEMPLATE,
       to: [{ email }],
       dynamic_template_data: {
-        subject: 'Confirm your email address on Spectrum',
+        subject: 'Confirm your email address on Vanila Community',
         validateToken,
       },
     });

@@ -24,7 +24,7 @@ export default (job: Job<NewUserWelcomeEmailJobData>): Promise<void> => {
       Tag: SEND_NEW_USER_WELCOME_EMAIL,
       dynamic_template_data: {
         user,
-        subject: 'Welcome to Spectrum!',
+        subject: 'Welcome to Vanila Community!',
       },
     });
   } catch (err) {
