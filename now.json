@@ -60,6 +60,7 @@
     "IMGIX_SECURITY_KEY": "@imgix-security-key",
     "DATADOG_API_KEY": "@datadog-api-key",
     "PROD_DOMAIN": "@prod-domain",
+    "REACT_APP_PROD_DOMAIN": "@prod-domain",
     "IMGIX_SUB_DOMAIN": "@imgix-sub-domain"
   }
 }
