@@ -1,5 +1,5 @@
 function urlB64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
 
   const rawData = window.atob(base64);
@@ -37,7 +37,7 @@ class WebPushManager {
     return this.manager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: urlB64ToUint8Array(
-        'BPJAFt0MO2BkTYSuzNdGHbVD6lbk2bzYqMBp1gBXLKUupEIIV7yXViZ1D7SyrJfFbYkKuoxwyaP8YcHU8nRDQsA'
+        'BP67LCSbrGpmjiPPYX7O0nv5ax4QPKjGt7vaGscfFBu65yQYsdSK3FfcoDHtVm8U3SHvNaxJVGWztSYBmrBpzIY'
       ),
     });
   };
