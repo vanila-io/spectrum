@@ -37,7 +37,7 @@ class WebPushManager {
     return this.manager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: urlB64ToUint8Array(
-        'BP67LCSbrGpmjiPPYX7O0nv5ax4QPKjGt7vaGscfFBu65yQYsdSK3FfcoDHtVm8U3SHvNaxJVGWztSYBmrBpzIY'
+        process.env.REACT_APP_VAPID_PUBLIC_KEY
       ),
     });
   };
