@@ -1,7 +1,14 @@
 // @flow
 import * as React from 'react';
 import compose from 'recompose/compose';
-import { Route, Switch, Redirect } from 'react-router';
+import {
+  Route,
+  Switch,
+  Redirect,
+  withRouter,
+  type Location,
+  type History,
+} from 'react-router';
 import styled, { ThemeProvider } from 'styled-components';
 import Loadable from 'react-loadable';
 import { ErrorBoundary } from 'src/components/error';
@@ -32,10 +39,11 @@ import { withCurrentUser } from 'src/components/withCurrentUser';
 import Maintenance from 'src/components/maintenance';
 import type { GetUserType } from 'shared/graphql/queries/user/getUser';
 import RedirectOldThreadRoute from './views/thread/redirect-old-route';
+import NewUserOnboarding from './views/newUserOnboarding';
+import QueryParamToastDispatcher from './views/queryParamToastDispatcher';
 
-/* prettier-ignore */
 const Explore = Loadable({
-  loader: () => import('./views/explore'/* webpackChunkName: "Explore" */),
+  loader: () => import('./views/explore' /* webpackChunkName: "Explore" */),
   loading: ({ isLoading }) => isLoading && <Loading />,
 });
 
@@ -158,9 +166,24 @@ type Props = {
   currentUser: ?GetUserType,
   isLoadingCurrentUser: boolean,
   maintenanceMode?: boolean,
+  location: Location,
+  history: History,
 };
 
 class Routes extends React.Component<Props> {
+  previousLocation = this.props.location;
+
+  componentWillUpdate(nextProps) {
+    const { location } = this.props;
+    // set previousLocation if props.location is not modal
+    if (
+      nextProps.history.action !== 'POP' &&
+      (!location.state || !location.state.modal)
+    ) {
+      this.previousLocation = this.props.location;
+    }
+  }
+
   render() {
     const { currentUser, isLoadingCurrentUser } = this.props;
     const { title, description } = generateMetaInfo();
@@ -181,6 +204,13 @@ class Routes extends React.Component<Props> {
       );
     }
 
+    const { location } = this.props;
+    const isModal = !!(
+      location.state &&
+      location.state.modal &&
+      this.previousLocation !== location
+    ); // not initial render
+
     return (
       <ThemeProvider theme={theme}>
         <ErrorBoundary fallbackComponent={ErrorFallback}>
@@ -197,18 +227,18 @@ class Routes extends React.Component<Props> {
               <AuthViewHandler>{() => null}</AuthViewHandler>
               <ThirdPartyContext />
               <Status />
+              <Route component={QueryParamToastDispatcher} />
               <Route component={Navbar} />
 
               <Route component={ModalRoot} />
               <Route component={Toasts} />
               <Route component={Gallery} />
-              <Route component={ThreadSlider} />
 
               {/*
                   Switch only renders the first match. Subrouting happens downstream
                   https://reacttraining.com/react-router/web/api/Switch
                 */}
-              <Switch>
+              <Switch location={isModal ? this.previousLocation : location}>
                 <Route exact path="/" component={DashboardFallback} />
                 <Route exact path="/home" component={HomeFallback} />
 
@@ -237,7 +267,6 @@ class Routes extends React.Component<Props> {
 
                 <Route path="/login" component={LoginFallback} />
                 <Route path="/explore" component={Explore} />
-                <Route path="/messages/new" component={MessagesFallback} />
                 <Route
                   path="/messages/:threadId"
                   component={MessagesFallback}
@@ -267,6 +296,8 @@ class Routes extends React.Component<Props> {
                       <Redirect
                         to={`/users/${currentUser.username}/settings`}
                       />
+                    ) : currentUser && !currentUser.username ? (
+                      <NewUserOnboarding />
                     ) : isLoadingCurrentUser ? null : (
                       <Login redirectPath={`${CLIENT_URL}/me/settings`} />
                     )
@@ -328,6 +359,26 @@ class Routes extends React.Component<Props> {
                 />
                 <Route path="/:communitySlug" component={CommunityView} />
               </Switch>
+
+              {isModal && (
+                <Route
+                  // NOTE(@mxstbr): This custom path regexp matches threadId correctly in all cases, no matter if we prepend it with a custom slug or not.
+                  // Imagine our threadId is "id-123-id" (similar in shape to an actual UUID)
+                  // - /id-123-id => id-123-id, easy start that works
+                  // - /some-custom-slug~id-123-id => id-123-id, custom slug also works
+                  // - /~id-123-id => id-123-id => id-123-id, empty custom slug also works
+                  // - /some~custom~slug~id-123-id => id-123-id, custom slug with delimiter char in it (~) also works! :tada:
+                  path="/:communitySlug/:channelSlug/(.*~)?:threadId"
+                  component={ThreadSlider}
+                />
+              )}
+
+              {isModal && (
+                <Route
+                  path="/new/thread"
+                  render={props => <ComposerFallback {...props} slider />}
+                />
+              )}
             </Body>
           </ScrollManager>
         </ErrorBoundary>
@@ -336,4 +387,7 @@ class Routes extends React.Component<Props> {
   }
 }
 
-export default compose(withCurrentUser)(Routes);
+export default compose(
+  withCurrentUser,
+  withRouter
+)(Routes);

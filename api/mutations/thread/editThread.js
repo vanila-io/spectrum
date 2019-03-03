@@ -1,5 +1,6 @@
 require('now-env');
 // @flow
+const debug = require('debug')('api:mutations:edit-thread');
 import type { GraphQLContext } from '../../';
 import type { EditThreadInput } from '../../models/thread';
 import UserError from '../../utils/UserError';
@@ -8,6 +9,7 @@ import { getThreads, editThread } from '../../models/thread';
 import { getUserPermissionsInCommunity } from '../../models/usersCommunities';
 import { getUserPermissionsInChannel } from '../../models/usersChannels';
 import { isAuthedResolver as requireAuth } from '../../utils/permissions';
+import processThreadContent from 'shared/draft-utils/process-thread-content';
 import { events } from 'shared/analytics';
 import { trackQueue } from 'shared/bull/queues';
 import {
@@ -84,6 +86,8 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
     );
   }
 
+  input.content.body = processThreadContent('TEXT', input.content.body || '');
+
   /*
     When threads are sent to the client, all image urls are signed and proxied
     via imgix. If a user edits the thread, we have to restore all image upload
@@ -131,6 +135,7 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
     });
   }
 
+  debug('store new body to database:', initialBody);
   const newInput = Object.assign({}, input, {
     ...input,
     content: {

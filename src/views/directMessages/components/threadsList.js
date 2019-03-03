@@ -96,7 +96,7 @@ class ThreadsList extends React.Component<Props, State> {
   }
 
   paginate = () => {
-    const { dmData, isFetchingMore, activeThreadId } = this.props;
+    const { dmData, activeThreadId } = this.props;
     // don't accidentally paginate the threadslist in the background on mobile
     if (window && window.innerWidth < 768 && activeThreadId) return;
     return dmData.fetchMore();
@@ -106,7 +106,7 @@ class ThreadsList extends React.Component<Props, State> {
     const { currentUser, dmData, activeThreadId } = this.props;
     const { scrollElement } = this.state;
 
-    if (!dmData || !dmData.user) return null;
+    if (!dmData) return null;
 
     const dmDataExists =
       currentUser && dmData.user && dmData.user.directMessageThreadsConnection;
@@ -138,7 +138,7 @@ class ThreadsList extends React.Component<Props, State> {
 
     const uniqueThreads = deduplicateChildren(threads, 'id');
 
-    if (!dmDataExists && dmData.isLoading) {
+    if (!dmDataExists && dmData.loading) {
       return (
         <div>
           <LoadingDM />

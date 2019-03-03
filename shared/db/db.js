@@ -10,11 +10,12 @@ import { statsd } from '../statsd';
 const IS_PROD = !process.env.FORCE_DEV && process.env.NODE_ENV === 'production';
 const LOCALDB = true; // TODO: Add option for localhosted databases
 
+const CONNECTIONS = 20;
 const DEFAULT_CONFIG = {
   // Connect to the test database when, well, testing
   db: !process.env.TEST_DB ? 'spectrum' : 'testing',
-  max: 20, // Maximum number of connections, default is 1000
-  buffer: 20, // Minimum number of connections open at any given moment, default is 50
+  max: CONNECTIONS, // Maximum number of connections, default is 1000
+  buffer: CONNECTIONS, // Minimum number of connections open at any given moment, default is 50
   timeoutGb: 60 * 60 * 1000, // How long should an unused connection stick around, default is an hour, this is a minute
   timeout: 30, // The number of seconds for a connection to be opened, default 20
 };
@@ -58,6 +59,10 @@ const poolMaster = r.getPoolMaster();
 poolMaster.on('queueing', size => {
   statsd.gauge('db.query_queue.size', size);
 });
+
+setInterval(() => {
+  statsd.gauge('db.connections.count', poolMaster.getLength());
+}, 5000);
 
 // Exit the process on unhealthy db in test env
 if (process.env.TEST_DB) {
