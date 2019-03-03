@@ -3,26 +3,25 @@ import * as React from 'react';
 import compose from 'recompose/compose';
 import generateMetaInfo from 'shared/generate-meta-info';
 import { connect } from 'react-redux';
-import { removeItemFromStorage } from '../../helpers/localStorage';
+import { removeItemFromStorage } from 'src/helpers/localStorage';
 import getEverythingThreads from 'shared/graphql/queries/user/getCurrentUserEverythingFeed';
 import getCommunityThreads from 'shared/graphql/queries/community/getCommunityThreadConnection';
 import getChannelThreadConnection from 'shared/graphql/queries/channel/getChannelThreadConnection';
 import { getCurrentUserCommunityConnection } from 'shared/graphql/queries/user/getUserCommunityConnection';
 import type { GetUserCommunityConnectionType } from 'shared/graphql/queries/user/getUserCommunityConnection';
 import searchThreadsQuery from 'shared/graphql/queries/search/searchThreads';
-import Composer from 'src/components/composer';
-import Titlebar from '../../views/titlebar';
-import NewUserOnboarding from '../../views/newUserOnboarding';
+import Titlebar from 'src/views/titlebar';
+import NewUserOnboarding from 'src/views/newUserOnboarding';
 import DashboardThreadFeed from './components/threadFeed';
-import Head from '../../components/head';
-import Menu from '../../components/menu';
+import Head from 'src/components/head';
+import Menu from 'src/components/menu';
 import DashboardLoading from './components/dashboardLoading';
 import DashboardError from './components/dashboardError';
 import NewActivityIndicator from './components/newActivityIndicator';
 import DashboardThread from '../dashboardThread';
 import Header from './components/threadSelectorHeader';
 import CommunityList from './components/communityList';
-import viewNetworkHandler from '../../components/viewNetworkHandler';
+import viewNetworkHandler from 'src/components/viewNetworkHandler';
 import {
   DashboardWrapper,
   InboxWrapper,
@@ -112,13 +111,7 @@ class Dashboard extends React.Component<Props, State> {
     if (user) {
       // if the user hasn't joined any communities yet, we have nothing to show them on the dashboard. So instead just render the onboarding step to upsell popular communities to join
       if (user.communityConnection.edges.length === 0) {
-        return (
-          <NewUserOnboarding
-            noCloseButton
-            close={() => {}}
-            currentUser={user}
-          />
-        );
+        return <NewUserOnboarding currentUser={user} />;
       }
 
       // at this point we have succesfully validated a user, and the user has both a username and joined communities - we can show their thread feed!
@@ -131,9 +124,14 @@ class Dashboard extends React.Component<Props, State> {
 
       return (
         <DashboardWrapper data-cy="inbox-view" id="main">
-          <Composer isSlider={true} activeCommunity={activeCommunity} />
           <Head title={title} description={description} />
-          <Titlebar hasChildren hasSearch filter={searchFilter}>
+          <Titlebar
+            activeCommunityId={activeCommunity}
+            activeChannelId={activeChannel}
+            hasChildren
+            hasSearch
+            filter={searchFilter}
+          >
             <Menu darkContext hasTabBar>
               <ErrorBoundary>
                 <CommunityList

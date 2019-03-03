@@ -147,9 +147,7 @@ class UserView extends React.Component<Props, State> {
         },
       });
 
-      const nullHeading = `${
-        user.firstName ? user.firstName : user.name
-      } hasn’t ${
+      const nullHeading = `${user.name} hasn’t ${
         selectedView === 'creator' ? 'created' : 'joined'
       } any conversations yet.`;
 
@@ -190,7 +188,10 @@ class UserView extends React.Component<Props, State> {
 
               {currentUser && user.id !== currentUser.id && (
                 <React.Fragment>
-                  <LoginButton onClick={() => this.initMessage(user)}>
+                  <LoginButton
+                    dataCy={'send-dm-button'}
+                    onClick={() => this.initMessage(user)}
+                  >
                     Message {user.name}
                   </LoginButton>
                   <TextButton onClick={this.initReport}>Report</TextButton>

@@ -53,10 +53,7 @@ describe('Thread View', () => {
       const newMessage = 'A new message!';
       cy.get('[data-cy="thread-view"]').should('be.visible');
       cy.get('[data-cy="join-channel-login-upsell"]').should('be.visible');
-      cy.get('[data-cy="thread-join-channel-upsell-button"]').should(
-        'be.visible'
-      );
-      cy.get('[data-cy="thread-join-channel-upsell-button"]').click();
+      cy.get('[data-cy="join-channel-login-upsell"]').click();
       cy.get('[data-cy="login-modal"]').should('be.visible');
     });
   });
@@ -452,8 +449,13 @@ describe('/new/thread', () => {
     const title = 'Some new thread';
     const body = "with some fresh content you've never seen before";
     cy.get('[data-cy="rich-text-editor"]').should('be.visible');
-    cy.get('[data-cy="composer-community-selector"]').should('be.visible');
-    cy.get('[data-cy="composer-channel-selector"]').should('be.visible');
+    cy.get('[data-cy="composer-community-selector"]')
+      .should('be.visible')
+      .select('Spectrum');
+    cy.get('[data-cy="composer-channel-selector"]')
+      .should('be.visible')
+      .select('General');
+
     // Type title and body
     cy.get('[data-cy="composer-title-input"]').type(title);
     cy.get('[data-cy="rich-text-editor"]').type(body);
@@ -469,7 +471,7 @@ describe('/new/thread', () => {
     const body = 'with some persisting content';
     cy.get('[data-cy="rich-text-editor"]').should('be.visible');
     cy.get('[data-cy="composer-community-selector"]').should('be.visible');
-    cy.get('[data-cy="composer-channel-selector"]').should('be.visible');
+    cy.get('[data-cy="composer-channel-selector"]').should('not.be.visible');
     // Type title and body
     cy.get('[data-cy="composer-title-input"]').type(title);
     cy.get('[data-cy="rich-text-editor"]').type(body);
