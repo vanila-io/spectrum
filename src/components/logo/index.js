@@ -22,6 +22,7 @@ export const SvgWrapper = styled.div`
 const Img = styled.img`
   float: left;
   height: 30px;
+  margin-right: 10px;
 `;
 
 const LogoTxt = styled.span`

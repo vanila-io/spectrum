@@ -44,18 +44,11 @@ import { track, events } from 'src/helpers/analytics';
 type Props = Object;
 
 export const Overview = (props: Props) => {
-  const ThisWrapper = styled(Content)`
-    background: #fff;
-    background-image: url('/img/mainSectionBg.svg');
-    @media (max-width: 640px) {
-      margin-bottom: 40px;
-    }
-  `;
   const ThisContent = styled(Content)`
     max-width: 100vw;
     padding-top: 92px;
     padding-bottom: 80px;
-    background: #000;
+    background: transparent;
     @media (max-width: 640px) {
       margin-bottom: 40px;
     }
@@ -156,38 +149,73 @@ export const Overview = (props: Props) => {
     font-weight: bold;
   `;
 
-  return (
-    <Section goop={2}>
-      <ThisContent>
-        <ThisText>
-          <ThisTagline>
-            Hub for <BoldText>Designers</BoldText>, <br />{' '}
-            <BoldText>Makers</BoldText>, <BoldText>Developers</BoldText>,{' '}
-            <BoldText>Growth Hackers</BoldText>
-          </ThisTagline>
-          <ThisCopy>
-            The maker culture is a contemporary culture or subculture
-            representing a <BoldText>technology-based</BoldText> extension of{' '}
-            <BoldText>DIY culture</BoldText> that intersects with hacker
-            culture.
-          </ThisCopy>
+  const ThisOnlineMembers = styled(Copy)`
+    text-align: right;
+    margin-top: 20px;
+    ::before {
+      content: '';
+      background: #26ffcb;
+      width: 17px;
+      height: 17px;
+      display: block;
+      border-radius: 50%;
+      float: left;
+      margin-top: 4px;
+      margin-right: 4px;
+    }
+  `;
 
-          <Actions>
-            <Link
-              to="/login"
-              onClick={() => track(events.HOME_PAGE_JOIN_SPECTRUM_CLICKED)}
-            >
-              <ThisPrimaryCTA icon="welcome">Join community</ThisPrimaryCTA>
-            </Link>
-            <Link to="/explore">
-              <ThisSecondaryCTA
-                icon="explore"
-                onClick={() => track(events.HOME_PAGE_EXPLORE_CLICKED)}
+  const ThisWrapper = styled.div`
+    max-width: 100vw;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    background: #fff;
+    background-image: url('/img/mainSectionBg.svg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (max-width: 640px) {
+      margin-bottom: 40px;
+    }
+  `;
+  return (
+    <Section>
+      <ThisWrapper>
+        <ThisContent>
+          <ThisText>
+            <ThisTagline>
+              Hub for <BoldText>Designers</BoldText>, <br />{' '}
+              <BoldText>Makers</BoldText>, <BoldText>Developers</BoldText>,{' '}
+              <BoldText>Growth Hackers</BoldText>
+            </ThisTagline>
+            <ThisCopy>
+              The maker culture is a contemporary culture or subculture
+              representing a <BoldText>technology-based</BoldText> extension of{' '}
+              <BoldText>DIY culture</BoldText> that intersects with hacker
+              culture.
+            </ThisCopy>
+
+            <Actions>
+              <Link
+                to="/login"
+                onClick={() => track(events.HOME_PAGE_JOIN_SPECTRUM_CLICKED)}
               >
-                Explore
-              </ThisSecondaryCTA>
-            </Link>
-            {/* <Link
+                <ThisPrimaryCTA icon="welcome">Join community</ThisPrimaryCTA>
+                <ThisOnlineMembers>1,725 online members</ThisOnlineMembers>
+              </Link>
+              <Link to="/explore">
+                <ThisSecondaryCTA
+                  icon="explore"
+                  onClick={() => track(events.HOME_PAGE_EXPLORE_CLICKED)}
+                >
+                  Explore
+                </ThisSecondaryCTA>
+              </Link>
+              {/* <Link
               to="/new/community"
               onClick={() => track(events.HOME_PAGE_CREATE_COMMUNITY_CLICKED)}
             >
@@ -195,18 +223,20 @@ export const Overview = (props: Props) => {
                 Create your community
               </ThisSecondaryCTA>
             </Link> */}
-          </Actions>
-        </ThisText>
-      </ThisContent>
-      <ThisContent>
-        <Img src="img/home-hero.png" alt="" />
-      </ThisContent>
+            </Actions>
+          </ThisText>
+        </ThisContent>
+        <ThisContent>
+          <Img src="img/home-hero.png" alt="" />
+        </ThisContent>
+      </ThisWrapper>
     </Section>
   );
 };
 
 export const DiscoverCommunites = (props: Props) => {
   const ThisContent = styled(Content)`
+    padding: 100px 0;
     img {
       margin: 24px 0;
     }
@@ -292,7 +322,7 @@ export const DiscoverCommunites = (props: Props) => {
   `;
 
   return (
-    <Section goop={2}>
+    <Section>
       <ThisContent>
         <Img src="/img/home2.png" alt="Discover communities screenshot" />
         <Text>
@@ -323,7 +353,14 @@ export const SearchThread = (props: Props) => {
   const ThisContent = styled(Content)`
     overflow: hidden;
     padding: 100px 0;
-    background: #151419;
+    background: #fff;
+    background-image: url('/img/sectionOneBg.svg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    padding-top: 300px;
+
     @media (max-width: 768px) {
       margin-bottom: 40px;
     }
@@ -402,7 +439,7 @@ export const ReputationSystem = (props: Props) => {
   const ThisContent = styled(Content)`
     overflow: hidden;
     background-color: #fff;
-    padding: 100px 0;
+    padding: 200px 0;
     @media (max-width: 768px) {
       margin-bottom: 40px;
     }
@@ -446,11 +483,125 @@ export const ReputationSystem = (props: Props) => {
   `;
 
   const Text = styled(FlexCol)`
-    margin-left: 100px;
+    margin-right: 100px;
+  `;
+
+  const WidgetWrapper = styled.div`
+    padding: 10px 15px;
+    border-radius: 9px;
+    box-shadow: firebrick;
+    -webkit-box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 70px;
+  `;
+  const WidgetAvatar = styled.img`
+    float: left;
+    display: block;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+  `;
+  const WidgetInfo = styled.div`
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+  `;
+  const WidgetUserName = styled.p`
+    color: #070707;
+    font-weight: bold;
+  `;
+
+  const WidgetUserReputation = styled.p`
+    font-size: 0.8em;
+  `;
+
+  const WidgetUserReputationScore = styled.p`
+    font-size: 0.8em;
+    font-weight: bold;
   `;
   return (
-    <Section goop={0} background={'reverse'}>
+    <Section>
       <ThisContent>
+        <Text>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+        </Text>
+        <Text>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+        </Text>
+        <Text>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+            <WidgetInfo>
+              <WidgetUserName>Stefi Jecko</WidgetUserName>
+              <WidgetUserReputation>Reputation</WidgetUserReputation>
+              <WidgetUserReputationScore>875</WidgetUserReputationScore>
+            </WidgetInfo>
+          </WidgetWrapper>
+        </Text>
         <Text>
           <ThisTagline>
             <BoldText>Reputation</BoldText> System
@@ -472,7 +623,7 @@ export const ReputationSystem = (props: Props) => {
 export const PublicProfile = (props: Props) => {
   const ThisContent = styled(Content)`
     overflow: hidden;
-    margin: 40px 16px 80px;
+    margin-bottom: 200px;
 
     @media (max-width: 768px) {
       margin-bottom: 40px;
@@ -516,104 +667,70 @@ export const PublicProfile = (props: Props) => {
   `;
 
   const Text = styled(FlexCol)`
-    margin-left: 100px;
+    margin: 0 100px;
   `;
-  return (
-    <Section goop={0} background={'reverse'}>
-      <ThisContent>
-        <img src="/img/home4.png" alt="" />
-        <Text>
-          <ThisTagline>
-            Public <BoldText>Profiles</BoldText> Showing <br />{' '}
-            <BoldText>Contribution</BoldText>
-          </ThisTagline>
-          <ThisCopy>The internet was built for communities.</ThisCopy>
-          <ThisCopy>
-            But, as the web has changed and improved radically, community
-            software has hardly improved since the heyday of messageboards and
-            IRC.
-          </ThisCopy>
-          <Actions>
-            <Link to="/explore">
-              <ThisPrimaryCTA
-                onClick={() => track(events.HOME_PAGE_EXPLORE_CLICKED)}
-              >
-                Create your profile
-              </ThisPrimaryCTA>
-            </Link>
-          </Actions>
-        </Text>
-      </ThisContent>
-    </Section>
-  );
-};
 
-export const PWA = (props: Props) => {
-  const ThisContent = styled(Content)`
-    overflow: hidden;
-    margin: 40px 16px 80px;
-
-    @media (max-width: 768px) {
+  const ThisWrapper = styled.div`
+    max-width: 100vw;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    background: #fff;
+    background-image: url('/img/sectionTwoBg.svg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 350px;
+    @media (max-width: 640px) {
       margin-bottom: 40px;
     }
   `;
-
-  const ThisCopy = styled(Copy)`
-    font-weight: 400;
-    margin-top: 16px;
-  `;
-
-  const ThisPrimaryCTA = styled(PrimaryCTA)`
-    background-color: ${theme.brand.alt};
-    background-image: ${props =>
-      Gradient(props.theme.brand.alt, props.theme.brand.default)};
-    color: ${theme.text.reverse};
-    margin-top: 32px;
-
-    &:hover {
-      color: ${theme.text.reverse};
-    }
-  `;
-
-  const Actions = styled.div`
-    @media (max-width: 768px) {
-      display: flex;
-      justify-content: center;
-    }
-  `;
-
-  const ThisTagline = styled(Tagline)`
-    font-size: 50px;
-    font-weight: normal;
-    @media (max-width: 768px) {
-      margin-bottom: 0;
-    }
-  `;
-
-  const BoldText = styled.span`
-    font-weight: bold;
-  `;
-
-  const Text = styled(FlexCol)`
-    margin-right: 100px;
-  `;
   return (
     <Section goop={0} background={'reverse'}>
-      <ThisContent>
-        <Text>
-          <ThisTagline>
-            It's Mobile Friendly (PWA), <br />
-            <BoldText>Native Apps Coming Soon</BoldText>
-          </ThisTagline>
-          <ThisCopy>The internet was built for communities.</ThisCopy>
-          <ThisCopy>
-            But, as the web has changed and improved radically, community
-            software has hardly improved since the heyday of messageboards and
-            IRC.
-          </ThisCopy>
-        </Text>
-        <img src="/img/home5.png" alt="" />
-      </ThisContent>
+      <ThisWrapper>
+        <ThisContent>
+          <img src="/img/home4.png" alt="" />
+          <Text>
+            <ThisTagline>
+              Public <BoldText>Profiles</BoldText> Showing <br />{' '}
+              <BoldText>Contribution</BoldText>
+            </ThisTagline>
+            <ThisCopy>The internet was built for communities.</ThisCopy>
+            <ThisCopy>
+              But, as the web has changed and improved radically, community
+              software has hardly improved since the heyday of messageboards and
+              IRC.
+            </ThisCopy>
+            <Actions>
+              <Link to="/explore">
+                <ThisPrimaryCTA
+                  onClick={() => track(events.HOME_PAGE_EXPLORE_CLICKED)}
+                >
+                  Create your profile
+                </ThisPrimaryCTA>
+              </Link>
+            </Actions>
+          </Text>
+        </ThisContent>
+        <ThisContent>
+          <Text>
+            <ThisTagline>
+              It's Mobile Friendly (PWA), <br />
+              <BoldText>Native Apps Coming Soon</BoldText>
+            </ThisTagline>
+            <ThisCopy>The internet was built for communities.</ThisCopy>
+            <ThisCopy>
+              But, as the web has changed and improved radically, community
+              software has hardly improved since the heyday of messageboards and
+              IRC.
+            </ThisCopy>
+          </Text>
+          <img src="/img/home5.png" alt="" />
+        </ThisContent>
+      </ThisWrapper>
     </Section>
   );
 };
