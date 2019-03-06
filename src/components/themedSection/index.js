@@ -130,10 +130,10 @@ const Section = (props: ThemeProps) => {
     default:
       return (
         <Default>
-          <ClusterOne src="/img/cluster-1.svg" role="presentation" />
+          {/* <ClusterOne src="/img/cluster-1.svg" role="presentation" />
           <ClusterTwo src="/img/cluster-2.svg" role="presentation" />
           <ClusterThree src="/img/cluster-5.svg" role="presentation" />
-          <ClusterFour src="/img/cluster-4.svg" role="presentation" />
+          <ClusterFour src="/img/cluster-4.svg" role="presentation" /> */}
           {props.children}
           <Goop {...props} />
         </Default>

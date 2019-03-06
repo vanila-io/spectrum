@@ -50,8 +50,8 @@ class Nav extends React.Component<Props, State> {
     return (
       <NavContainer data-cy="navbar-splash">
         <Head
-          title={'Spectrum'}
-          description={'The community platform for the future.'}
+          title={'community.vanila'}
+          description={'Hub for Designers, Makers, Developers, Growth Hackers'}
         >
           <link
             rel="shortcut icon"
@@ -67,7 +67,6 @@ class Nav extends React.Component<Props, State> {
             data-cy="navbar-splash-about"
           >
             <Logo />
-            <Icon glyph={'logo'} />
           </LogoTab>
           <FeaturesTab
             dark={this.props.dark}
@@ -108,10 +107,13 @@ class Nav extends React.Component<Props, State> {
               >
                 <Button
                   data-cy="navbar-splash-signin"
+                  icon="welcome"
                   style={{
                     fontWeight: '700',
                     fontSize: '16px',
                     letterSpacing: '0.5px',
+                    background: '#3D57FF',
+                    color: '#ffffff',
                   }}
                 >
                   Sign In
