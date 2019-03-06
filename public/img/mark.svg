@@ -1,12 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
-<title>mark</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-2639 -1639)" figma:type="canvas">
-<g id="mark" style="mix-blend-mode:normal;" figma:type="vector">
-<use xlink:href="#path0_fill" transform="translate(2639 1639)" fill="#747E8D" style="mix-blend-mode:normal;"/>
-</g>
-</g>
-<defs>
-<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 3 0C 14.598 0 24 9.40202 24 21L 24 24L 13 24C 12.4477 24 12 23.5523 12 23L 12 21C 12 16.0294 7.97056 12 3 12L 1 12C 0.447715 12 0 11.5523 0 11L 0 0Z"/>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:url(#a);}.b{fill:#d1d0df;opacity:0.97;}</style><linearGradient id="a" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#736c95"/><stop offset="1" stop-color="#636388"/></linearGradient></defs><path class="a" d="M5.6,0H18.4A5.6,5.6,0,0,1,24,5.6V18.4A5.6,5.6,0,0,1,18.4,24H5.6A5.6,5.6,0,0,1,0,18.4V5.6A5.6,5.6,0,0,1,5.6,0Z" transform="translate(0)"/><path class="b" d="M1.59-100.291C.5-97.21.59-89.482,3.8-89.482c3.275,0,8.248-6.507,8.248-12.589A2.67,2.67,0,0,0,9.6-105.018a1.972,1.972,0,0,0-2.032,2.045c1.274.5,1.88,2.072,1.88,3.851a8.865,8.865,0,0,1-3.821,6.879c-1.274-2.178-.91-6.135-.121-9.4.273-1.009-.364-1.461-1.456-1.461a5.94,5.94,0,0,0-3.4,1.275.893.893,0,0,0,0,1.461,1.155,1.155,0,0,1,.606-.319C1.53-100.689,1.651-100.5,1.59-100.291Z" transform="translate(5.626 109.226)"/></svg>
