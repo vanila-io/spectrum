@@ -188,7 +188,7 @@ class Navbar extends React.Component<Props, State> {
             onClick={() => this.trackNavigationClick('logo')}
             data-cy="navbar-logo"
           >
-            <Icon glyph="logo" size={28} />
+            <img src="img/logos/logomark.png" />
           </Logo>
 
           <SkipLink
