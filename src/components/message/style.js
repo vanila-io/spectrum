@@ -251,6 +251,12 @@ export const Text = styled(Bubble)`
     text-decoration: underline;
     word-break: break-word;
   }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 `;
 
 export const Emoji = styled(Bubble)`
@@ -490,3 +496,5 @@ export const EditedIndicator = styled.span`
   color: ${props => props.theme.text.alt};
   ${Tooltip};
 `;
+
+export const ThreadAttachmentsContainer = styled.ul``;

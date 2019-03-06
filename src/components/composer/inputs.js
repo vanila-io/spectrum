@@ -26,6 +26,7 @@ type Props = {
   autoFocus?: boolean,
   bodyRef?: Function,
   onKeyDown?: Function,
+  isEditing: boolean,
 };
 
 export default (props: Props) => {
@@ -41,10 +42,11 @@ export default (props: Props) => {
     changeTitle,
     bodyRef,
     onKeyDown,
+    isEditing,
   } = props;
 
   return (
-    <InputsGrid>
+    <InputsGrid isEditing={isEditing}>
       <SegmentedControl
         css={{
           margin: '0',
@@ -99,7 +101,7 @@ export default (props: Props) => {
                   onChange={changeBody}
                   value={body}
                   style={ThreadDescription}
-                  inputRef={props.bodyRef}
+                  inputRef={bodyRef}
                   placeholder={'Add more thoughts here...'}
                   className={'threadComposer'}
                   dataCy="rich-text-editor"

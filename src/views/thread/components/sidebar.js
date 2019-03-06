@@ -69,7 +69,6 @@ class Sidebar extends React.Component<Props> {
     const {
       thread,
       currentUser,
-      location,
       data: { threads },
     } = this.props;
 
@@ -85,10 +84,10 @@ class Sidebar extends React.Component<Props> {
     const loginUrl =
       thread && thread.community
         ? thread.community.brandedLogin.isEnabled
-          ? `/${thread.community.slug}/login?r=${CLIENT_URL}/${getThreadLink(
+          ? `/${thread.community.slug}/login?r=${CLIENT_URL}${getThreadLink(
               thread
             )}`
-          : `/login?r=${CLIENT_URL}/${getThreadLink(thread)}`
+          : `/login?r=${CLIENT_URL}${getThreadLink(thread)}`
         : '/login';
 
     return (
@@ -210,8 +209,8 @@ class Sidebar extends React.Component<Props> {
                         <SidebarRelatedThread key={t.id}>
                           <Link
                             to={{
-                              pathname: location.pathname,
-                              search: `?thread=${t.id}`,
+                              pathname: getThreadLink(t),
+                              state: { modal: true },
                             }}
                           >
                             <RelatedTitle>{t.content.title}</RelatedTitle>
