@@ -4,12 +4,12 @@
   START_CONFIG
   { 
     "test": {
-      "version": "50f883da-53b9-438e-ba6a-7bf7fb5cbd24",
-      "template": "d-3e289af9efe748308be2dde1d3786c0d"
+      "version": "1e4efca9-2d08-4827-b87e-f5a345c2bc5b",
+      "template": "d-f2e518b1bf4347478bfe62bebcdcb85f"
     },
     "production": {
-      "version": "676b57a5-0765-4306-b0e3-63cc77503e9f",
-      "template": "d-d959535dd2304830ad14e1850297f46d"
+      "version": "1e4efca9-2d08-4827-b87e-f5a345c2bc5b",
+      "template": "d-f2e518b1bf4347478bfe62bebcdcb85f"
     }
   }
   END_CONFIG
@@ -415,7 +415,7 @@
                     <table class="attributes post" width="100%" cellpadding="0" cellspacing="0">
                       <tr>
                         <td>
-                          <a href="https://spectrum.chat/{{thread.path}}">
+                          <a href="https://community.vanila.io/{{thread.path}}">
                             <h2 class="title">{{thread.content.title}}</h2>
                           </a>
                         </td>
@@ -426,7 +426,7 @@
                           <table>
                             <tr>
                               <td valign="top">
-                                <a href="https://spectrum.chat/{{thread.path}}">
+                                <a href="https://community.vanila.io/{{thread.path}}">
                                   <img class="avatar" src="{{user.profilePhoto}}" />
                                 </a>
                               </td>
@@ -434,12 +434,12 @@
                                 <table>
                                   <tr>
                                     <td>
-                                      <a href="https://spectrum.chat/{{thread.path}}"><span class="name">{{user.name}}</span></a>
+                                      <a href="https://community.vanila.io/{{thread.path}}"><span class="name">{{user.name}}</span></a>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <a href="https://spectrum.chat/{{thread.path}}">
+                                      <a href="https://community.vanila.io/{{thread.path}}">
                                         <p class="reply">{{message.content.body}}</p>
                                       </a>
                                     </td>
@@ -453,7 +453,7 @@
 
                       <tr>
                         <td>
-                          <a data-pm-no-track class="feed button" href="https://spectrum.chat/{{thread.path}}">Go to
+                          <a data-pm-no-track class="feed button" href="https://community.vanila.io/{{thread.path}}">Go to
                             conversation</a>
                         </td>
                       </tr>
@@ -463,7 +463,7 @@
                 <tr>
                   <td class="footer-cell">
                     <p class="emoji">✌️</p>
-                    <p>- The Spectrum team</p>
+                    <p>- The Vanila Community team</p>
                   </td>
                 </tr>
               </table>
@@ -474,42 +474,39 @@
           <tr>
             <td class="content-cell">
               <p class="sub">
-                You are receiving this email because you joined <a href="https://spectrum.chat">Spectrum</a>. If you no
+                You are receiving this email because you joined <a href="https://community.vanila.io">Vanila Community</a>. If you no
                 longer want to receive emails like this, you can:
               </p>
 
               <ul>
                 {{#muteThreadToken}}
                 <li>
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{.}}">Unsubscribe from this conversation</a>
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{.}}">Unsubscribe from this conversation</a>
                 </li>
                 {{/muteThreadToken}}
 
                 <li>
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{unsubscribeToken}}">Unsubscribe from all
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{unsubscribeToken}}">Unsubscribe from all
                     new direct message notification emails</a>
                 </li>
 
                 {{#username}}
                 <li>
-                  <a href="https://spectrum.chat/users/{{.}}/settings">Manage your email preferences on Spectrum</a>
+                  <a href="https://community.vanila.io/users/{{.}}/settings">Manage your email preferences on Vanila Community</a>
                 </li>
                 {{/username}}
               </ul>
 
               <ul>
                 <li>
-                  <a href="https://twitter.com/withspectrum">Follow @withspectrum on Twitter</a>
+                  <a href="https://twitter.com/vanila_io">Follow @vanila_io on Twitter</a>
                 </li>
 
                 <li>
-                  <a href="https://spectrum.chat/spectrum/hugs-n-bugs">Report bugs</a> · <a href="https://spectrum.chat/spectrum/feature-requests">Request
+                  <a href="https://community.vanila.io/spectrum/hugs-n-bugs">Report bugs</a> · <a href="https://community.vanila.io/spectrum/feature-requests">Request
                     a feature</a>
                 </li>
               </ul>
-
-              <p class="sub">Spectrum is made by GitHub, Inc.<br />88 Colin P Kelly Jr St, San Francisco, CA
-                94107<br /> United States</p>
             </td>
           </tr>
         </table>

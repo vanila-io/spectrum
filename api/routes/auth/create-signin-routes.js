@@ -7,13 +7,14 @@
  * facebookRouter.get('/', main);
  * facebookRouter.get('/callback', ...callbacks);
  */
+require('now-env');
 import passport from 'passport';
 import { URL } from 'url';
 import isSpectrumUrl from '../../utils/is-spectrum-url';
 
 const IS_PROD = process.env.NODE_ENV === 'production';
 const FALLBACK_URL = IS_PROD
-  ? 'https://spectrum.chat/home'
+  ? `https://${process.env.PROD_DOMAIN}/home`
   : 'http://localhost:3000/home';
 
 type Strategy = 'twitter' | 'facebook' | 'github' | 'google';
@@ -42,6 +43,7 @@ export const createSigninRoutes = (
     callbacks: [
       passport.authenticate(strategy, {
         failureRedirect: IS_PROD ? '/' : 'http://localhost:3000/',
+        failureFlash: true,
       }),
       (req: express$Request, res: express$Response) => {
         // $FlowIssue

@@ -4,6 +4,7 @@ import {
   ThreadListItemTitle,
   ThreadListItemSubtitle,
 } from '../style';
+require('now-env');
 
 type ThreadProps = {
   id: string,
@@ -46,7 +47,10 @@ class ThreadListItem extends React.Component<Props> {
 
     return (
       <StyledThreadListItem>
-        <a href={`https://spectrum.chat/thread/${id}`} target="_blank">
+        <a
+          href={`https://${process.env.REACT_APP_PROD_DOMAIN}/thread/${id}`}
+          target="_blank"
+        >
           <ThreadListItemTitle>{title}</ThreadListItemTitle>
         </a>
         {messageCount > 0 && (
@@ -56,16 +60,28 @@ class ThreadListItem extends React.Component<Props> {
         )}
         <ThreadListItemSubtitle>
           By{' '}
-          <a href={`https://spectrum.chat/users/${username}`} target="_blank">
+          <a
+            href={`https://${
+              process.env.REACT_APP_PROD_DOMAIN
+            }/users/${username}`}
+            target="_blank"
+          >
             {name}
           </a>{' '}
           ·{' '}
-          <a href={`https://spectrum.chat/${community.slug}`} target="_blank">
+          <a
+            href={`https://${process.env.REACT_APP_PROD_DOMAIN}/${
+              community.slug
+            }`}
+            target="_blank"
+          >
             {community.name}
           </a>{' '}
           ·{' '}
           <a
-            href={`https://spectrum.chat/${community.slug}/${channel.slug}`}
+            href={`https://${process.env.REACT_APP_PROD_DOMAIN}/${
+              community.slug
+            }/${channel.slug}`}
             target="_blank"
           >
             {channel.name}

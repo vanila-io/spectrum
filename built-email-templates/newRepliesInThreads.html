@@ -3,17 +3,16 @@
   START_CONFIG
   { 
     "test": {
-      "version": "b57962d2-3907-4410-b1f6-a9c28f8450f4",
-      "template": "d-7a4c14fd440146f1b1cfcafb633bb040"
+      "version": "d00da7be-d810-479e-9ec4-fb177615c9ad",
+      "template": "d-f15036fd5a9f4cf897ac31b324d6b583"
     },
     "production": {
-      "version": "5936374b-4f63-45d3-9f6d-4f56623b6902",
-      "template": "d-1379042b64ba4c6093fecaec7161480a"
+      "version": "d00da7be-d810-479e-9ec4-fb177615c9ad",
+      "template": "d-f15036fd5a9f4cf897ac31b324d6b583"
     }
   }
   END_CONFIG
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+--><html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,13 +89,13 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-community-header" style="padding:16px 16px 0">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" width="32" style="word-break:break-word">
-                          <a href="https://spectrum.chat/{{ community.slug }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
+                          <a href="https://community.vanila.io/{{ community.slug }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
                             <img src="{{ community.profilePhoto }}" width="24" height="24" style="border:none; border-radius:4px; display:inline-block; margin-right:8px">
                           </a>
                         </td>
 
                         <td valign="middle" style="word-break:break-word">
-                          <a href="https://spectrum.chat/{{ community.slug }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
+                          <a href="https://community.vanila.io/{{ community.slug }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
                             <p style="line-height:1.4; margin:0; padding:0; text-align:left; color:#828C99; font-size:14px; margin-top:0; display:inline-block; font-weight:400" align="left">{{community.name}} ({{channel.name}})</p>
                           </a>
                         </td>
@@ -106,7 +105,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-title" style="border-bottom:1px solid #DAE4F2; padding:8px 16px 16px">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" style="word-break:break-word">
-                          <a href="https://spectrum.chat/thread/{{ id }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
+                          <a href="https://community.vanila.io/thread/{{ id }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
                             <h3 style="color:#16171A; font-size:16px; font-weight:500; margin-top:0; text-align:left; line-height:1.4; margin-bottom:0" align="left">{{content.title}}</h3>
                           </a>
                         </td>
@@ -117,13 +116,13 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-byline" style="padding:16px 16px 8px">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" width="32" style="word-break:break-word">
-                          <a href="https://spectrum.chat/users/{{ sender.username }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
+                          <a href="https://community.vanila.io/users/{{ sender.username }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
                             <img src="{{ sender.profilePhoto }}" width="24" height="24" style="border:none; border-radius:40px; display:inline-block; margin-right:8px">
                           </a>
                         </td>
 
                         <td valign="middle" style="word-break:break-word">
-                          <a href="https://spectrum.chat/users/{{ sender.username }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
+                          <a href="https://community.vanila.io/users/{{ sender.username }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
                             <p style="line-height:1.4; margin:0; padding:0; text-align:left; color:#828C99; font-size:15px; margin-top:0; display:inline-block; font-weight:400" align="left">{{sender.name}}</p>
                           </a>
                         </td>
@@ -137,7 +136,7 @@
                           <table cellpadding="0" cellspacing="0" class="reply-body" style="color:#16171A; display:inline-block; margin-bottom:2px; max-width:100%">
                             <tr width="100%" cellpadding="0" cellspacing="0">
                               <td valign="middle" style="word-break:break-word">
-                                <a href="https://spectrum.chat/thread/{{ ../id }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
+                                <a href="https://community.vanila.io/thread/{{ ../id }}" class="block" style="color:#7B16FF; text-decoration:none; display:block">
                                   {{{content.body}}}
                                 </a>
                               </td>
@@ -152,14 +151,14 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-actions multi" style="padding:16px; padding-bottom:0">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" class="action-top" style="word-break:break-word">
-                          <a href="https://spectrum.chat/thread/{{ id }}" class="button" style="color:#FFF; text-decoration:none; -webkit-text-size-adjust:none; background-color:#7B16FF; border-radius:8px; box-shadow:0 4px 8px rgba(0, 0, 0, 0.15); display:block; font-size:16px; font-weight:600; padding:12px 0; text-align:center; white-space:nowrap; word-break:keep-all" bgcolor="#7B16FF" align="center">
+                          <a href="https://community.vanila.io/thread/{{ id }}" class="button" style="color:#FFF; text-decoration:none; -webkit-text-size-adjust:none; background-color:#7B16FF; border-radius:8px; box-shadow:0 4px 8px rgba(0, 0, 0, 0.15); display:block; font-size:16px; font-weight:600; padding:12px 0; text-align:center; white-space:nowrap; word-break:keep-all" bgcolor="#7B16FF" align="center">
                             View conversation
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td valign="middle" style="word-break:break-word">
-                          <a href="https://spectrum.chat/api/email/unsubscribe?token={{ muteThreadToken }}" class="button-textonly" style="color:#828C99; text-decoration:none; -webkit-text-size-adjust:none; background-color:#FFF; border:0; box-shadow:none; font-size:16px; font-weight:600; padding:12px 16px; text-align:center; white-space:nowrap; word-break:keep-all; display:block" bgcolor="#FFFFFF" align="center">
+                          <a href="https://community.vanila.io/api/email/unsubscribe?token={{ muteThreadToken }}" class="button-textonly" style="color:#828C99; text-decoration:none; -webkit-text-size-adjust:none; background-color:#FFF; border:0; box-shadow:none; font-size:16px; font-weight:600; padding:12px 16px; text-align:center; white-space:nowrap; word-break:keep-all; display:block" bgcolor="#FFFFFF" align="center">
                             Mute conversation
                           </a>
                         </td>
@@ -172,7 +171,7 @@
                 <tr>
                   <td class="signoff" style="word-break:break-word; padding-top:32px">
                     <p class="emoji" style="line-height:1.6; margin:0; padding:0; text-align:left; color:#171A21; font-size:32px; margin-top:12px; vertical-align:middle" align="left" valign="middle">✌️</p>
-                    <p style="line-height:1.4; margin:0; padding:0; text-align:left; color:#171A21; font-size:16px; margin-top:12px" align="left">- The Spectrum team</p>
+                    <p style="line-height:1.4; margin:0; padding:0; text-align:left; color:#171A21; font-size:16px; margin-top:12px" align="left">- The Vanila Community team</p>
                   </td>
                 </tr>
               </table>
@@ -184,43 +183,40 @@
           <tr>
             <td style="word-break:break-word">
               <p style="line-height:1.4; margin:0; padding:0; text-align:left; color:#828C99; font-size:14px; margin-top:12px" align="left">
-                You are receiving this email because you joined <a href="https://spectrum.chat" style="color:#1D2129; text-decoration:none">Spectrum</a>. If you no
+                You are receiving this email because you joined <a href="https://community.vanila.io" style="color:#1D2129; text-decoration:none">Vanila Community</a>. If you no
                 longer want to receive emails like this, you can:
               </p>
 
               <ul style="line-height:1.4; margin:24px 0; padding:0; text-align:left; list-style-type:none" align="left">
                 {{#singleThreadMuteToken}}
                 <li style="font-size:14px; margin:8px 0">
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{ . }}" style="color:#1D2129; text-decoration:none">Unsubscribe from this thread
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{ . }}" style="color:#1D2129; text-decoration:none">Unsubscribe from this thread
                     (including future @mentions)</a>
                 </li>
                 {{/singleThreadMuteToken}}
 
                 <li style="font-size:14px; margin:8px 0">
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{ unsubscribeToken }}" style="color:#1D2129; text-decoration:none">Unsubscribe from all
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{ unsubscribeToken }}" style="color:#1D2129; text-decoration:none">Unsubscribe from all
                     new reply notifications in conversations where I'm active</a>
                 </li>
 
                 {{#recipient.username}}
                 <li style="font-size:14px; margin:8px 0">
-                  <a href="https://spectrum.chat/users/{{ . }}/settings" style="color:#1D2129; text-decoration:none">Manage your email preferences on Spectrum</a>
+                  <a href="https://community.vanila.io/users/{{ . }}/settings" style="color:#1D2129; text-decoration:none">Manage your email preferences on Vanila Community</a>
                 </li>
                 {{/recipient.username}}
               </ul>
 
               <ul style="line-height:1.4; margin:24px 0; padding:0; text-align:left; list-style-type:none" align="left">
                 <li style="font-size:14px; margin:8px 0">
-                  <a href="https://twitter.com/withspectrum" style="color:#1D2129; text-decoration:none">Follow @withspectrum on Twitter</a>
+                  <a href="https://twitter.com/vanila_io" style="color:#1D2129; text-decoration:none">Follow @vanila_io on Twitter</a>
                 </li>
 
                 <li style="font-size:14px; margin:8px 0">
-                  <a href="https://spectrum.chat/spectrum/hugs-n-bugs" style="color:#1D2129; text-decoration:none">Report bugs</a> · <a href="https://spectrum.chat/spectrum/feature-requests" style="color:#1D2129; text-decoration:none">Request
+                  <a href="https://community.vanila.io/spectrum/hugs-n-bugs" style="color:#1D2129; text-decoration:none">Report bugs</a> · <a href="https://community.vanila.io/spectrum/feature-requests" style="color:#1D2129; text-decoration:none">Request
                     a feature</a>
                 </li>
               </ul>
-
-              <p style="line-height:1.4; margin:0; padding:0; text-align:left; color:#828C99; font-size:14px; margin-top:12px" align="left">Spectrum is made by GitHub, Inc.<br>88 Colin P Kelly Jr St, San Francisco, CA 94107<br>United
-                States</p>
             </td>
           </tr>
         </table>

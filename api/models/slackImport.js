@@ -1,13 +1,12 @@
-// @flow
 require('now-env');
 import axios from 'axios';
 const querystring = require('querystring');
 const { db } = require('shared/db');
 
-let SLACK_SECRET = process.env.SLACK_SECRET;
-if (!SLACK_SECRET) {
-  SLACK_SECRET = process.env.SLACK_SECRET_DEVELOPMENT || 'asdf123';
-}
+let SLACK_SECRET =
+  process.env.SLACK_SECRET || process.env.SLACK_SECRET_DEVELOPMENT || 'asdf123';
+let SLACK_CLIENT =
+  process.env.SLACK_CLIENT || process.env.SLACK_SECRET_DEVELOPMENT || 'asdf123';
 
 type SlackData = {
   access_token: string,
@@ -25,7 +24,7 @@ export const generateOAuthToken = (code: string, redirect_uri: string): Promise<
         code: code,
         scope:
           'users:read.email,users:read,chat:write,bot,chat:write:bot,channels:read,groups:read',
-        client_id: '201769987287.271382863153',
+        client_id: SLACK_CLIENT,
         client_secret: SLACK_SECRET,
         redirect_uri,
       })

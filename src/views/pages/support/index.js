@@ -124,7 +124,7 @@ class Support extends React.Component<{}> {
                 </PlanDescription>
               </div>
 
-              <a href={'mailto:hi@spectrum.chat'}>
+              <a href={'mailto:community@vanila.io'}>
                 <Button
                   gradientTheme={'special'}
                   icon={'email'}

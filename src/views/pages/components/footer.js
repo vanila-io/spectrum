@@ -48,7 +48,7 @@ export default () => {
           <Link to={`/spectrum`}>Community</Link>
           <Link to={`/spectrum/hugs-n-bugs`}>Bug reports</Link>
           <Link to={`/spectrum/feature-requests`}>Feature requests</Link>
-          <a href="mailto:hi@spectrum.chat">Email support</a>
+          <a href="mailto:community@vanila.io">Email support</a>
         </Support>
         <Safety>
           <span>Safety</span>

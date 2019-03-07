@@ -6,6 +6,7 @@ const fetch = require('isomorphic-fetch');
 const textversion = require('textversionjs');
 const { SENDGRID_API_KEY } = process.env;
 const RELATIVE_PATH_TO_TEMPLATES = '../built-email-templates';
+
 const processArgs = process.argv.slice(2);
 const UPDATE_PROD_TEMPLATES = processArgs.some(arg => arg === 'prod');
 

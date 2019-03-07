@@ -10,17 +10,17 @@ import hostValidation from 'host-validation';
 const trustedHosts = [
   process.env.NOW_URL &&
     new RegExp(`^${process.env.NOW_URL.replace('https://', '')}$`),
-  /^spectrum\.chat$/,
+  /^vanila\.io$/,
   // All subdomains
-  /^.*\.spectrum\.chat$/,
+  /^.*\.vanila\.io$/,
 ].filter(Boolean);
 
 // Referers, with http(s):// and paths
 const trustedReferers = [
   process.env.NOW_URL && new RegExp(`^${process.env.NOW_URL}($|\/.*)`),
-  /^https:\/\/spectrum\.chat($|\/.*)/,
+  /^https:\/\/vanila\.io($|\/.*)/,
   // All subdomains
-  /^https:\/\/.*\.spectrum\.chat($|\/.*)/,
+  /^https:\/\/.*\.vanila\.io($|\/.*)/,
 ].filter(Boolean);
 
 export default hostValidation({

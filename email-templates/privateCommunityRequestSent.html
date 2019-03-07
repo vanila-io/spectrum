@@ -4,12 +4,12 @@
   START_CONFIG
   { 
     "test": {
-      "version": "cb3ca606-2437-42a9-972f-07b51592295f",
-      "template": "d-743d07e016ee4798a87c06b5dd0a27a1"
+      "version": "74831f98-5144-4b2a-9f12-fc33f5e01d27",
+      "template": "d-025124979b234781abcfb188bed745b6"
     },
     "production": {
-      "version": "03622f30-7d81-4b46-96b2-e5df86a7f451",
-      "template": "d-0e21a47bdce348a093c86b8779d84687"
+      "version": "74831f98-5144-4b2a-9f12-fc33f5e01d27",
+      "template": "d-025124979b234781abcfb188bed745b6"
     }
   }
   END_CONFIG
@@ -377,8 +377,8 @@
                 <!-- Body content -->
                 <tr>
                   <td class="content-cell">
-                    <p><a href="https://spectrum.chat/users/{{data.user.username}}">{{data.user.name}}</a>
-                      has requested to join the <a href="https://spectrum.chat/{{data.community.slug}}">{{data.community.name}}
+                    <p><a href="https://community.vanila.io/users/{{data.user.username}}">{{data.user.name}}</a>
+                      has requested to join the <a href="https://community.vanila.io/{{data.community.slug}}">{{data.community.name}}
                         community</a>. You can approve or block this request in your community settings.</p>
                   </td>
                 </tr>
@@ -388,7 +388,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-actions multi">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle">
-                          <a href="https://spectrum.chat/{{data.community.slug}}/settings/members?filter=pending" class="button">
+                          <a href="https://community.vanila.io/{{data.community.slug}}/settings/members?filter=pending" class="button">
                             Go to community settings
                           </a>
                         </td>
@@ -405,29 +405,26 @@
           <tr>
             <td>
               <p>
-                You are receiving this email because you joined <a href="https://spectrum.chat">Spectrum</a>.
+                You are receiving this email because you joined <a href="https://community.vanila.io">Vanila Community</a>.
               </p>
 
               <ul>
                 <li>
-                  <a href="https://spectrum.chat/{{data.community.slug}}/settings">View settings for the
+                  <a href="https://community.vanila.io/{{data.community.slug}}/settings">View settings for the
                     {{data.community.name}} community</a>
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  <a href="https://twitter.com/withspectrum">Follow @withspectrum on Twitter</a>
+                  <a href="https://twitter.com/vanila_io">Follow @vanila_io on Twitter</a>
                 </li>
 
                 <li>
-                  <a href="https://spectrum.chat/spectrum/hugs-n-bugs">Report bugs</a> · <a href="https://spectrum.chat/spectrum/feature-requests">Request
+                  <a href="https://community.vanila.io/spectrum/hugs-n-bugs">Report bugs</a> · <a href="https://community.vanila.io/spectrum/feature-requests">Request
                     a feature</a>
                 </li>
               </ul>
-
-              <p>Spectrum is made by GitHub, Inc.<br />88 Colin P Kelly Jr St, San Francisco, CA 94107<br />United
-                States</p>
             </td>
           </tr>
         </table>

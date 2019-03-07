@@ -7,12 +7,12 @@
   START_CONFIG
   { 
     "test": {
-      "version": "b389bbce-183a-45cc-8ca8-7cd321bc690f",
-      "template": "d-5e52250c25be4654af82172970551919"
+      "version": "69d92c4e-6c15-4e5d-9d2b-db73286ee7fa",
+      "template": "d-78ae950412844f049c9a52cf753b7927"
     },
     "production": {
-      "version": "91a9475c-96ac-47bb-aa92-7f8350ed5d7d",
-      "template": "d-54e8d4905da64158a98ddb92c9330583"
+       "version": "69d92c4e-6c15-4e5d-9d2b-db73286ee7fa",
+      "template": "d-78ae950412844f049c9a52cf753b7927"
     }
   }
   END_CONFIG
@@ -424,7 +424,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-title">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle">
-                          <a href="https://spectrum.chat/thread/{{id}}" class="block">
+                          <a href="https://community.vanila.io/thread/{{id}}" class="block">
                             <h3>{{content.title}}</h3>
                           </a>
                         </td>
@@ -434,7 +434,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" class="thread-community-header">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" width="32">
-                          <a href="https://spectrum.chat/{{community.slug}}" class="block" style="height:32px">
+                          <a href="https://community.vanila.io/{{community.slug}}" class="block" style="height:32px">
                             <img src={{community.profilePhoto}} width="32" height="32" />
                           </a>
                         </td>
@@ -442,11 +442,11 @@
                         <td valign="middle">
                           <p>
                             Posted in <a
-                              href="https://spectrum.chat/{{community.slug}}">{{community.name}}</a>&nbsp;·&nbsp;<a
-                              href="https://spectrum.chat/{{community.slug}}/{{channel.slug}}">{{channel.name}}</a>
+                              href="https://community.vanila.io/{{community.slug}}">{{community.name}}</a>&nbsp;·&nbsp;<a
+                              href="https://community.vanila.io/{{community.slug}}/{{channel.slug}}">{{channel.name}}</a>
                           </p>
                           <p>
-                            <a href="https://spectrum.chat/{{community.slug}}" class="block a-p">
+                            <a href="https://community.vanila.io/{{community.slug}}" class="block a-p">
                               {{{messageCountString}}}
                             </a>
                           </p>
@@ -467,7 +467,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <a class="button" href="https://spectrum.chat">See more conversations</a>
+                    <a class="button" href="https://community.vanila.io">See more conversations</a>
                   </td>
                 </tr>
                 {{/data.hasOverflowThreads}}
@@ -493,16 +493,16 @@
                       class="thread-community-header suggested-community">
                       <tr width="100%" cellpadding="0" cellspacing="0">
                         <td valign="middle" width="32">
-                          <a href="https://spectrum.chat/{{slug}}" class="block">
+                          <a href="https://community.vanila.io/{{slug}}" class="block">
                             <img src={{profilePhoto}} width="44" height="44" />
                           </a>
                         </td>
 
                         <td valign="middle">
-                          <a href="https://spectrum.chat/{{slug}}" class="block">
+                          <a href="https://community.vanila.io/{{slug}}" class="block">
                             <h2 class="suggested-community-title">{{name}}</h2>
                           </a>
-                          <a href="https://spectrum.chat/{{slug}}" class="block">
+                          <a href="https://community.vanila.io/{{slug}}" class="block">
                             <p>
                               {{description}}
                             </p>
@@ -524,7 +524,7 @@
 
                 <tr>
                   <td>
-                    <a class="button" href="https://spectrum.chat/">Go to my feed</a>
+                    <a class="button" href="https://community.vanila.io/">Go to my feed</a>
                   </td>
                 </tr>
               </table>
@@ -536,37 +536,34 @@
           <tr>
             <td>
               <p>
-                You are receiving this email because you joined <a href="https://spectrum.chat">Spectrum</a>. If you no
+                You are receiving this email because you joined <a href="https://community.vanila.io">Vanila Community</a>. If you no
                 longer want to receive emails like this, you can:
               </p>
 
               <ul>
                 <li>
-                  <a href="https://spectrum.chat/api/email/unsubscribe?token={{unsubscribeToken}}">Unsubscribe from
+                  <a href="https://community.vanila.io/api/email/unsubscribe?token={{unsubscribeToken}}">Unsubscribe from
                     {{data.timeframe.subject}} digests</a>
                 </li>
 
                 {{#data.username}}
                 <li>
-                  <a href="https://spectrum.chat/users/{{.}}/settings">Manage your email preferences on Spectrum</a>
+                  <a href="https://community.vanila.io/users/{{.}}/settings">Manage your email preferences on Vanila Community</a>
                 </li>
                 {{/data.username}}
               </ul>
 
               <ul>
                 <li>
-                  <a href="https://twitter.com/withspectrum">Follow @withspectrum on Twitter</a>
+                  <a href="https://twitter.com/vanila_io">Follow @vanila_io on Twitter</a>
                 </li>
 
                 <li>
-                  <a href="https://spectrum.chat/spectrum/hugs-n-bugs">Report bugs</a> · <a
-                    href="https://spectrum.chat/spectrum/feature-requests">Request
+                  <a href="https://community.vanila.io/spectrum/hugs-n-bugs">Report bugs</a> · <a
+                    href="https://community.vanila.io/spectrum/feature-requests">Request
                     a feature</a>
                 </li>
               </ul>
-
-              <p>Spectrum is made by GitHub, Inc.<br />88 Colin P Kelly Jr St, San Francisco, CA 94107<br />United
-                States</p>
             </td>
           </tr>
         </table>

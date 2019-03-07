@@ -27,9 +27,9 @@ export default async (
     return sendEmail({
       templateId: ADMIN_USER_REPORTED_TEMPLATE,
       to: [
-        { email: 'brian@spectrum.chat ' },
-        { email: 'max@spectrum.chat ' },
-        { email: 'bryn@spectrum.chat ' },
+        { email: 'taher@vanila.io ' },
+        { email: 'stefan@vanila.io ' },
+        { email: 'jelena@vanila.io ' },
       ],
       dynamic_template_data: {
         subject,

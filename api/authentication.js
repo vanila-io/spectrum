@@ -14,37 +14,37 @@ const {
 
 const IS_PROD = !process.env.FORCE_DEV && process.env.NODE_ENV === 'production';
 
+const TWITTER_OAUTH_CLIENT_ID = IS_PROD
+  ? process.env.TWITTER_OAUTH_CLIENT_ID
+  : process.env.TWITTER_OAUTH_CLIENT_ID_DEVELOPMENT;
+
 const TWITTER_OAUTH_CLIENT_SECRET = IS_PROD
   ? process.env.TWITTER_OAUTH_CLIENT_SECRET
   : process.env.TWITTER_OAUTH_CLIENT_SECRET_DEVELOPMENT;
 
 const FACEBOOK_OAUTH_CLIENT_ID = IS_PROD
   ? process.env.FACEBOOK_OAUTH_CLIENT_ID
-  : process.env.FACEBOOK_OAUTH_CLIENT_SECRET_DEVELOPMENT;
+  : process.env.FACEBOOK_OAUTH_CLIENT_ID_DEVELOPMENT;
 
 const FACEBOOK_OAUTH_CLIENT_SECRET = IS_PROD
   ? process.env.FACEBOOK_OAUTH_CLIENT_SECRET
   : process.env.FACEBOOK_OAUTH_CLIENT_SECRET_DEVELOPMENT;
 
+const GOOGLE_OAUTH_CLIENT_ID = IS_PROD
+  ? process.env.GOOGLE_OAUTH_CLIENT_ID
+  : process.env.GOOGLE_OAUTH_CLIENT_ID_DEVELOPMENT;
+
 const GOOGLE_OAUTH_CLIENT_SECRET = IS_PROD
   ? process.env.GOOGLE_OAUTH_CLIENT_SECRET
   : process.env.GOOGLE_OAUTH_CLIENT_SECRET_DEVELOPMENT;
 
+const GITHUB_OAUTH_CLIENT_ID = IS_PROD
+  ? process.env.GITHUB_OAUTH_CLIENT_ID
+  : process.env.GITHUB_OAUTH_CLIENT_ID_DEVELOPMENT;
+
 const GITHUB_OAUTH_CLIENT_SECRET = IS_PROD
   ? process.env.GITHUB_OAUTH_CLIENT_SECRET
   : process.env.GITHUB_OAUTH_CLIENT_SECRET_DEVELOPMENT;
-
-const TWITTER_OAUTH_CLIENT_ID = IS_PROD
-  ? 'vxmsICGyIIoT5NEYi1I8baPrf'
-  : 'Qk7BWFe44JKswEw2sNaDAA4x7';
-
-const GOOGLE_OAUTH_CLIENT_ID = IS_PROD
-  ? '923611718470-chv7p9ep65m3fqqjr154r1p3a5j6oidc.apps.googleusercontent.com'
-  : '923611718470-hjribk5128dr3s26cbp5cbdecigrsjsp.apps.googleusercontent.com';
-
-const GITHUB_OAUTH_CLIENT_ID = IS_PROD
-  ? '208a2e8684d88883eded'
-  : 'ed3e924f4a599313c83b';
 
 const isSerializedJSON = (str: string) =>
   str[0] === '{' && str[str.length - 1] === '}';
@@ -89,7 +89,7 @@ const init = () => {
         consumerKey: TWITTER_OAUTH_CLIENT_ID,
         consumerSecret: TWITTER_OAUTH_CLIENT_SECRET,
         callbackURL: IS_PROD
-          ? 'https://spectrum.chat/auth/twitter/callback'
+          ? `https://${process.env.PROD_DOMAIN}/auth/twitter/callback`
           : 'http://localhost:3001/auth/twitter/callback',
         includeEmail: true,
       },
@@ -322,7 +322,9 @@ const init = () => {
                 req.user.id,
                 'githubProviderId',
                 profile.id,
-                { githubUsername: githubUsername }
+                {
+                  githubUsername: githubUsername,
+                }
               )
                 .then(user => {
                   done(null, user);
@@ -344,7 +346,9 @@ const init = () => {
               req.user.id,
               'githubProviderId',
               profile.id,
-              { githubUsername: githubUsername }
+              {
+                githubUsername: githubUsername,
+              }
             )
               .then(user => {
                 done(null, user);

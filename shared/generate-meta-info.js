@@ -12,7 +12,7 @@ var truncate = require('./truncate');
 var striptags = require('striptags');
 
 var DEFAULT_META = {
-  title: 'Spectrum',
+  title: 'Vanila Community',
   description: 'Where communities live.',
 };
 

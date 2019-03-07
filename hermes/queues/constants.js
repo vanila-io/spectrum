@@ -36,66 +36,66 @@ export const SEND_ADMIN_USER_REPORTED_EMAIL = 'send admin user reported email';
 export const SENDGRID_WEBHOOK_EVENT = 'process sendgrid webhook event';
 
 export const NEW_MESSAGE_TEMPLATE = IS_PROD
-  ? 'd-1379042b64ba4c6093fecaec7161480a'
-  : 'd-7a4c14fd440146f1b1cfcafb633bb040';
+  ? 'd-f15036fd5a9f4cf897ac31b324d6b583'
+  : 'd-f15036fd5a9f4cf897ac31b324d6b583';
 export const NEW_MENTION_THREAD_TEMPLATE = IS_PROD
-  ? 'd-343ec51df23943e88d0709aa8e30312b'
-  : 'd-ff421ea0112a4525b6615bcc666ede00';
+  ? 'd-ad36bf63f0e447ae8ae2681f5eb14418'
+  : 'd-ad36bf63f0e447ae8ae2681f5eb14418';
 export const NEW_MENTION_MESSAGE_TEMPLATE = IS_PROD
-  ? 'd-5ef46b71baee4c67bc46ab867e14d5bb'
-  : 'd-637189bc871744e9846694bff9f572ae';
+  ? 'd-798f75bcfc424ea797aeecf1bf788879'
+  : 'd-798f75bcfc424ea797aeecf1bf788879';
 export const NEW_DIRECT_MESSAGE_TEMPLATE = IS_PROD
-  ? 'd-d959535dd2304830ad14e1850297f46d'
-  : 'd-3e289af9efe748308be2dde1d3786c0d';
+  ? 'd-f2e518b1bf4347478bfe62bebcdcb85f'
+  : 'd-f2e518b1bf4347478bfe62bebcdcb85f';
 export const NEW_USER_WELCOME_TEMPLATE = IS_PROD
-  ? 'd-57c4111b847d4554b5d71f9fcf9170f8'
-  : 'd-2e46e5b65abc42b78941fbe027be4cd5';
+  ? 'd-584544303d44469081181d96e66146a9'
+  : 'd-584544303d44469081181d96e66146a9';
 export const COMMUNITY_INVITE_TEMPLATE = IS_PROD
-  ? 'd-566d2a20ca9246108a55a4b4037b9e53'
-  : 'd-69b2e17b7a0f46048dcf4083ad4f9c48';
+  ? 'd-5d52175477b74997b2ae229a51f92dce'
+  : 'd-5d52175477b74997b2ae229a51f92dce';
 export const NEW_COMMUNITY_WELCOME_TEMPLATE = IS_PROD
-  ? 'd-3a72aa9dec664ab4badd20e17586f477'
-  : 'd-dc7b4f048f4c460f9dd368fd3796421b';
+  ? 'd-14d97a348c4445fd8d58fac72ab9c48c'
+  : 'd-14d97a348c4445fd8d58fac72ab9c48c';
 
 export const NEW_THREAD_CREATED_TEMPLATE = IS_PROD
-  ? 'd-2809d28ff1cc4d89a503e04de3388411'
-  : 'd-084c11332981443388ebdae05d0a2ff4';
+  ? 'd-9d3821120b054f83a6772db2091ce718'
+  : 'd-9d3821120b054f83a6772db2091ce718';
 export const DIGEST_TEMPLATE = IS_PROD
-  ? 'd-54e8d4905da64158a98ddb92c9330583'
-  : 'd-5e52250c25be4654af82172970551919';
+  ? 'd-78ae950412844f049c9a52cf753b7927'
+  : 'd-78ae950412844f049c9a52cf753b7927';
 export const EMAIL_VALIDATION_TEMPLATE = IS_PROD
-  ? 'd-8cd6c640e2d944c7a4bb8877722ff00f'
-  : 'd-9fbb3cc969364050aac891c255d31209';
+  ? 'd-33485113347d4cda9da79df518a39efd'
+  : 'd-33485113347d4cda9da79df518a39efd';
 export const ADMINISTRATOR_EMAIL_VALIDATION_TEMPLATE = IS_PROD
-  ? 'd-c7ab6234c65b47d88413d9deaae0f7f1'
-  : 'd-a60e1df2d5294c73818759be13f09df4';
+  ? 'd-fcac6746dfab4f86b4bc2431d175df4b'
+  : 'd-fcac6746dfab4f86b4bc2431d175df4b';
 
 export const ADMIN_COMMUNITY_CREATED_TEMPLATE =
-  'd-8220ddfc3d3a436a9ea974348c9c2edd';
+  'd-a7087be1226d4ea88aa9a48db1e286fd';
 export const ADMIN_TOXIC_MESSAGE_TEMPLATE =
-  'd-f6e52c81dd8d49e29f23c5c6112d676b';
+  'd-5cb8a34555d0497c8093dbace5a1f0d1';
 export const ADMIN_SLACK_IMPORT_PROCESSED_TEMPLATE =
-  'd-b3f8d36ef3354ce987a352ce39893432';
+  'd-80e4bcfafff548dc9f4bbe4453b393de';
 export const ADMIN_ACTIVE_COMMUNITY_REPORT_TEMPLATE =
-  'd-82812e47e2ea458c8ded5be8d3de4f48';
+  'd-f8458ee08cb54001aa530f6a5d4874a7';
 export const ADMIN_USER_SPAMMING_THREADS_NOTIFICATION_TEMPLATE =
-  'd-65de04a810d84af7b76a57f7b4b6ebbe';
+  'd-51bb58e9db4840a9a4815c33af861123';
 export const ADMIN_USER_REPORTED_TEMPLATE =
-  'd-7340d2f62edd4af6a4c95f87a8d4e1c6';
+  'd-2610f4efe7cc435486f91eaaea2de9bc';
 
 export const PRIVATE_CHANNEL_REQUEST_SENT_TEMPLATE = IS_PROD
-  ? 'd-fe75baaf293541889bd3a573c2d9b1c5'
-  : 'd-29f3f62815004e0bb3b9f884c9fb3901';
+  ? 'd-1d863d2d96844fd49fae8429f09c3ee6'
+  : 'd-1d863d2d96844fd49fae8429f09c3ee6';
 export const PRIVATE_CHANNEL_REQUEST_APPROVED_TEMPLATE = IS_PROD
-  ? 'd-b419b76ca66046b3b24ead7b3a0cbb36'
-  : 'd-6bc3fffa3fa64e369035bc906b3975dd';
+  ? 'd-42f319a0d18c474c8e7cdb6ad01304f0'
+  : 'd-42f319a0d18c474c8e7cdb6ad01304f0';
 
 export const PRIVATE_COMMUNITY_REQUEST_SENT_TEMPLATE = IS_PROD
-  ? 'd-0e21a47bdce348a093c86b8779d84687'
-  : 'd-743d07e016ee4798a87c06b5dd0a27a1';
+  ? 'd-025124979b234781abcfb188bed745b6'
+  : 'd-025124979b234781abcfb188bed745b6';
 export const PRIVATE_COMMUNITY_REQUEST_APPROVED_TEMPLATE = IS_PROD
-  ? 'd-73135e016dbf47bbb37ed45eb7860b81'
-  : 'd-d91de18c257344d2bf9ff0c628d1a92e';
+  ? 'd-7f4e67e918d14e73962249825b1faf1a'
+  : 'd-7f4e67e918d14e73962249825b1faf1a';
 
 // types used to generate unsubscribe tokens
 export const TYPE_DAILY_DIGEST = 'dailyDigest';

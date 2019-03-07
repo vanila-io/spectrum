@@ -10,11 +10,12 @@ import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 import introspectionQueryResultData from './schema.json';
 import getSharedApolloClientOptions from './apollo-options';
+require('now-env');
 
 const IS_PROD = process.env.NODE_ENV === 'production';
 // In production the API is at the same URL, in development it's at a different port
 const API_URI = IS_PROD
-  ? 'https://spectrum.chat/api'
+  ? `https://${process.env.REACT_APP_PROD_DOMAIN}/api`
   : 'http://localhost:3001/api';
 
 const cache = new InMemoryCache({

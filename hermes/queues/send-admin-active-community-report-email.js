@@ -35,9 +35,9 @@ export default (
     return sendEmail({
       templateId: ADMIN_ACTIVE_COMMUNITY_REPORT_TEMPLATE,
       to: [
-        { email: 'brian@spectrum.chat ' },
-        { email: 'max@spectrum.chat ' },
-        { email: 'bryn@spectrum.chat ' },
+        { email: 'taher@vanila.io' },
+        { email: 'stefan@vanila.io' },
+        { email: 'jelena@vanila.io' },
       ],
       dynamic_template_data: {
         subject: `Active Community Report: ${month} ${day}, ${year}`,

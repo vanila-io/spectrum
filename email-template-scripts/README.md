@@ -21,3 +21,4 @@ Rather than spinning up the local web app, clicking around and trying to replica
 `SENDGRID_API_KEY=<key> yarn run process:emails:send`
 
 **Be sure to edit the email address in `package.json` first**
+

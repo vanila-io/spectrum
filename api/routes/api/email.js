@@ -19,7 +19,7 @@ import {
 import { getChannelsByCommunity, getChannelById } from '../../models/channel';
 
 const rootRedirect = IS_PROD
-  ? `https://spectrum.chat`
+  ? `https://${process.env.PROD_DOMAIN}`
   : `http://localhost:3000`;
 
 // $FlowIssue
@@ -181,17 +181,11 @@ emailRouter.get('/validate', (req, res) => {
     try {
       return updateCommunityAdministratorEmail(communityId, email, userId).then(
         community =>
-          IS_PROD
-            ? res.redirect(
-                `https://spectrum.chat/${
-                  community.slug
-                }/settings?toastType=success&toastMessage=Your email address has been validated!`
-              )
-            : res.redirect(
-                `http://localhost:3000/${
-                  community.slug
-                }/settings?toastType=success&toastMessage=Your email address has been validated!`
-              )
+          res.redirect(
+            `${rootRedirect}/${
+              community.slug
+            }/settings?toastType=success&toastMessage=Your email address has been validated!`
+          )
       );
     } catch (err) {
       console.error(err);

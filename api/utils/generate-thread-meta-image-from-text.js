@@ -31,7 +31,9 @@ const FOOTER_PARAMS = {
   txtfont: 'Helvetica,Bold',
 };
 
-const BACKGROUND_URL = `https://spectrum.imgix.net/default_images/twitter-share-card.png`;
+const BACKGROUND_URL = `https://${
+  process.env.IMGIX_SUB_DOMAIN
+}/default_images/twitter-share-card.png`;
 
 type GetMetaImageInput = {
   title: string,

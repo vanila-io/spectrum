@@ -3,13 +3,12 @@
   START_CONFIG
   { 
     "production": {
-      "version": "abb1a526-56c2-4162-b7f0-dd86eb76fb11",
-      "template": "d-8220ddfc3d3a436a9ea974348c9c2edd"
+      "version": "a76cccbc-97dc-4144-a9d8-3dd57f8dc7d1",
+      "template": "d-a7087be1226d4ea88aa9a48db1e286fd"
     }
   }
   END_CONFIG
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+--><html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,19 +39,17 @@
 
   <p><strong>New community:</strong></p>
   <ul>
-    <li><a href="https://spectrum.chat/{{ community.slug }}">{{community.name}}</a></li>
+    <li><a href="https://community.vanila.io/{{ community.slug }}">{{community.name}}</a></li>
     <li>About: {{community.description}}</li>
-    <li>Website: <a href="{{ community.website }}">{{community.website}}</a>
-</li>
+    <li>Website: <a href="{{ community.website }}">{{community.website}}</a></li>
   </ul>
 
   <p><strong>Creator:</strong></p>
   <ul>
-    <li><a href="https://spectrum.chat/users/{{ user.username }}">{{user.name}}</a></li>
+    <li><a href="https://community.vanila.io/users/{{ user.username }}">{{user.name}}</a></li>
     <li>About: {{user.description}}</li>
-    <li>Joined Spectrum: {{user.createdAt}}</li>
-    <li>Email: <a href="mailto:{{ user.email }}">{{user.email}}</a>
-</li>
+    <li>Joined Vanila Community: {{user.createdAt}}</li>
+    <li>Email: <a href="mailto:{{ user.email }}">{{user.email}}</a></li>
   </ul>
 </body>
 

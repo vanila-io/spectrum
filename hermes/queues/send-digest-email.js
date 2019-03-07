@@ -39,7 +39,9 @@ export default async (job: Job<SendDigestEmailJobData>): Promise<void> => {
       ? 'send daily digest email'
       : 'send weekly digest email';
   const subjectPrefix =
-    timeframe === 'daily' ? 'Spectrum Daily Digest' : 'Spectrum Weekly Digest';
+    timeframe === 'daily'
+      ? 'Vanila Community Daily Digest'
+      : 'Vanila Community Weekly Digest';
 
   const subjectStart =
     threads.length > 2
@@ -56,8 +58,8 @@ export default async (job: Job<SendDigestEmailJobData>): Promise<void> => {
 
   const preheader =
     timeframe === 'daily'
-      ? `Your Spectrum daily digest · ${month} ${day}, ${year}`
-      : `Your Spectrum weekly digest · ${month} ${day}, ${year}`;
+      ? `Your Vanila Community daily digest · ${month} ${day}, ${year}`
+      : `Your Vanila Community weekly digest · ${month} ${day}, ${year}`;
 
   try {
     return sendEmail({

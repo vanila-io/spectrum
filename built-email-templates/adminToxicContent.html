@@ -3,13 +3,12 @@
   START_CONFIG
   { 
     "production": {
-      "version": "c9d15baa-4799-45b9-8fbf-0b1a20d7fc75",
-      "template": "d-f6e52c81dd8d49e29f23c5c6112d676b"
+      "version": "fee0703f-fd62-4d9d-88db-8c26b6786ab9",
+      "template": "d-5cb8a34555d0497c8093dbace5a1f0d1"
     }
   }
   END_CONFIG
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+--><html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,20 +43,15 @@
   <p><strong>Info:</strong></p>
   <ul>
     {{#data.toxicityConfidence.perspectivePercent}}
-    <li>
-<strong>Perspective:</strong> {{.}}% confident</li>
+    <li><strong>Perspective:</strong> {{.}}% confident</li>
     {{/data.toxicityConfidence.perspectivePercent}}
   </ul>
 
   <ul>
-    <li>Sender/creator: <a href="https://spectrum.chat/users/{{ data.user.username }}">{{data.user.name}}</a>
-</li>
-    <li>Thread: <a href="https://spectrum.chat/thread/{{ data.thread.id }}">{{data.thread.content.title}}</a>
-</li>
-    <li>Community: <a href="https://spectrum.chat/{{ data.community.slug }}">{{data.community.name}}</a>
-</li>
-    <li>Channel: <a href="https://spectrum.chat/{{ data.community.slug }}/{{ data.channel.slug }}">{{data.channel.name}}</a>
-</li>
+    <li>Sender/creator: <a href="https://community.vanila.io/users/{{ data.user.username }}">{{data.user.name}}</a></li>
+    <li>Thread: <a href="https://community.vanila.io/thread/{{ data.thread.id }}">{{data.thread.content.title}}</a></li>
+    <li>Community: <a href="https://community.vanila.io/{{ data.community.slug }}">{{data.community.name}}</a></li>
+    <li>Channel: <a href="https://community.vanila.io/{{ data.community.slug }}/{{ data.channel.slug }}">{{data.channel.name}}</a></li>
   </ul>
 </body>
 

@@ -16,7 +16,7 @@ export default async (
 ): Promise<void> => {
   debug(`\nnew job: ${job.id}`);
   const { recipient, user, thread, message } = job.data;
-  const subject = `New direct message from ${user.name} on Spectrum`;
+  const subject = `New direct message from ${user.name} on Vanila Community`;
 
   const unsubscribeToken = await generateUnsubscribeToken(
     recipient.userId,

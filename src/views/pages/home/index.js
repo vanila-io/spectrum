@@ -1,7 +1,14 @@
 // @flow
 import * as React from 'react';
 import { storeItem, getItemFromStorage } from 'src/helpers/localStorage';
-import { Overview, Centralized, CommunitySearch, Chat, Yours } from '../view';
+import {
+  Overview,
+  DiscoverCommunites,
+  SearchThread,
+  ReputationSystem,
+  PublicProfile,
+  PWA,
+} from '../view';
 import PageFooter from '../components/footer';
 import { Wrapper } from '../style';
 import { track, events } from 'src/helpers/analytics';
@@ -33,10 +40,10 @@ class Splash extends React.Component<{}, State> {
     return (
       <Wrapper data-cy="home-page">
         <Overview />
-        <Centralized />
-        <CommunitySearch />
-        <Chat />
-        <Yours />
+        <DiscoverCommunites />
+        <SearchThread />
+        <ReputationSystem />
+        <PublicProfile />
         <PageFooter />
       </Wrapper>
     );

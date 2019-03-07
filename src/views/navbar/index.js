@@ -188,7 +188,7 @@ class Navbar extends React.Component<Props, State> {
             onClick={() => this.trackNavigationClick('logo')}
             data-cy="navbar-logo"
           >
-            <Icon glyph="logo" size={28} />
+            <img src="img/logos/logomark.png" />
           </Logo>
 
           <SkipLink
@@ -239,16 +239,12 @@ class Navbar extends React.Component<Props, State> {
               to={currentUser ? `/users/${currentUser.username}` : '/'}
               onClick={() => this.trackNavigationClick('profile')}
             >
-              {currentUser &&
-                typeof currentUser.totalReputation === 'number' && (
-                  <Reputation>
-                    <Icon glyph="rep" />{' '}
-                    {truncateNumber(
-                      parseInt(currentUser.totalReputation, 10),
-                      1
-                    )}
-                  </Reputation>
-                )}
+              {currentUser && typeof currentUser.totalReputation === 'number' && (
+                <Reputation>
+                  <Icon glyph="rep" />{' '}
+                  {truncateNumber(parseInt(currentUser.totalReputation, 10), 1)}
+                </Reputation>
+              )}
               <Navatar
                 style={{ gridArea: 'label' }}
                 user={currentUser}
@@ -290,7 +286,7 @@ class Navbar extends React.Component<Props, State> {
             ishidden={this.state.isSkipLinkFocused || undefined}
             data-cy="navbar-logo"
           >
-            <Icon glyph="logo" size={28} />
+            <img src="img/logos/logomark.png" />
           </Logo>
 
           <SkipLink

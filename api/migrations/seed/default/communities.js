@@ -1,4 +1,5 @@
 // @flow
+require('now-env');
 const constants = require('./constants');
 const {
   DATE,
@@ -16,11 +17,13 @@ module.exports = [
     isPrivate: false,
     name: 'Spectrum',
     description: 'The future of communities',
-    website: 'https://spectrum.chat',
-    profilePhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693',
-    coverPhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434',
+    website: `https://${process.env.PROD_DOMAIN}`,
+    profilePhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693`,
+    coverPhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434`,
     slug: 'spectrum',
     memberCount: 4,
   },
@@ -30,11 +33,13 @@ module.exports = [
     isPrivate: false,
     name: 'Payments',
     description: 'Where payments are tested',
-    website: 'https://spectrum.chat',
-    profilePhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693',
-    coverPhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434',
+    website: `https://${process.env.PROD_DOMAIN}`,
+    profilePhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693`,
+    coverPhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434`,
     slug: 'payments',
     memberCount: 5,
   },
@@ -45,11 +50,13 @@ module.exports = [
     isPrivate: false,
     name: 'Deleted',
     description: 'Things didnt work out',
-    website: 'https://spectrum.chat',
-    profilePhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693',
-    coverPhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434',
+    website: `https://${process.env.PROD_DOMAIN}`,
+    profilePhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693`,
+    coverPhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434`,
     slug: 'deleted',
     memberCount: 0,
   },
@@ -59,11 +66,13 @@ module.exports = [
     isPrivate: true,
     name: 'Private community',
     description: 'Private community',
-    website: 'https://spectrum.chat',
-    profilePhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693',
-    coverPhoto:
-      'https://spectrum.imgix.net/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434',
+    website: `https://${process.env.PROD_DOMAIN}`,
+    profilePhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Profile.png.0.6225566835336693`,
+    coverPhoto: `https://${
+      process.env.IMGIX_SUB_DOMAIN
+    }/communities/-Kh6RfPYjmSaIWbkck8i/Twitter Header.png.0.3303118636071434`,
     slug: 'private',
     memberCount: 1,
   },

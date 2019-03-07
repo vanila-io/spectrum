@@ -1,3 +1,4 @@
+require('now-env');
 import data from '../../../../shared/testing/data';
 
 const user = data.users[0];
@@ -28,13 +29,13 @@ describe('creating a public community', () => {
       .scrollIntoView()
       .should('be.visible')
       .click()
-      .type('spectrum.chat');
+      .type(`${process.env.PROD_DOMAIN}`);
 
     cy.get('[data-cy="community-website-input"]')
       .scrollIntoView()
       .should('be.visible')
       .click()
-      .type('spectrum.chat');
+      .type(`${process.env.PROD_DOMAIN}`);
 
     cy.get('[data-cy="community-public-selector-input"]')
       .scrollIntoView()
@@ -84,13 +85,13 @@ describe('creating a private community', () => {
       .scrollIntoView()
       .should('be.visible')
       .click()
-      .type('spectrum.chat');
+      .type(`${process.env.PROD_DOMAIN}`);
 
     cy.get('[data-cy="community-website-input"]')
       .scrollIntoView()
       .should('be.visible')
       .click()
-      .type('spectrum.chat');
+      .type(`${process.env.PROD_DOMAIN}`);
 
     cy.get('[data-cy="community-public-selector-input"]')
       .scrollIntoView()

@@ -8,6 +8,7 @@ import inspect from 'rethinkdb-inspector';
 import { statsd } from '../statsd';
 
 const IS_PROD = !process.env.FORCE_DEV && process.env.NODE_ENV === 'production';
+const LOCALDB = true; // TODO: Add option for localhosted databases
 
 const CONNECTIONS = 20;
 const DEFAULT_CONFIG = {
@@ -25,7 +26,7 @@ try {
   ca = fs.readFileSync(path.join(process.cwd(), 'cacert'));
 } catch (err) {}
 
-if (!ca && IS_PROD)
+if (!ca && IS_PROD && !LOCALDB)
   throw new Error(
     'Please provide the SSL certificate to connect to the production database in a file called `cacert` in the root directory.'
   );

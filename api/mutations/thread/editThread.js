@@ -1,3 +1,4 @@
+require('now-env');
 // @flow
 const debug = require('debug')('api:mutations:edit-thread');
 import type { GraphQLContext } from '../../';
@@ -102,8 +103,8 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
 
     const stripQueryParams = (str: string): string => {
       if (
-        str.indexOf('https://spectrum.imgix.net') < 0 &&
-        str.indexOf('https://spectrum-proxy.imgix.net') < 0
+        str.indexOf(`https://${process.env.IMGIX_SUB_DOMAIN}`) < 0 &&
+        str.indexOf(`https://${process.env.IMGIX_SUB_DOMAIN}`) < 0
       ) {
         return str;
       }

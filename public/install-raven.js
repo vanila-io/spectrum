@@ -1,3 +1,3 @@
-Raven.config('https://3bd8523edd5d43d7998f9b85562d6924@sentry.io/154812', {
-  whitelistUrls: [/spectrum.chat/, /www.spectrum.chat/],
+Raven.config('https://217e121015b040d59d99ecd2b73b6aee@sentry.io/1392260', {
+  whitelistUrls: [/community.vanila.io/, /www.community.vanila.io/],
 }).install();

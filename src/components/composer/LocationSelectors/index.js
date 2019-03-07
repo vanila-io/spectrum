@@ -42,12 +42,9 @@ const ComposerLocationSelectors = (props: Props) => {
     Whenever the browser location.search changes, check for query parameters 
     related to the composer and update the state of the composer.
   */
-  useEffect(
-    () => {
-      setStateFromQueryParams();
-    },
-    [location.search]
-  );
+  useEffect(() => {
+    setStateFromQueryParams();
+  }, [location.search]);
 
   return (
     <Dropdowns>

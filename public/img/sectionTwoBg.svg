@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.063" height="2376.079" viewBox="0 0 1920.063 2376.079">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#24225d"/>
+      <stop offset="1" stop-color="#151419"/>
+    </radialGradient>
+  </defs>
+  <g id="Section_2_bg" data-name="Section 2 bg" transform="translate(0 -5043.025)">
+    <path id="layer_1" data-name="layer 1" d="M12058,4962.1V2872.647s276.78,18.453,476.583-111.221,709.758-225.808,1046.78,37.634,395.782,219.05,395.782,219.05l.918,1943.44Z" transform="translate(-12058 2457)" opacity="0.65" fill="url(#radial-gradient)"/>
+    <path id="layer_1-2" data-name="layer 1" d="M12058,5008.1V2877.4s276.78,18.817,476.583-113.417,709.758-230.265,1046.78,38.377,395.782,223.374,395.782,223.374l.918,1981.807Z" transform="translate(-12058 2411)" opacity="0.44" fill="url(#radial-gradient)"/>
+    <path id="layer_1-3" data-name="layer 1" d="M12058,4886.1V2864.8s276.78,17.851,476.583-107.593,709.758-218.443,1046.78,36.407,395.782,211.9,395.782,211.9l.918,1880.051Z" transform="translate(-12058 2533)" opacity="0.78" fill="url(#radial-gradient)"/>
+    <path id="layer_1-4" data-name="layer 1" d="M12058,4776.1V2853.439s276.78,16.98,476.583-102.342,709.758-207.782,1046.78,34.63,395.782,201.563,395.782,201.563l.918,1788.3Z" transform="translate(-12058 2643)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>
