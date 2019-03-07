@@ -3,6 +3,8 @@ import theme from 'shared/theme';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Button } from '../../components/buttons';
+import { injectGlobal } from 'styled-components';
+
 import {
   H2,
   FlexCol,
@@ -22,6 +24,7 @@ export const Page = styled.main`
   grid-template-columns: 1fr;
   grid-template-areas: 'content';
   background-color: ${theme.bg.default};
+  overflow-x: hidden;
 `;
 
 export const Wrapper = styled(FlexCol)`
@@ -75,7 +78,7 @@ export const Tagline = styled(H2)`
 `;
 
 export const Copy = styled(P)`
-  max-width: 480px;
+  max-width: 100%;
   width: 100%;
   font-size: 18px;
   line-height: 1.5;
@@ -149,6 +152,7 @@ export const PrimaryCTA = styled(Button)`
 
   &:hover {
     background-color: ${theme.bg.default};
+    border-color: ${theme.bg.default};
     color: ${theme.brand.default};
     box-shadow: ${Shadow.high} ${props => hexa(props.theme.bg.reverse, 0.5)};
     transition: ${Transition.hover.on};
@@ -485,7 +489,7 @@ export const NavContainer = styled.div`
 
 export const Tabs = styled.div`
   display: grid;
-  padding: 0 16px;
+  padding: 70px 200px 0;
   grid-template-columns: auto 1fr repeat(3, auto);
   grid-column-gap: 32px;
   grid-template-rows: auto;
@@ -522,7 +526,7 @@ export const Tabs = styled.div`
 
 export const Tab = styled(Link)`
   padding: 4px 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: ${props => (props.selected ? '700' : '500')};
   color: ${props =>
     props.selected
@@ -542,8 +546,6 @@ export const Tab = styled(Link)`
         : props.dark
         ? props.theme.text.reverse
         : props.theme.text.alt};
-    text-shadow: ${props =>
-      props.dark ? `0 0 32px ${hexa(props.theme.text.reverse, 0.75)}` : 'none'};
   }
 `;
 
@@ -625,7 +627,6 @@ export const AuthLink = styled(DropdownLink)`
 
   &:hover {
     color: ${theme.text.reverse};
-    text-shadow: 0 0 32px ${props => hexa(props.theme.text.reverse, 0.5)};
   }
 `;
 
