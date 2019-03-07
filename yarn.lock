@@ -4172,7 +4172,6 @@ cycle@1.0.x:
 cypress-plugin-retries@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/cypress-plugin-retries/-/cypress-plugin-retries-1.2.0.tgz#a4e120c1bc417d1be525632e7d38e52a87bc0578"
-  integrity sha512-seQFI/0j5WCqX7IVN2k0tbd3FLdhbPuSCWdDtdzDmU9oJfUkRUlluV47TYD+qQ/l+fJYkQkpw8csLg8/LohfRg==
 
 cypress@3.1.5:
   version "3.1.5"
