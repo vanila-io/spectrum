@@ -222,7 +222,7 @@ export const Reputation = styled.div`
 
 export const Logo = styled(Tab)`
   grid-area: logo;
-  padding: ${isDesktopApp() ? '0 32px 0 4px' : '0 24px 0 4px'};
+  padding: ${isDesktopApp() ? '5px 32px 0 4px' : '0 24px 0 4px'};
   color: ${theme.text.reverse};
   opacity: 1;
 
