@@ -37,7 +37,7 @@ class Titlebar extends Component {
         <Text>
           {subtitle && <Subtitle>{subtitle}</Subtitle>}
           {title ? (
-            <Title large={subtitle ? false : true}>{title}</Title>
+            <Title large={subtitle ? false : true}>{title} rrrrr</Title>
           ) : (
             <Icon glyph="logo" />
           )}
@@ -51,4 +51,7 @@ const mapStateToProps = state => ({
   currentUser: state.users.currentUser,
   isOpen: state.composer.isOpen,
 });
-export default compose(withRouter, connect(mapStateToProps))(Titlebar);
+export default compose(
+  withRouter,
+  connect(mapStateToProps)
+)(Titlebar);
