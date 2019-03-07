@@ -50,8 +50,10 @@ class Nav extends React.Component<Props, State> {
     return (
       <NavContainer data-cy="navbar-splash">
         <Head
-          title={'community.vanila'}
-          description={'Hub for Designers, Makers, Developers, Growth Hackers'}
+          title={'Vanila Community - Hub for makers'}
+          description={
+            'Vanila Community is hub for Designers, Makers, Developers, Growth Hackers'
+          }
         >
           <link
             rel="shortcut icon"

@@ -44,7 +44,6 @@ class Splash extends React.Component<{}, State> {
         <SearchThread />
         <ReputationSystem />
         <PublicProfile />
-        <PWA />
         <PageFooter />
       </Wrapper>
     );
