@@ -314,9 +314,9 @@ class ActionBar extends React.Component<Props, State> {
                   <a
                     href={`https://twitter.com/share?url=https://${
                       process.env.REACT_APP_PROD_DOMAIN
-                    }/${getThreadLink(thread)}&text=${encodeURIComponent(
+                    }${getThreadLink(thread)}&text=${encodeURIComponent(
                       thread.content.title
-                    )} on @withspectrum`}
+                    )} on @vanila_io`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -332,7 +332,7 @@ class ActionBar extends React.Component<Props, State> {
 
                 <Clipboard
                   style={{ background: 'none' }}
-                  data-clipboard-text={`${CLIENT_URL}/${getThreadLink(thread)}`}
+                  data-clipboard-text={`${CLIENT_URL}${getThreadLink(thread)}`}
                   onSuccess={() =>
                     this.props.dispatch(
                       addToastWithTimeout('success', 'Copied to clipboard')
@@ -363,7 +363,7 @@ class ActionBar extends React.Component<Props, State> {
                   style={{ background: 'none' }}
                   data-clipboard-text={`https://${
                     process.env.REACT_APP_PROD_DOMAIN
-                  }/${getThreadLink(thread)}`}
+                  }${getThreadLink(thread)}`}
                   onSuccess={() =>
                     this.props.dispatch(
                       addToastWithTimeout('success', 'Copied to clipboard')

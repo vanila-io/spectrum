@@ -204,9 +204,9 @@ class MessagesWithData extends React.Component<Props, State> {
           <A
             href={`https://twitter.com/share?text=${encodeURIComponent(
               threadTitle
-            )} on @withspectrum&url=https://${
+            )} on @vanila_io&url=https://${
               process.env.REACT_APP_PROD_DOMAIN
-            }/${getThreadLink(this.props.data.thread)}`}
+            }${getThreadLink(this.props.data.thread)}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -217,7 +217,7 @@ class MessagesWithData extends React.Component<Props, State> {
           <A
             href={`https://www.facebook.com/sharer/sharer.php?u=https://${
               process.env.REACT_APP_PROD_DOMAIN
-            }/${getThreadLink(this.props.data.thread)}&t=${encodeURIComponent(
+            }${getThreadLink(this.props.data.thread)}&t=${encodeURIComponent(
               threadTitle
             )}`}
             target="_blank"
@@ -303,7 +303,7 @@ class MessagesWithData extends React.Component<Props, State> {
                   <link
                     rel="canonical"
                     href={
-                      `https://${process.env.REACT_APP_PROD_DOMAIN}/` +
+                      `https://${process.env.REACT_APP_PROD_DOMAIN}` +
                       getThreadLink(thread)
                     }
                   />
@@ -321,7 +321,7 @@ class MessagesWithData extends React.Component<Props, State> {
                 <link
                   rel="canonical"
                   href={
-                    `https://${process.env.REACT_APP_PROD_DOMAIN}/` +
+                    `https://${process.env.REACT_APP_PROD_DOMAIN}` +
                     getThreadLink(thread)
                   }
                 />

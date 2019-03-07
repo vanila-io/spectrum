@@ -301,6 +301,20 @@ class ComposerWithData extends React.Component<Props, State> {
       })
       .catch(err => {
         console.error({ err });
+        this.setState({
+          isLoading: false,
+        });
+        this.changeBody({
+          target: {
+            value: this.state.body.replace(uploading, ''),
+          },
+        });
+        this.props.dispatch(
+          addToastWithTimeout(
+            'error',
+            `Uploading image failed - ${err.message}`
+          )
+        );
       });
   };
 
@@ -396,9 +410,9 @@ class ComposerWithData extends React.Component<Props, State> {
           this.props.history.replace(`/?t=${id}`);
           this.props.dispatch(changeActiveThread(id));
         } else if (this.props.location.pathname === '/new/thread') {
-          this.props.history.replace(`/${getThreadLink(data.publishThread)}`);
+          this.props.history.replace(getThreadLink(data.publishThread));
         } else {
-          this.props.history.push(`/${getThreadLink(data.publishThread)}`);
+          this.props.history.push(getThreadLink(data.publishThread));
           this.props.dispatch(changeActiveThread(null));
         }
         return;

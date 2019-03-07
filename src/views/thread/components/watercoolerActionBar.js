@@ -87,7 +87,7 @@ class WatercoolerActionBar extends React.Component<Props, State> {
                     thread.content.title
                   )}&u=https://${
                     process.env.REACT_APP_PROD_DOMAIN
-                  }/${getThreadLink(thread)}`}
+                  }${getThreadLink(thread)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -104,9 +104,9 @@ class WatercoolerActionBar extends React.Component<Props, State> {
                 <a
                   href={`https://twitter.com/share?text=${encodeURIComponent(
                     thread.content.title
-                  )} on @withspectrum&url=https://${
+                  )} on @vanila_io&url=https://${
                     process.env.REACT_APP_PROD_DOMAIN
-                  }/${getThreadLink(thread)}`}
+                  }${getThreadLink(thread)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -118,7 +118,7 @@ class WatercoolerActionBar extends React.Component<Props, State> {
                 style={{ background: 'none' }}
                 data-clipboard-text={`https://${
                   process.env.REACT_APP_PROD_DOMAIN
-                }/${getThreadLink(thread)}`}
+                }${getThreadLink(thread)}`}
                 onSuccess={() =>
                   this.props.dispatch(
                     addToastWithTimeout('success', 'Copied to clipboard')

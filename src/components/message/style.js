@@ -251,6 +251,12 @@ export const Text = styled(Bubble)`
     text-decoration: underline;
     word-break: break-word;
   }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 `;
 
 export const Emoji = styled(Bubble)`
@@ -326,10 +332,13 @@ export const Line = styled.pre`
 `;
 
 export const Paragraph = styled.p`
-  line-height: 1.5;
-
   &:not(:empty) ~ &:not(:empty) {
     margin-top: 8px;
+  }
+
+  /* hack for https://github.com/withspectrum/spectrum/issues/4829 */
+  &:last-of-type:not(:empty) {
+    margin-top: 0px !important;
   }
 `;
 
