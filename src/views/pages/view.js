@@ -201,7 +201,6 @@ export const Overview = (props: Props) => {
                 onClick={() => track(events.HOME_PAGE_JOIN_SPECTRUM_CLICKED)}
               >
                 <ThisPrimaryCTA icon="welcome">Join community</ThisPrimaryCTA>
-                {/* <ThisOnlineMembers>1,725 online members</ThisOnlineMembers> */}
               </Link>
               <Link to="/explore">
                 <ThisSecondaryCTA
@@ -447,7 +446,8 @@ export const SearchThread = (props: Props) => {
             Conversations are threaded and easy searchable using
             <BoldText>
               {' '}
-              Algolia <br />search
+              Algolia <br />
+              search
             </BoldText>{' '}
             power.
           </ThisCopy>
