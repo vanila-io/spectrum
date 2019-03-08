@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   align-items: stretch;
   width: 100%;
   flex: 0 0 48px;
-  padding: 0 16px;
+  padding: 0 200px;
   line-height: 1;
   box-shadow: 0 4px 8px ${({ theme }) => hexa(theme.bg.reverse, 0.15)};
   z-index: ${zIndex.navBar};

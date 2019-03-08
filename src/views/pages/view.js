@@ -46,7 +46,7 @@ type Props = Object;
 export const Overview = (props: Props) => {
   const ThisContent = styled(Content)`
     max-width: 100vw;
-    padding-top: 92px;
+    padding-top: 0;
     padding-bottom: 80px;
     background: transparent;
     @media (max-width: 640px) {
@@ -55,10 +55,12 @@ export const Overview = (props: Props) => {
   `;
 
   const Text = styled(FlexCol)`
-    margin: 120px 32px 0 32px;
+    margin: 250px 32px 0 32px;
     text-align: center;
     z-index: 2;
     color: #fff;
+    font-family: 'Lato', sans-serif;
+
     @media (max-width: 768px) {
       margin-top: 0;
       margin-bottom: 16px;
@@ -70,7 +72,10 @@ export const Overview = (props: Props) => {
   const ThisCopy = styled(Copy)`
     line-height: 1.6;
     color: #fff;
-    max-width: 500px;
+    max-width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
     margin: 0 auto;
     @media (max-width: 768px) {
       text-align: center;
@@ -80,7 +85,9 @@ export const Overview = (props: Props) => {
   const ThisTagline = styled(Tagline)`
     margin-bottom: 16px;
     font-size: 50px;
-    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+
+    font-weight: 300;
     @media (max-width: 768px) {
       font-size: 24px;
     }
@@ -98,9 +105,10 @@ export const Overview = (props: Props) => {
 
   const ThisSecondaryCTA = styled(SecondaryCTA)`
     margin-left: 16px;
-    font-size: 16px;
-    border: 2px solid #fff;
-
+    font-size: 24px;
+    font-weight: normal;
+    border: 1px solid #fff;
+    font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
       margin-left: 0;
       margin-top: 16px;
@@ -109,7 +117,7 @@ export const Overview = (props: Props) => {
 
   const ThisText = styled(Text)`
     position: relative;
-
+    font-family: 'Lato', sans-serif;
     @media (max-width: 1400px) {
       right: 15vw;
     }
@@ -120,15 +128,18 @@ export const Overview = (props: Props) => {
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: normal;
     background: #3d57ff;
+    border: 1px solid #3d57ff;
     border-radius: 9px;
     color: #fff;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Img = styled.img`
     max-width: 1350px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 
     @media (max-width: 1400px) {
       left: calc(20vw + 480px);
@@ -146,23 +157,8 @@ export const Overview = (props: Props) => {
   /* custom */
 
   const BoldText = styled.span`
-    font-weight: bold;
-  `;
-
-  const ThisOnlineMembers = styled(Copy)`
-    text-align: right;
-    margin-top: 20px;
-    ::before {
-      content: '';
-      background: #26ffcb;
-      width: 17px;
-      height: 17px;
-      display: block;
-      border-radius: 50%;
-      float: left;
-      margin-top: 4px;
-      margin-right: 4px;
-    }
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
   `;
 
   const ThisWrapper = styled.div`
@@ -193,10 +189,10 @@ export const Overview = (props: Props) => {
               <BoldText>Growth Hackers</BoldText>
             </ThisTagline>
             <ThisCopy>
-              The maker culture is a contemporary culture or subculture
+              The maker culture is a contemporary culture or subculture <br />
               representing a <BoldText>technology-based</BoldText> extension of{' '}
-              <BoldText>DIY culture</BoldText> that intersects with hacker
-              culture.
+              <BoldText>DIY culture</BoldText> <br /> that intersects with
+              hacker culture.
             </ThisCopy>
 
             <Actions>
@@ -205,7 +201,6 @@ export const Overview = (props: Props) => {
                 onClick={() => track(events.HOME_PAGE_JOIN_SPECTRUM_CLICKED)}
               >
                 <ThisPrimaryCTA icon="welcome">Join community</ThisPrimaryCTA>
-                <ThisOnlineMembers>1,725 online members</ThisOnlineMembers>
               </Link>
               <Link to="/explore">
                 <ThisSecondaryCTA
@@ -244,7 +239,7 @@ export const DiscoverCommunites = (props: Props) => {
 
   const Text = styled(FlexCol)`
     margin: 40px 100px 200px;
-
+    font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
       margin-top: 20px;
       margin-bottom: 44px;
@@ -252,8 +247,10 @@ export const DiscoverCommunites = (props: Props) => {
   `;
 
   const ThisCopy = styled(Copy)`
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 28px;
     margin-top: 16px;
+    font-family: 'Lato', sans-serif;
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -264,6 +261,7 @@ export const DiscoverCommunites = (props: Props) => {
     color: #fff;
     padding: 20px;
     font-weight: normal;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Actions = styled.div`
@@ -275,7 +273,8 @@ export const DiscoverCommunites = (props: Props) => {
 
   const ThisTagline = styled(Tagline)`
     font-size: 50px;
-    font-weight: normal;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
       margin-bottom: 0;
     }
@@ -303,10 +302,12 @@ export const DiscoverCommunites = (props: Props) => {
 
   const BoldText = styled.span`
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Img = styled.img`
     padding-bottom: 100px;
+    max-width: 700px;
 
     @media (max-width: 1400px) {
       left: calc(20vw + 480px);
@@ -330,9 +331,10 @@ export const DiscoverCommunites = (props: Props) => {
             Discover <BoldText>Communities</BoldText>
           </ThisTagline>
           <ThisCopy>
-            Every community is built to cover specific skills or group of
-            people. Be part of communities that fits your skills or If you don't
-            find yours community, go and <BoldText>build one</BoldText>.
+            Every community is built to cover specific skills or group of <br />
+            people. Be part of communities that fits your skills or If you{' '}
+            <br /> don't find yours community, go and{' '}
+            <BoldText>build one</BoldText>.
           </ThisCopy>
           <Actions>
             <Link to="/explore">
@@ -367,7 +369,10 @@ export const SearchThread = (props: Props) => {
   `;
 
   const ThisCopy = styled(Copy)`
-    font-weight: 400;
+    font-size: 28px;
+    margin-top: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     margin-top: 16px;
     color: #fff;
   `;
@@ -380,6 +385,7 @@ export const SearchThread = (props: Props) => {
     color: #fff;
     padding: 20px;
     font-weight: normal;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Actions = styled.div`
@@ -391,8 +397,9 @@ export const SearchThread = (props: Props) => {
 
   const ThisTagline = styled(Tagline)`
     font-size: 50px;
-    font-weight: normal;
+    font-weight: 300;
     color: #fff;
+    font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
       margin-bottom: 0;
     }
@@ -400,25 +407,49 @@ export const SearchThread = (props: Props) => {
 
   const BoldText = styled.span`
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
   `;
   const Text = styled(FlexCol)`
     margin-left: 100px;
+    font-family: 'Lato', sans-serif;
+  `;
+
+  const Img = styled.img`
+    padding-bottom: 100px;
+    max-width: 700px;
+
+    @media (max-width: 1400px) {
+      left: calc(20vw + 480px);
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   `;
   return (
     <Section>
       <ThisContent>
-        <img src="/img/home3.png" alt="Gain reputation screenshot" />
+        <Img src="/img/home3.png" alt="Gain reputation screenshot" />
         <Text>
           <ThisTagline>
             All your <BoldText>communities</BoldText> in one place
           </ThisTagline>
           <ThisCopy>
-            Compact design give you ability to have all your communities and
-            threads in <BoldText>one place</BoldText>.
+            Compact design give you ability to have all your communities <br />
+            and threads in <BoldText>one place</BoldText>.
           </ThisCopy>
           <ThisCopy>
-            Conversations are threaded and easy searchable using{' '}
-            <BoldText>Algolia search</BoldText> power.
+            Conversations are threaded and easy searchable using
+            <BoldText>
+              {' '}
+              Algolia <br />
+              search
+            </BoldText>{' '}
+            power.
           </ThisCopy>
           <Actions>
             <Link to="/explore">
@@ -446,9 +477,11 @@ export const ReputationSystem = (props: Props) => {
   `;
 
   const ThisCopy = styled(Copy)`
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 16px;
     color: #000000;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -459,6 +492,7 @@ export const ReputationSystem = (props: Props) => {
     color: #fff;
     padding: 20px;
     font-weight: normal;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Actions = styled.div`
@@ -470,8 +504,9 @@ export const ReputationSystem = (props: Props) => {
 
   const ThisTagline = styled(Tagline)`
     font-size: 50px;
-    font-weight: normal;
+    font-weight: 300;
     color: #000000;
+    font-family: 'Lato', sans-serif;
 
     @media (max-width: 768px) {
       margin-bottom: 0;
@@ -480,10 +515,12 @@ export const ReputationSystem = (props: Props) => {
 
   const BoldText = styled.span`
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Text = styled(FlexCol)`
     margin-right: 100px;
+    font-family: 'Lato', sans-serif;
   `;
 
   const WidgetWrapper = styled.div`
@@ -511,15 +548,19 @@ export const ReputationSystem = (props: Props) => {
   const WidgetUserName = styled.p`
     color: #070707;
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
   `;
 
   const WidgetUserReputation = styled.p`
     font-size: 0.8em;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
   `;
 
   const WidgetUserReputationScore = styled.p`
     font-size: 0.8em;
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
   `;
   return (
     <Section>
@@ -607,12 +648,12 @@ export const ReputationSystem = (props: Props) => {
             <BoldText>Reputation</BoldText> System
           </ThisTagline>
           <ThisCopy>
-            You gain reputations each time you create, respond or give a like to
-            thread.
+            You gain reputations each time you create, respond or give a <br />{' '}
+            like to thread.
           </ThisCopy>
           <ThisCopy>
-            Reputation gives you sense of how active is some member in overall
-            Vanila Community or specific one.
+            Reputation gives you sense of how active is some member in <br />{' '}
+            overall Vanila Community or specific one.
           </ThisCopy>
         </Text>
       </ThisContent>
@@ -623,7 +664,7 @@ export const ReputationSystem = (props: Props) => {
 export const PublicProfile = (props: Props) => {
   const ThisContent = styled(Content)`
     overflow: hidden;
-    margin-bottom: 200px;
+    margin-bottom: 120px;
 
     @media (max-width: 768px) {
       margin-bottom: 40px;
@@ -631,8 +672,10 @@ export const PublicProfile = (props: Props) => {
   `;
 
   const ThisCopy = styled(Copy)`
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 16px;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -643,6 +686,7 @@ export const PublicProfile = (props: Props) => {
     color: #fff;
     padding: 20px;
     font-weight: normal;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Actions = styled.div`
@@ -654,9 +698,9 @@ export const PublicProfile = (props: Props) => {
 
   const ThisTagline = styled(Tagline)`
     font-size: 50px;
-    font-weight: normal;
+    font-weight: 300;
     margin-top: -130px;
-
+    font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
       margin-bottom: 0;
     }
@@ -664,10 +708,12 @@ export const PublicProfile = (props: Props) => {
 
   const BoldText = styled.span`
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
   `;
 
   const Text = styled(FlexCol)`
     margin: 0 100px;
+    font-family: 'Lato', sans-serif;
   `;
 
   const ThisWrapper = styled.div`
@@ -688,11 +734,27 @@ export const PublicProfile = (props: Props) => {
       margin-bottom: 40px;
     }
   `;
+  const Img = styled.img`
+    padding-bottom: 100px;
+    max-width: 700px;
+
+    @media (max-width: 1400px) {
+      left: calc(20vw + 480px);
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `;
   return (
     <Section goop={0} background={'reverse'}>
       <ThisWrapper>
         <ThisContent>
-          <img src="/img/home4.png" alt="" />
+          <Img src="/img/home4.png" alt="" />
           <Text>
             <ThisTagline>
               Public <BoldText>Profiles</BoldText> Showing <br />{' '}
@@ -700,9 +762,9 @@ export const PublicProfile = (props: Props) => {
             </ThisTagline>
             <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, community
-              software has hardly improved since the heyday of messageboards and
-              IRC.
+              But, as the web has changed and improved radically, <br />{' '}
+              community software has hardly improved since the heyday of <br />{' '}
+              messageboards and IRC.
             </ThisCopy>
             <Actions>
               <Link to="/explore">
@@ -723,9 +785,9 @@ export const PublicProfile = (props: Props) => {
             </ThisTagline>
             <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, community
-              software has hardly improved since the heyday of messageboards and
-              IRC.
+              But, as the web has changed and improved radically, <br />{' '}
+              community software has hardly improved since the heyday of <br />{' '}
+              messageboards and IRC.
             </ThisCopy>
           </Text>
           <img src="/img/home5.png" alt="" />
