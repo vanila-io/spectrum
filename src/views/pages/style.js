@@ -35,7 +35,6 @@ export const Wrapper = styled(FlexCol)`
   width: 100%;
   max-width: 100vw;
   background-color: ${theme.bg.default};
-  overflow: hidden;
   z-index: ${zIndex.base};
 `;
 
