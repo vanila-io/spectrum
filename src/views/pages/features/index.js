@@ -146,10 +146,10 @@ class Features extends React.Component<Props, State> {
                 <FeatureName>Real members. Real reputation.</FeatureName>
                 <FeatureCopy>
                   <p>
-                    With Spectrum's Rep system, you can see how active and
-                    constructive a member is in your community - and globally
-                    across communities - which makes it simple to figure out if
-                    an issue is a trend or an isolated incident.
+                    With Vanila Community's Rep system, you can see how active
+                    and constructive a member is in your community - and
+                    globally across communities - which makes it simple to
+                    figure out if an issue is a trend or an isolated incident.
                   </p>
                 </FeatureCopy>
               </Feature>
@@ -202,9 +202,9 @@ class Features extends React.Component<Props, State> {
                 </FeatureName>
                 <FeatureCopy>
                   <p>
-                    With Spectrum integrations, your community can go beyond
-                    engagement to provide a convenient first-touch experience to
-                    organically onboard and convert new users.
+                    With Vanila Community integrations, your community can go
+                    beyond engagement to provide a convenient first-touch
+                    experience to organically onboard and convert new users.
                   </p>
                 </FeatureCopy>
               </Feature>
@@ -246,8 +246,9 @@ class Features extends React.Component<Props, State> {
                     provide help to users efficiently - especially at scale.
                   </p>
                   <p>
-                    Spectrum enables you and your users to address issues
-                    globally and searchably without the extra duplicated effort.
+                    Vanila Community enables you and your users to address
+                    issues globally and searchably without the extra duplicated
+                    effort.
                   </p>
                 </FeatureCopy>
               </Feature>
@@ -256,8 +257,8 @@ class Features extends React.Component<Props, State> {
                 <FeatureName>Collect actionable feedback and ideas</FeatureName>
                 <FeatureCopy>
                   <p>
-                    Spectrum's great for collecting feature requests and user
-                    feedback, and the realtime nature makes it easy for the
+                    Vanila Community's great for collecting feature requests and
+                    user feedback, and the realtime nature makes it easy for the
                     requests to adapt as you update your product.
                   </p>
                   <p>

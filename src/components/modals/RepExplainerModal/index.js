@@ -54,7 +54,7 @@ class RepExplainerModal extends React.Component<Props> {
             <IconContainer>
               <Icon glyph={'rep'} size={64} />
             </IconContainer>
-            <Title>Spectrum Rep</Title>
+            <Title>Vanila Community Rep</Title>
             <Subtitle>
               Rep provides context about a person's reputation in a community.
               Rep is earned by starting and joining productive conversations.

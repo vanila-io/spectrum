@@ -22,7 +22,7 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
 
   if (result && result.email === email) {
     return new UserError(
-      'Another person on Spectrum is already using this email.'
+      'Another person on Vanila Community is already using this email.'
     );
   }
 

@@ -19,7 +19,7 @@ class Privacy extends React.Component<{}> {
   render() {
     return (
       <Wrapper data-cy="privacy-page">
-        <Head title={'Spectrum · Privacy'} />
+        <Head title={'Vanila Community · Privacy'} />
 
         <ContentContainer>
           <Heading>Privacy Policy</Heading>
@@ -27,8 +27,8 @@ class Privacy extends React.Component<{}> {
 
           <Section>
             <SectionDescription>
-              GitHub, Inc. (“GitHub”, “us”, “we”, or “our”) operates the
-              spectrum.chat website (the “Service”).
+              Vanila Web Services (“Vanila”, “us”, “we”, or “our”) operates the
+              community.vanila.io website (the “Service”).
             </SectionDescription>
 
             <SectionDescription>
@@ -43,7 +43,7 @@ class Privacy extends React.Component<{}> {
               accordance with this policy. Unless otherwise defined in this
               Privacy Policy, terms used in this Privacy Policy have the same
               meanings as in our Terms and Conditions, accessible from
-              spectrum.chat.
+              community.vanila.io.
             </SectionDescription>
           </Section>
 
@@ -51,7 +51,7 @@ class Privacy extends React.Component<{}> {
             <SectionTitle>Definitions</SectionTitle>
 
             <SectionDescription>
-              “Service” is the spectrum.chat website operated by GitHub.
+              “Service” is the community.vanila.io website operated by GitHub.
             </SectionDescription>
 
             <SectionDescription>
@@ -542,7 +542,7 @@ class Privacy extends React.Component<{}> {
             <SectionDescription>
               Our Service does not address anyone under the age of 13
               (“Children”). If you’re a child under the age of 13, you may not
-              have an account on Spectrum.
+              have an account on Vanila Community.
             </SectionDescription>
 
             <SectionDescription>
@@ -582,7 +582,7 @@ class Privacy extends React.Component<{}> {
             <SectionDescription>
               If you have any questions about this Privacy Policy, please
               contact us by email:{' '}
-              <a href="mailto:help@spectrum.chat">help@spectrum.chat</a>
+              <a href="mailto:community@vanila.io">community@vanila.io</a>
             </SectionDescription>
           </Section>
         </ContentContainer>

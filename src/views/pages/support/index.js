@@ -25,7 +25,7 @@ class Support extends React.Component<{}> {
     return (
       <Wrapper data-cy="support-page">
         <Head
-          title={'Spectrum · Support'}
+          title={'Vanila Community · Support'}
           description={'Questions, feedback, or just need to get in touch?'}
         />
 
@@ -89,7 +89,7 @@ class Support extends React.Component<{}> {
               </div>
 
               <a
-                href={'https://twitter.com/withspectrum'}
+                href={'https://twitter.com/vanila_io'}
                 target={'_blank'}
                 rel={'noopener noreferrer'}
               >

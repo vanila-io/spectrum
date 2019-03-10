@@ -194,8 +194,8 @@ class Routes extends React.Component<Props> {
           <ScrollManager>
             <Body>
               <Head
-                title="Ongoing Maintenance - Spectrum"
-                description="Spectrum is currently undergoing scheduled maintenance downtime. Please check https://twitter.com/withspectrum for ongoing updates."
+                title="Ongoing Maintenance - Vanila Community"
+                description="Vanila Community is currently undergoing scheduled maintenance downtime. Please check https://twitter.com/vanila_io for ongoing updates."
               />
               <Maintenance />
             </Body>

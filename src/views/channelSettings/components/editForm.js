@@ -227,15 +227,15 @@ class ChannelWithData extends React.Component<Props, State> {
               </Checkbox>} */}
             {isPrivate ? (
               <Description>
-                Only approved people on Spectrum can see the threads, messages,
-                and members in this channel. You can manually approve users who
-                request to join this channel.
+                Only approved people on Vanila Community can see the threads,
+                messages, and members in this channel. You can manually approve
+                users who request to join this channel.
               </Description>
             ) : (
               <Description>
-                Anyone on Spectrum can join this channel, post threads and
-                messages, and will be able to see other members. If you want to
-                create private channels,{' '}
+                Anyone on Vanila Community can join this channel, post threads
+                and messages, and will be able to see other members. If you want
+                to create private channels,{' '}
                 <a href="mailto:community@vanila.io">get in touch</a>.
               </Description>
             )}

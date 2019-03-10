@@ -37,7 +37,7 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
     });
 
     return new UserError(
-      "You're on an old version of Spectrum, please refresh your browser."
+      "You're on an old version of Vanila Community, please refresh your browser."
     );
   }
 

@@ -24,14 +24,14 @@ export default () => {
           </Link>
           <SocialLinks>
             <a
-              href="https://github.com/withspectrum"
+              href="https://github.com/vanila-io"
               target="_blank"
               rel="noopener noreferrer"
             >
               <IconButton glyph="github" hoverColor={'text.reverse'} />
             </a>
             <a
-              href="https://twitter.com/withspectrum"
+              href="https://twitter.com/vanila_io"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -53,7 +53,7 @@ export default () => {
         <Safety>
           <span>Safety</span>
           <a
-            href="https://github.com/withspectrum/code-of-conduct"
+            href="https://github.com/vanila-io/code-of-conduct"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() =>
