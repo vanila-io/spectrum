@@ -83,8 +83,8 @@ class Support extends React.Component<{}> {
               <div>
                 <PlanPrice>What we’ve been working on</PlanPrice>
                 <PlanDescription>
-                  We post news, release notes, and threads from all over
-                  Spectrum on Twitter, or directly in our community.
+                  We post news, release notes, and threads from all over Vanila
+                  Community on Twitter, or directly in our community.
                 </PlanDescription>
               </div>
 
@@ -102,7 +102,7 @@ class Support extends React.Component<{}> {
                 </Button>
               </a>
 
-              <Link to={'/spectrum'}>
+              <Link to={'/vanila'}>
                 <Button
                   gradientTheme={'brand'}
                   icon={'logo'}
@@ -119,8 +119,8 @@ class Support extends React.Component<{}> {
               <div>
                 <PlanPrice>Anything else?</PlanPrice>
                 <PlanDescription>
-                  Concerned about something on Spectrum? Shoot us an email and
-                  we’ll take care of it right away.
+                  Concerned about something on Vanila Community? Shoot us an
+                  email and we’ll take care of it right away.
                 </PlanDescription>
               </div>
 

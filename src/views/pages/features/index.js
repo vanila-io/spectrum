@@ -43,7 +43,7 @@ class Features extends React.Component<Props, State> {
   render() {
     return (
       <Wrapper data-cy="features-page">
-        <Head title={'Spectrum · Features'} />
+        <Head title={'Vanila Community · Features'} />
 
         <Section background={'blank'} goop={1} color={'brand.alt'}>
           <Intro>
@@ -96,9 +96,9 @@ class Features extends React.Component<Props, State> {
                 <FeatureName>Location, location, location</FeatureName>
                 <FeatureCopy>
                   <p>
-                    Conversations and communities on Spectrum are public,
-                    permalinked, and search engine optimized by default which
-                    makes it easy for new members to find and join your
+                    Conversations and communities on Vanila Community are
+                    public, permalinked, and search engine optimized by default
+                    which makes it easy for new members to find and join your
                     community.
                   </p>
                 </FeatureCopy>
@@ -109,8 +109,8 @@ class Features extends React.Component<Props, State> {
                 <FeatureCopy>
                   <p>
                     Skip managing multiple credentials and playing whack-a-mole
-                    with DMs and notifications, Spectrum lets you join as many
-                    communities as you want with only one account.
+                    with DMs and notifications, Vanila Community lets you join
+                    as many communities as you want with only one account.
                   </p>
                 </FeatureCopy>
               </Feature>
