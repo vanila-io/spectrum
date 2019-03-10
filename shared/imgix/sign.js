@@ -44,7 +44,7 @@ const signPrimary = (url: string, opts: Opts = defaultOpts): string => {
 
 const signProxy = (url: string, opts?: Opts = defaultOpts): string => {
   const client = new ImgixClient({
-    domains: [`${process.env.IMGIX_SUB_DOMAIN}`],
+    domains: [`${process.env.IMGIX_PROXY_SUB_DOMAIN}`],
     secureURLToken: process.env.IMGIX_PROXY_SECURITY_KEY,
   });
   return client.buildURL(url, opts);

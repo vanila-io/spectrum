@@ -104,7 +104,7 @@ export default requireAuth(async (_: any, args: Input, ctx: GraphQLContext) => {
     const stripQueryParams = (str: string): string => {
       if (
         str.indexOf(`https://${process.env.IMGIX_SUB_DOMAIN}`) < 0 &&
-        str.indexOf(`https://${process.env.IMGIX_SUB_DOMAIN}`) < 0
+        str.indexOf(`https://${process.env.IMGIX_PROXY_SUB_DOMAIN}`) < 0
       ) {
         return str;
       }
