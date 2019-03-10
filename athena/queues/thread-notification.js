@@ -124,7 +124,7 @@ export default async (job: Job<ThreadNotificationJobData>) => {
               incomingThread.id
             }`,
             text: truncateString(plainTextBody, 140),
-            footer: 'Spectrum',
+            footer: 'Vanila Community',
             footer_icon: `https://${
               process.env.PROD_DOMAIN
             }/img/apple-icon-57x57-precomposed.png`,

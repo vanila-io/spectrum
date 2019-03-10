@@ -85,7 +85,7 @@ class ReportUserModal extends React.Component<Props, State> {
         return dispatch(
           addToastWithTimeout(
             'success',
-            'Your report has been sent to the Spectrum team. Thank you!'
+            'Your report has been sent to the Vanila Community team. Thank you!'
           )
         );
       })
@@ -130,7 +130,7 @@ class ReportUserModal extends React.Component<Props, State> {
             {reasonError && (
               <Error>
                 Please be sure to add a reason for reporting this user so the
-                Spectrum team can take appropriate action.
+                Vanila Community team can take appropriate action.
               </Error>
             )}
 

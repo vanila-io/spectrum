@@ -17,7 +17,7 @@ class Terms extends React.Component<{}> {
   render() {
     return (
       <Wrapper data-cy="terms-page">
-        <Head title={'Spectrum · Terms'} />
+        <Head title={'Vanila Community · Terms'} />
 
         <ContentContainer>
           <Heading>Terms of Service</Heading>
@@ -27,7 +27,7 @@ class Terms extends React.Component<{}> {
           <Section>
             <SectionDescription>
               These terms of service ("Terms") apply to your access and use of
-              Spectrum.chat (the "Service"). Please read them carefully.
+              community.vanila.io (the "Service"). Please read them carefully.
             </SectionDescription>
           </Section>
 
@@ -40,7 +40,7 @@ class Terms extends React.Component<{}> {
               read all of the terms. If you don’t agree to all of the terms
               below, please do not use the Service. Also, if a term does not
               make sense to you, please let us know by e-mailing
-              support@spectrum.chat.
+              community@vanila.io.
             </SectionDescription>
           </Section>
 
@@ -59,8 +59,8 @@ class Terms extends React.Component<{}> {
               date at the top of these Terms) or upon your acceptance if we
               provide a mechanism for your immediate acceptance of the revised
               Terms (such as a click-through confirmation or acceptance button).
-              It is your responsibility to check Spectrum for changes to these
-              Terms.
+              It is your responsibility to check Vanila Community for changes to
+              these Terms.
             </SectionDescription>
 
             <SectionDescription>
@@ -318,8 +318,7 @@ class Terms extends React.Component<{}> {
               law, we have adopted a policy of terminating, in appropriate
               circumstances and, at our sole discretion, access to the service
               for users who are deemed to be repeat infringers. See
-              https://github.com/withspectrum/code-of-conduct for more
-              information.
+              https://github.com/vanila-io/code-of-conduct for more information.
             </SectionDescription>
           </Section>
 
@@ -388,11 +387,11 @@ class Terms extends React.Component<{}> {
 
             <SectionDescription>
               Please let us know what you think of the Service, these Terms and,
-              in general, Spectrum. When you provide us with any feedback,
-              comments or suggestions about the Service, these Terms and, in
-              general, Spectrum, you irrevocably assign to us all of your right,
-              title and interest in and to your feedback, comments and
-              suggestions.
+              in general, Vanila Community. When you provide us with any
+              feedback, comments or suggestions about the Service, these Terms
+              and, in general, Vanila Community, you irrevocably assign to us
+              all of your right, title and interest in and to your feedback,
+              comments and suggestions.
             </SectionDescription>
           </Section>
 
@@ -402,7 +401,7 @@ class Terms extends React.Component<{}> {
             <SectionDescription>
               Questions or comments about the Service may be directed to us at
               the email address{' '}
-              <a href="mailto:support@spectrum.chat">support@spectrum.chat</a>.
+              <a href="mailto:community@vanila.io">community@vanila.io</a>.
             </SectionDescription>
           </Section>
         </ContentContainer>

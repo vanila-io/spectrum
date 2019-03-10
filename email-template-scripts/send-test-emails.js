@@ -110,7 +110,7 @@ const init = () => {
     },
   ];
 
-  // NOTE: SENDS 1 TEST EMAIL
+  // NOTE VANILA: SENDS 1 TEST EMAIL
   return templates.slice(0, 1).map(template => {
     const json = require(`./test-email-data/${template.filename}`);
     console.error(`✅ Sending test email for ${template.filename}`);

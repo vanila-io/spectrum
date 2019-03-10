@@ -100,10 +100,10 @@ class DeleteAccountForm extends React.Component<Props, State> {
 
           {ownsCommunities && (
             <Notice data-cy="owns-communities-notice">
-              You currently own communities on Spectrum. When your account is
-              deleted these communities will not be deleted. Spectrum reserves
-              the right to manage your communities after your account is
-              deleted.
+              You currently own communities on Vanila Community. When your
+              account is deleted these communities will not be deleted. Vanila
+              Community reserves the right to manage your communities after your
+              account is deleted.
             </Notice>
           )}
 

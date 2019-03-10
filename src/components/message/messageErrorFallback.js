@@ -15,8 +15,8 @@ class MessageErrorFallback extends React.Component<{}> {
 
         <InnerMessageContainer>
           <Text error>
-            Something went wrong loading this message. The Spectrum team has
-            been alerted and will investigate soon.
+            Something went wrong loading this message. The Vanila Community team
+            has been alerted and will investigate soon.
           </Text>
         </InnerMessageContainer>
       </OuterMessageContainer>

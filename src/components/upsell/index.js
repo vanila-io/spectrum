@@ -79,7 +79,7 @@ export const UpsellMiniCreateCommunity = () => {
     <MiniNullCard
       bg="onboarding"
       heading="Create a community"
-      copy="Building communities on Spectrum is easy and free forever"
+      copy="Building communities on Vanila Community is easy and free forever"
     >
       <Link to="/new/community">
         <Button icon="plus">Get Started</Button>
@@ -94,7 +94,8 @@ export const UpsellMiniCreateCommunity = () => {
 // button will close the new user onboarding
 export const UpsellCreateCommunity = () => {
   const title = 'Create a community';
-  const subtitle = 'Building communities on Spectrum is easy and free forever';
+  const subtitle =
+    'Building communities on Vanila Community is easy and free forever';
 
   return (
     <NullCard bg={'onboarding'}>
@@ -155,13 +156,13 @@ export class UpsellSignIn extends React.Component<SigninProps, SigninState> {
     } else {
       const subtitle = view
         ? view.type === 'community'
-          ? `Spectrum is a place where communities can share, discuss, and grow together. Sign up to join the ${
+          ? `Vanila Community is a place where communities can share, discuss, and grow together. Sign up to join the ${
               view.data.name
             } community and get in on the conversation.`
-          : `Spectrum is a place where communities can share, discuss, and grow together. Sign up to join the ${
+          : `Vanila Community is a place where communities can share, discuss, and grow together. Sign up to join the ${
               view.data.community.name
             } community and get in on the conversation.`
-        : 'Spectrum is a place where communities can share, discuss, and grow together. Sign up below to get in on the conversation.';
+        : 'Vanila Community is a place where communities can share, discuss, and grow together. Sign up below to get in on the conversation.';
 
       return (
         <NullCard bg={'signup'} noPadding noShadow={noShadow}>
@@ -258,9 +259,9 @@ export class UpsellNewUser extends React.Component<NewUserProps> {
         </LargeEmoji>
         <Title>Howdy, {user.name}!</Title>
         <Subtitle>
-          Spectrum is a place where communities live. It’s easy to follow the
-          things that you care about most, or even create your own community to
-          share with the world.
+          Vanila Community is a place where communities live. It’s easy to
+          follow the things that you care about most, or even create your own
+          community to share with the world.
         </Subtitle>
       </NullCard>
     );

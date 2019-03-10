@@ -39,13 +39,11 @@ const MaintenanceDowntime = () => {
     <ViewSegment background="constellations">
       <Wrapper>
         <Emoji>🛠</Emoji>
-        <Tagline>Spectrum is currently undergoing maintenance</Tagline>
+        <Tagline>Vanila Community is currently undergoing maintenance</Tagline>
         <Text>
           We'll be back soon, check{' '}
-          <a href="https://twitter.com/withspectrum">
-            @withspectrum on Twitter
-          </a>{' '}
-          for updates!
+          <a href="https://twitter.com/vanila_io">@vanila_io on Twitter</a> for
+          updates!
         </Text>
       </Wrapper>
     </ViewSegment>

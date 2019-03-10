@@ -523,7 +523,7 @@ class CreateCommunityForm extends React.Component<Props, State> {
             onBlur={this.checkSuggestedCommunities}
             dataCy="community-slug-input"
           >
-            spectrum.chat/
+            community.vanila.io/
           </UnderlineInput>
 
           {slugTaken && (
@@ -644,7 +644,7 @@ class CreateCommunityForm extends React.Component<Props, State> {
             <span>
               I have read the{' '}
               <a
-                href="https://github.com/withspectrum/code-of-conduct"
+                href="https://github.com/vanila-io/code-of-conduct"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() =>
@@ -653,7 +653,7 @@ class CreateCommunityForm extends React.Component<Props, State> {
                   })
                 }
               >
-                Spectrum Code of Conduct
+                Vanila Code of Conduct
               </a>{' '}
               and agree to enforce it in my community.
             </span>
