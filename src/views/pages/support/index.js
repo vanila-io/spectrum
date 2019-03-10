@@ -48,7 +48,7 @@ class Support extends React.Component<{}> {
                 </PlanDescription>
               </div>
 
-              <Link to={'/spectrum/hugs-n-bugs'}>
+              <Link to={'/vanila/hugs-n-bugs'}>
                 <Button
                   gradientTheme={'warn'}
                   icon={'bug'}
@@ -68,7 +68,7 @@ class Support extends React.Component<{}> {
                 </PlanDescription>
               </div>
 
-              <Link to={'/spectrum/feature-requests'}>
+              <Link to={'/vanila/feature-requests'}>
                 <Button
                   gradientTheme={'space'}
                   icon={'idea'}

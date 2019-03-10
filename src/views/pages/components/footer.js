@@ -46,8 +46,8 @@ export default () => {
         <Support>
           <span>Support</span>
           <Link to={`/spectrum`}>Community</Link>
-          <Link to={`/spectrum/hugs-n-bugs`}>Bug reports</Link>
-          <Link to={`/spectrum/feature-requests`}>Feature requests</Link>
+          <Link to={`/vanila/hugs-n-bugs`}>Bug reports</Link>
+          <Link to={`/vanila/feature-requests`}>Feature requests</Link>
           <a href="mailto:community@vanila.io">Email support</a>
         </Support>
         <Safety>

@@ -51,7 +51,7 @@ class Privacy extends React.Component<{}> {
             <SectionTitle>Definitions</SectionTitle>
 
             <SectionDescription>
-              “Service” is the community.vanila.io website operated by GitHub.
+              “Service” is the community.vanila.io website operated by Vanila.
             </SectionDescription>
 
             <SectionDescription>
@@ -229,7 +229,7 @@ class Privacy extends React.Component<{}> {
               States in accordance with this Privacy Policy (our subprocessors
               may store and process data outside the United States). For
               cross-border data transfers from the European Union (EU) and the
-              European Economic Area (EEA), GitHub adheres to the Privacy Shield
+              European Economic Area (EEA), Vanila adheres to the Privacy Shield
               Framework. You may view our entry in the Privacy Shield List.
             </SectionDescription>
 
@@ -252,7 +252,7 @@ class Privacy extends React.Component<{}> {
               practices. In addition, we participate in and comply with the
               Privacy Shield framework, and we are committed to subject any
               Personal Data we receive from the EU and EEA to the Privacy Shield
-              Principles. Please read more about GitHub’s international privacy
+              Principles. Please read more about Vanila’s international privacy
               commitments.
             </SectionDescription>
 
@@ -290,7 +290,7 @@ class Privacy extends React.Component<{}> {
 
             <PrivacyTermsList>
               <li>To comply with a legal obligation</li>
-              <li>To protect and defend the rights or property of GitHub</li>
+              <li>To protect and defend the rights or property of Vanila</li>
               <li>
                 To prevent or investigate possible wrongdoing in connection with
                 the Service
@@ -382,10 +382,10 @@ class Privacy extends React.Component<{}> {
             </SectionDescription>
 
             <SectionDescription>
-              If you have concerns about the way GitHub is handling your
+              If you have concerns about the way Vanila is handling your
               Personal Data, please let us know immediately. We want to help.
               You may contact us by filling out the Privacy contact form. You
-              may also email us directly at privacy@github.com with the subject
+              may also email us directly at privacy@vanila.com with the subject
               line “Privacy Concerns.” We will respond promptly — within 45 days
               at the latest. You may also contact our Data Protection Officer
               directly.
@@ -395,7 +395,7 @@ class Privacy extends React.Component<{}> {
           <Section>
             <SectionTitle>Dispute resolution process</SectionTitle>
             <SectionDescription>
-              In the unlikely event that a dispute arises between you and GitHub
+              In the unlikely event that a dispute arises between you and Vanila
               regarding our handling of your Personal Data, we will do our best
               to resolve it. If we cannot, we have selected JAMS, an independent
               dispute resolution provider, to handle unresolved Privacy Shield

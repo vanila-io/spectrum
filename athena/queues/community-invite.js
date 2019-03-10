@@ -89,7 +89,7 @@ export default async (job: Job<CommunityInviteNotificationJobData>) => {
 
   // if the recipient of the email is not a member of spectrum, pass their information along to the email queue
   if (!existingUser) {
-    debug('recipient does not exist on spectrum, sending an email');
+    debug('recipient does not exist on vanila community, sending an email');
     return addToSendCommunityInviteEmailQueue(
       inboundRecipient,
       communityToInvite,
