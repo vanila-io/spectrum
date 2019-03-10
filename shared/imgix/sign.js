@@ -5,7 +5,7 @@ import decodeUriComponent from 'decode-uri-component';
 import { getDefaultExpires } from './getDefaultExpires';
 
 const IS_PROD = process.env.NODE_ENV === 'production';
-export const LEGACY_PREFIX = `https://${process.env.IMGIX_SUB_DOMAIN}`;
+export const LEGACY_PREFIX = `https://${process.env.IMGIX_SUB_DOMAIN}/`;
 
 // prettier-ignore
 const isLocalUpload = (url: string): boolean => url.startsWith('/uploads/', 0) && !IS_PROD
