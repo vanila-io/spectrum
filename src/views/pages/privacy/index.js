@@ -385,7 +385,7 @@ class Privacy extends React.Component<{}> {
               If you have concerns about the way Vanila is handling your
               Personal Data, please let us know immediately. We want to help.
               You may contact us by filling out the Privacy contact form. You
-              may also email us directly at privacy@vanila.com with the subject
+              may also email us directly at community@vanila.io with the subject
               line “Privacy Concerns.” We will respond promptly — within 45 days
               at the latest. You may also contact our Data Protection Officer
               directly.

@@ -210,14 +210,6 @@ export const Overview = (props: Props) => {
                   Explore
                 </ThisSecondaryCTA>
               </Link>
-              {/* <Link
-              to="/new/community"
-              onClick={() => track(events.HOME_PAGE_CREATE_COMMUNITY_CLICKED)}
-            >
-              <ThisSecondaryCTA icon="plus-fill">
-                Create your community
-              </ThisSecondaryCTA>
-            </Link> */}
             </Actions>
           </ThisText>
         </ThisContent>
