@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable-file */
 
 // @flow
 import fs from 'fs';
