@@ -1,5 +1,3 @@
-/* eslint-disable-file */
-
 // @flow
 import fs from 'fs';
 import path from 'path';
