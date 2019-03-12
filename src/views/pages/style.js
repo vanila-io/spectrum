@@ -290,7 +290,7 @@ export const Footer = styled.div`
   flex: none;
   position: relative;
   padding: 32px;
-  background-color: ${theme.bg.reverse};
+  background-color: #151419;
   color: ${theme.text.reverse};
 `;
 
@@ -501,9 +501,13 @@ export const Tabs = styled.div`
   z-index: ${zIndex.chrome + 1};
   line-height: 1;
 
+  @media (max-width: 1200px) {
+    padding: 70px 40px 0;
+  }
   @media (max-width: 768px) {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 'logo . menu';
+    padding: 20px;
   }
 
   ${props =>

@@ -22,6 +22,8 @@ export default () => {
           <Link to="/">
             <Logo />
           </Link>
+          <p>Hub for developers, designers, growth hackers, one word makers</p>
+          <p>© Copyright 2019 Vanila.io</p>
           <SocialLinks>
             <a
               href="https://github.com/withspectrum"
