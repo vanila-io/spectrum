@@ -1,0 +1,776 @@
+{
+    "data": {
+      "communities": [
+        {
+          "id": "72946f0e-0894-45c6-9c80-243ea7c68310",
+          "createdAt": "2019-03-07T07:10:55.905Z",
+          "name": "Vanila",
+          "slug": "vanila",
+          "description": "Vanila.io is community of developers and designers. Short word, creators.",
+          "website": "https://vanila.io",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/72946f0e-0894-45c6-9c80-243ea7c68310/68e12699-78a1-4c39-9bd2-607cce300ebf-avatar-logo.jpg?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=5abbcb0accd2672a6d5345efd287b96b",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/72946f0e-0894-45c6-9c80-243ea7c68310/76fdaf4b-1a84-47d3-91ae-02b1c69fbfe9-positive.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=84427144f63bb354974a2dbd62f6b43e",
+          "pinnedThreadId": null,
+          "watercoolerId": "fd2352ef-07b7-4c39-aad0-9e29245d3b1c",
+          "isPrivate": false,
+          "metaData": {
+            "members": 5,
+            "channels": 5,
+            "onlineMembers": 4
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 174
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 24
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 18
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 8
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "b7e8a2ce-b449-4781-b82a-f85cb25276a5",
+          "createdAt": "2019-03-07T09:28:38.968Z",
+          "name": "UI/UX 💩",
+          "slug": "uiux",
+          "description": "Everything about UI and UX, known as User Interface and User Experience. Tools like Adobe XD, Sketch and other.",
+          "website": "https://www.instagram.com/ui__ux/",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/b7e8a2ce-b449-4781-b82a-f85cb25276a5/68ce192c-a27e-49e6-aee1-bb0d1868fa61-14156306_326309614382136_965480403_a.jpg?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=345fdad5fd54776cca76e0501dced328",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/b7e8a2ce-b449-4781-b82a-f85cb25276a5/1fa49e82-947f-4cc4-8b7f-c3703fcc0fbd-community%2520pattern%2520bg%2520%25234.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=09bf94c6d1d5ce69fcee19d03d62e422",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 6,
+            "channels": 1,
+            "onlineMembers": 5
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 42
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "ux-store",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "330126cf-86a3-4956-860b-5ecb513e6e82",
+          "createdAt": "2019-03-07T15:58:16.071Z",
+          "name": "Frontend Hub",
+          "slug": "frontend-hub",
+          "description": "Talk anything related Frontend development, HTML/CSS, client side Javascript, Bootstrap, etc",
+          "website": "",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/330126cf-86a3-4956-860b-5ecb513e6e82/a0e3e022-5acc-4adc-89b8-ae091b084441-Group%252094.png?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=ca157968972a722179cb2151170dd034",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/330126cf-86a3-4956-860b-5ecb513e6e82/3429bc44-b855-4064-bf12-864901a30874-community%2520pattern%2520bg%2520%25233%2520%25E2%2580%2593%25204.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=2739527fe8644db22756c2acf57507ea",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 5,
+            "channels": 1,
+            "onlineMembers": 5
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 22
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-twitter",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "anotherguy",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-facebook",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "5b7b66f4-5fb1-4c94-862a-ea51377956fb",
+          "createdAt": "2019-03-07T09:33:13.651Z",
+          "name": "Growth Hackers",
+          "slug": "growth-hackers",
+          "description": "Growth topics, SEO, social media marketing, strategies and anything related to marketing.",
+          "website": "",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/5b7b66f4-5fb1-4c94-862a-ea51377956fb/b3cb0eae-8196-4d21-b7b3-11c6ccfa5b7f-growth%2520hackers%2520-%2520black%2520bg.png?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=d8008c9eeaf1eec4a46c4d687b04305a",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/5b7b66f4-5fb1-4c94-862a-ea51377956fb/f5d9c94b-e30c-4dd6-b9f5-6652394e3ad5-just-waves.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=819ed812c874cf9f2b52a6a2e5ce3cf3",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 7,
+            "channels": 1,
+            "onlineMembers": 6
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 20
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "ux-store",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "donydzep",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "88cac2f2-092e-4fbb-a962-76ea2a41391b",
+          "createdAt": "2019-03-07T09:31:57.062Z",
+          "name": "Javascript",
+          "slug": "javascript",
+          "description": "All things related to Javascript, React, Angular, Nodejs and other js frameworks.",
+          "website": "",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/88cac2f2-092e-4fbb-a962-76ea2a41391b/26b60710-624c-46bd-b36f-48f483f52c8e-1200px-Unofficial_JavaScript_logo_2.svg.png?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=d9a5d8ffe867b185eba980591598ef60",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/88cac2f2-092e-4fbb-a962-76ea2a41391b/df10c347-8204-46f4-96b7-83026263f429-community%2520pattern%2520bg%2520%25233%2520%25E2%2580%2593%25202.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=b87231fbe76c58d5cbf5703e4a48b03d",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 6,
+            "channels": 1,
+            "onlineMembers": 5
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-twitter",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "25b47b2e-a205-47a7-a5fe-4952d3f26c4a",
+          "createdAt": "2019-03-07T11:42:52.235Z",
+          "name": "Startup Space",
+          "slug": "startup-space",
+          "description": "Startup Space is a community for startup owners and workers. Ask or share anything related Startup topic.",
+          "website": "",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/25b47b2e-a205-47a7-a5fe-4952d3f26c4a/06e45ea2-64ca-4b37-956e-0cf646aef085-startup%2520space.jpg?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=6882b43bcadfd0f8ea80c93143fee357",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/25b47b2e-a205-47a7-a5fe-4952d3f26c4a/60907edc-7561-450f-87c3-a426988dc11b-wheat.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=a12758e9ebacccf21cfd67a8d967c9e3",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 4,
+            "channels": 1,
+            "onlineMembers": 4
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "9bf078e6-9b0f-4c1a-ab6f-74a9f8e72377",
+          "createdAt": "2019-03-07T10:48:57.176Z",
+          "name": "Wekan",
+          "slug": "wekan",
+          "description": "Wekan is an open-source kanban board (Trello like) which allows a card-based task and to-do management.",
+          "website": "https://wekan.github.io/",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/9bf078e6-9b0f-4c1a-ab6f-74a9f8e72377/6be7b498-45d3-4f54-8db0-4aaac949d931-Wekan%2520logo.png?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=6a8b304ce9bfb56a454e48bce009d599",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/9bf078e6-9b0f-4c1a-ab6f-74a9f8e72377/fdf3c3f4-8749-4196-84b2-cad8330c6a75-community%2520pattern%2520bg%2520%25233%2520%25E2%2580%2593%25203.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=6ffb52dcd4063471543d786bc34610b0",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 4,
+            "channels": 1,
+            "onlineMembers": 4
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "651ec3b0-4aa8-48c0-8790-380960ee5581",
+          "createdAt": "2019-03-07T11:07:31.685Z",
+          "name": "UX Store",
+          "slug": "uxstore",
+          "description": "Here you can talk about UX Store, it's products, resources, ask questions on how to use it or suggest anything",
+          "website": "https://uxstore.com",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/651ec3b0-4aa8-48c0-8790-380960ee5581/b61876fd-2674-4278-84f1-a80549022426-logo.jpg?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=b7b4c5394f4c0ca93273d4623cc0059c",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/651ec3b0-4aa8-48c0-8790-380960ee5581/b679cb40-5bda-40be-9f2f-2b88a07439d8-just-waves.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=3ad14455d4ac10a04fd459fe49aed8ce",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 6,
+            "channels": 1,
+            "onlineMembers": 5
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "ux-store",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "2aa3357e-5c0a-4afa-845b-0f6975af3896",
+          "createdAt": "2019-03-07T10:44:49.006Z",
+          "name": "Wireflow",
+          "slug": "wireflow",
+          "description": "Wireflow is free, online and open source tool for creating beautiful user flow prototypes. No Photoshop skills required!",
+          "website": "https://wireflow.co",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/2aa3357e-5c0a-4afa-845b-0f6975af3896/710ff08c-fa63-48b5-b8b7-ffa7d10acd2e-wireflow-logo.png?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=da62e7d3009168df3ad9e0a5691662d4",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/2aa3357e-5c0a-4afa-845b-0f6975af3896/f38a13c2-8e40-4315-b5e8-1c9915c093f3-community%2520pattern%2520bg%2520%25233%2520%25E2%2580%2593%25204.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=f63e9844ce9878fe15ee16be16805d9d",
+          "pinnedThreadId": null,
+          "watercoolerId": "e7443ca2-9c7b-4e38-b454-ea4103941138",
+          "isPrivate": false,
+          "metaData": {
+            "members": 6,
+            "channels": 1,
+            "onlineMembers": 5
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 84
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 74
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 18
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 14
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 6
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "ux-store",
+                    "totalReputation": 0,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        },
+        {
+          "id": "34d5356e-320c-4168-988e-5c591e6d15bd",
+          "createdAt": "2019-03-07T11:40:11.478Z",
+          "name": "Moonly",
+          "slug": "moonly",
+          "description": "Moon.ly is a Google Chrome extension that shows curated content upon opening Chrome or a new tab.",
+          "website": "https://moon.ly",
+          "profilePhoto": "https://vanila-community.imgix.net/communities/34d5356e-320c-4168-988e-5c591e6d15bd/0f2d32d0-eb64-46c7-8978-843265065134-moonly.png?w=256&h=256&dpr=2&auto=compress&expires=1552262400000&ixlib=js-1.2.0&s=f19ce705c794fa007f5e3accc7787342",
+          "coverPhoto": "https://vanila-community.imgix.net/communities/34d5356e-320c-4168-988e-5c591e6d15bd/5d98abee-5d8f-4b8c-ac98-864cde018247-community%2520pattern%2520bg%2520%25233.png?w=1280&h=384&dpr=2&q=100&expires=1552262400000&ixlib=js-1.2.0&s=c23bd93cc022f297509ec8e069e1dddf",
+          "pinnedThreadId": null,
+          "watercoolerId": null,
+          "isPrivate": false,
+          "metaData": {
+            "members": 5,
+            "channels": 1,
+            "onlineMembers": 4
+          },
+          "members": {
+            "edges": [
+              {
+                "node": {
+                  "user": {
+                    "username": "plavookac",
+                    "totalReputation": 104,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher",
+                    "totalReputation": 22,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "goldenveil",
+                    "totalReputation": 6,
+                    "isOnline": false
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "kinderminder",
+                    "totalReputation": 424,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              },
+              {
+                "node": {
+                  "user": {
+                    "username": "taher-github",
+                    "totalReputation": 36,
+                    "isOnline": true
+                  },
+                  "reputation": 0
+                }
+              }
+            ]
+          },
+          "__typename": "Community"
+        }
+      ]
+    }
+  }

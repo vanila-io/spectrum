@@ -3,8 +3,8 @@ import theme from 'shared/theme';
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Icon from '../../components/icons';
 import { UserAvatar } from '../../components/avatar';
+
 import {
   Shadow,
   Gradient,
@@ -531,7 +531,7 @@ export const SearchThread = (props: Props) => {
             and threads in <BoldText>one place</BoldText>.
           </ThisCopy>
           <ThisCopy>
-            Conversations are threaded and easy searchable using
+            Conversations are threaded and easy searchable
             <BoldText>
               {' '}
               Algolia <br />
@@ -548,219 +548,6 @@ export const SearchThread = (props: Props) => {
               </ThisPrimaryCTA>
             </Link>
           </Actions>
-        </Text>
-      </ThisContent>
-    </Section>
-  );
-};
-
-export const ReputationSystem = (props: Props) => {
-  const ThisContent = styled(Content)`
-    overflow: hidden;
-    background-color: #fff;
-    padding: 200px 0;
-    @media (max-width: 992px) {
-      display: block !important;
-    }
-    @media (max-width: 768px) {
-      margin-bottom: 40px;
-      padding: 0;
-    }
-  `;
-
-  const ThisCopy = styled(Copy)`
-    font-weight: 300;
-    margin-top: 16px;
-    color: #000000;
-    font-size: 28px;
-    font-family: 'Lato', sans-serif;
-    @media (max-width: 1400px) {
-      font-size: 22px;
-    }
-    @media (max-width: 768px) {
-      font-size: 18px;
-    }
-  `;
-
-  const ThisPrimaryCTA = styled(PrimaryCTA)`
-    margin-top: 32px;
-    font-size: 20px;
-    background: #3d57ff;
-    border-radius: 9px;
-    color: #fff;
-    padding: 20px;
-    font-weight: normal;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const Actions = styled.div`
-    @media (max-width: 768px) {
-      display: flex;
-      justify-content: start;
-      font-size: 18px;
-    }
-  `;
-
-  const ThisTagline = styled(Tagline)`
-    font-size: 50px;
-    font-weight: 300;
-    color: #000000;
-    font-family: 'Lato', sans-serif;
-    @media (max-width: 1200px) {
-      font-size: 40px;
-    }
-    @media (max-width: 768px) {
-      margin-bottom: 0;
-      font-size: 26px;
-    }
-  `;
-
-  const BoldText = styled.span`
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const Text = styled(FlexCol)`
-    margin-right: 100px;
-    font-family: 'Lato', sans-serif;
-
-    @media (max-width: 1400px) {
-      margin: 0 40px;
-    }
-  `;
-
-  const WidgetWrapper = styled.div`
-    padding: 10px 15px;
-    border-radius: 9px;
-    box-shadow: firebrick;
-    -webkit-box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
-    margin-bottom: 70px;
-  `;
-  const WidgetAvatar = styled.img`
-    float: left;
-    display: block;
-    overflow: hidden;
-    width: 60px;
-    height: 60px;
-  `;
-  const WidgetInfo = styled.div`
-    display: block;
-    overflow: hidden;
-    float: left;
-    margin-left: 20px;
-  `;
-  const WidgetUserName = styled.p`
-    color: #070707;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const WidgetUserReputation = styled.p`
-    font-size: 0.8em;
-    font-weight: 300;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const WidgetUserReputationScore = styled.p`
-    font-size: 0.8em;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  `;
-  return (
-    <Section>
-      <ThisContent>
-        <Text>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-        </Text>
-        <Text>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-        </Text>
-        <Text>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-        </Text>
-        <Text>
-          <ThisTagline>
-            <BoldText>Reputation</BoldText> System
-          </ThisTagline>
-          <ThisCopy>
-            You gain reputations each time you create, respond or give a <br />{' '}
-            like to thread.
-          </ThisCopy>
-          <ThisCopy>
-            Reputation gives you sense of how active is some member in <br />{' '}
-            overall Vanila Community or specific one.
-          </ThisCopy>
         </Text>
       </ThisContent>
     </Section>

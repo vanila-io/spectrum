@@ -5,11 +5,12 @@ import {
   Overview,
   DiscoverCommunites,
   SearchThread,
-  ReputationSystem,
   PublicProfile,
   PWA,
 } from '../view';
 import PageFooter from '../components/footer';
+import ReputationSystem from '../reputationSystem';
+
 import { Wrapper } from '../style';
 import { track, events } from 'src/helpers/analytics';
 
