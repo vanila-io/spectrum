@@ -8,6 +8,7 @@ import {
   Apps,
   Safety,
   SocialLinks,
+  FooterText,
 } from '../style';
 import { Link } from 'react-router-dom';
 import { IconButton } from 'src/components/buttons';
@@ -23,18 +24,20 @@ export default () => {
           <Link to="/">
             <Logo />
           </Link>
-          <p>Hub for developers, designers, growth hackers, one word makers</p>
-          <p>© Copyright 2019 Vanila.io</p>
+          <FooterText>
+            Hub for developers, designers, growth hackers, one word makers
+          </FooterText>
+          <FooterText>© Copyright 2019 Vanila.io</FooterText>
           <SocialLinks>
             <a
-              href="https://github.com/withspectrum"
+              href="https://github.com/vanila-io/spectrum"
               target="_blank"
               rel="noopener noreferrer"
             >
               <IconButton glyph="github" hoverColor={'text.reverse'} />
             </a>
             <a
-              href="https://twitter.com/withspectrum"
+              href="https://twitter.com/vanila_io"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -669,12 +669,12 @@ export const PublicProfile = (props: Props) => {
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
-    background: transparent;
+    background: #fff;
     background-image: url('/img/sectionTwoBg.svg');
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 350px;
+    padding-top: 615px;
 
     @media (max-width: 768px) {
       padding-top: 0;

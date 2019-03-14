@@ -55,6 +55,10 @@ export const Text = styled.div`
   @media (max-width: 1400px) {
     margin: 0 40px;
   }
+  @media (max-width: 992px) {
+    width: auto;
+    display: block;
+  }
 `;
 
 export const ThisTagline = styled.h2`
@@ -72,16 +76,29 @@ export const ThisTagline = styled.h2`
 `;
 
 export const MembersList = styled.ul`
-  float: left;
-  width: 50%;
+  float: right;
+  margin-left: 40px !important;
+  max-width: 700px;
+  @media (max-width: 1400px) {
+    max-width: 700px;
+    float: none;
+  }
+  @media (max-width: 768px) {
+    margin: 0 20px !important;
+  }
 `;
 
 export const MemberEach = styled.li`
-  width: 33.3333%;
-  max-width: 250px;
+  width: 190px;
   float: left;
   list-style: none;
-  padding: 20px;
+  padding: 8px;
+  margin-right: 30px;
+  @media (max-width: 768px) {
+    width: 177px;
+    padding: 15px 3px;
+    margin-right: 10px;
+  }
 `;
 
 export const Actions = styled.div`
@@ -112,8 +129,8 @@ export const WidgetAvatar = styled.img`
   float: left;
   display: block;
   overflow: hidden;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 `;
 export const WidgetInfo = styled.div`
   display: block;
@@ -125,21 +142,37 @@ export const WidgetUserName = styled.p`
   color: #070707;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
+  font-size: 12px;
 `;
 
 export const WidgetUserReputation = styled.p`
   font-size: 0.8em;
   font-weight: 300;
   font-family: 'Lato', sans-serif;
+  font-size: 9px;
 `;
 
 export const WidgetUserReputationScore = styled.p`
   font-size: 0.8em;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
+  font-size: 10px;
 `;
 export const Br = styled.br`
   @media (max-width: 768px) {
     display: none;
+  }
+`;
+export const MembersWrapper = styled.div`
+  display: block;
+  overflow: hidden;
+  float: left;
+  width: 50%;
+  margin-right: 100px;
+  @media (max-width: 992px) {
+    width: 100%;
+    float: none;
+    display: block;
+    margin: 0 auto 60px;
   }
 `;

@@ -20,6 +20,7 @@ import {
   ThisContent,
   ThisCopy,
   Br,
+  MembersWrapper,
 } from './style';
 
 class ReputationSystem extends React.Component {
@@ -125,7 +126,7 @@ class ReputationSystem extends React.Component {
     const { communityData, memberEdges } = this.state;
     if (!memberEdges.length) return '';
 
-    return memberEdges.map(member => {
+    return memberEdges.slice(0, 9).map(member => {
       return (
         <MemberEach key={member.node.user.username}>
           <WidgetWrapper>
@@ -149,7 +150,9 @@ class ReputationSystem extends React.Component {
     return (
       <Section>
         <ThisContent>
-          <MembersList>{this.getMembers()}</MembersList>
+          <MembersWrapper>
+            <MembersList>{this.getMembers()}</MembersList>
+          </MembersWrapper>
           <Text>
             <ThisTagline>
               <BoldText>Reputation</BoldText> System

@@ -290,8 +290,19 @@ export const Footer = styled.div`
   flex: none;
   position: relative;
   padding: 32px;
-  background-color: ${theme.bg.reverse};
+  background: rgb(21, 20, 25);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 20, 25, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   color: ${theme.text.reverse};
+  margin-top: -2px;
+`;
+
+export const FooterText = styled.p`
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 `;
 
 export const FooterGrid = styled.div`
