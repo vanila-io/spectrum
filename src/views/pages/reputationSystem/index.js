@@ -88,8 +88,12 @@ class ReputationSystem extends React.Component {
               node {
                 user {
                   username
+                  name
                   totalReputation
                   isOnline
+                  profilePhoto
+                  description
+                  coverPhoto
                 }
                 reputation
               }
