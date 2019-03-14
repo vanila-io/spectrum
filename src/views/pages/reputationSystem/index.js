@@ -40,6 +40,80 @@ class ReputationSystem extends React.Component {
   }
 
   async getData() {
+    if (process.env.NODE_ENV === 'production') {
+      const data = {
+        operationName: 'getCommunitiesBySlugs',
+        variables: {
+          slugs: [
+            'vanila',
+            'uiux',
+            'frontend-hub',
+            'growth-hackers',
+            'javascript',
+            'startup-space',
+            'wekan',
+            'uxstore',
+            'wireflow',
+            'moonly',
+          ],
+        },
+        query: `
+        query getCommunitiesBySlugs($slugs: [LowercaseString]) {
+          communities(slugs: $slugs) {
+            ...communityInfo
+            __typename
+          }
+        }
+        
+        fragment communityInfo on Community {
+          id
+          createdAt
+          name
+          slug
+          description
+          website
+          profilePhoto
+          coverPhoto
+          pinnedThreadId
+          watercoolerId
+          isPrivate
+          metaData {
+            members
+            channels
+            onlineMembers
+          }
+          members {
+            edges {
+              node {
+                user {
+                  username
+                  totalReputation
+                  isOnline
+                }
+                reputation
+              }
+            }
+          }
+        }
+        `,
+      };
+
+      return fetch(`https://${REACT_APP_PROD_DOMAIN}/api`, {
+        credentials: 'include',
+        headers: {
+          accept: '*/*',
+          'accept-language': 'en-US,en;q=0.9',
+          'content-type': 'application/json',
+        },
+        referrer: `https://${REACT_APP_PROD_DOMAIN}/explore`,
+        referrerPolicy: 'no-referrer-when-downgrade',
+        body: JSON.stringify(data),
+        method: 'POST',
+        mode: 'cors',
+      });
+    }
+
+    // we use a dummy data for local development
     return fetch(
       'https://gist.githubusercontent.com/entrptaher/4a62b93e59170e880691eae9723fb299/raw/d48d621fa5f8c8c454d8a49ec623b3217d848f1a/sample-data.json'
     )
