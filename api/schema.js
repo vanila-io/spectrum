@@ -174,7 +174,7 @@ if (process.env.REACT_APP_MAINTENANCE_MODE === 'enabled') {
   console.error('\n\n⚠️ ----MAINTENANCE MODE ENABLED----⚠️\n\n');
   addSchemaLevelResolveFunction(schema, () => {
     throw new UserError(
-      "We're currently undergoing planned maintenance. We'll be back soon, please check https://twitter.com/withspectrum for ongoing updates!"
+      "We're currently undergoing planned maintenance. We'll be back soon, please check https://twitter.com/vanila_io for ongoing updates!"
     );
   });
 }

@@ -101,6 +101,14 @@ const init = () => {
           profile.username ||
           '';
 
+        const photo =
+          profile.photos &&
+          profile.photos.length > 0 &&
+          profile.photos[0].value;
+
+        const profilePhoto =
+          (photo && photo.replace('normal', '400x400')) || null;
+
         const user = {
           providerId: profile.id,
           fbProviderId: null,
@@ -113,11 +121,7 @@ const init = () => {
               profile.emails.length > 0 &&
               profile.emails[0].value) ||
             null,
-          profilePhoto:
-            (profile.photos &&
-              profile.photos.length > 0 &&
-              profile.photos[0].value) ||
-            null,
+          profilePhoto,
           coverPhoto: profile._json.profile_background_image_url_https
             ? profile._json.profile_background_image_url_https
             : null,
@@ -364,7 +368,7 @@ const init = () => {
           if (existingUserWithProviderId) {
             return done(null, req.user, {
               message:
-                'Your GitHub account is already linked to another Spectrum profile.',
+                'Your GitHub account is already linked to another Vanila profile.',
             });
           }
         }

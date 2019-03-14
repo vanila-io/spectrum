@@ -91,7 +91,7 @@ const CommunitySearchWrapper = props => {
         <SecondaryContent>
           <SecondaryTagline>...or create your own community</SecondaryTagline>
           <SecondaryCopy>
-            Building communities on Spectrum is easy and free!
+            Building communities on Vanila Community is easy and free!
           </SecondaryCopy>
           {props.currentUser ? (
             <Link

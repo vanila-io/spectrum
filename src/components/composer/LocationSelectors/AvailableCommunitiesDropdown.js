@@ -31,7 +31,8 @@ const AvailableCommunitiesDropdown = (props: Props) => {
   if (loading) return <LoadingSelect />;
   if (error)
     return <ErrorSelect>Something went wrong, please refresh</ErrorSelect>;
-  if (!user) return <ErrorSelect>Please sign in to Spectrum</ErrorSelect>;
+  if (!user)
+    return <ErrorSelect>Please sign in to Vanila Community</ErrorSelect>;
 
   const { edges } = user.communityConnection;
   if (!edges || edges.length === 0)

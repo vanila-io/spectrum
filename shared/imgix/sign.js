@@ -5,7 +5,7 @@ import decodeUriComponent from 'decode-uri-component';
 import { getDefaultExpires } from './getDefaultExpires';
 
 const IS_PROD = process.env.NODE_ENV === 'production';
-export const LEGACY_PREFIX = `https://${process.env.IMGIX_SUB_DOMAIN}`;
+export const LEGACY_PREFIX = `https://${process.env.IMGIX_SUB_DOMAIN}/`;
 
 // prettier-ignore
 const isLocalUpload = (url: string): boolean => url.startsWith('/uploads/', 0) && !IS_PROD
@@ -44,7 +44,7 @@ const signPrimary = (url: string, opts: Opts = defaultOpts): string => {
 
 const signProxy = (url: string, opts?: Opts = defaultOpts): string => {
   const client = new ImgixClient({
-    domains: [`${process.env.IMGIX_SUB_DOMAIN}`],
+    domains: [`${process.env.IMGIX_PROXY_SUB_DOMAIN}`],
     secureURLToken: process.env.IMGIX_PROXY_SECURITY_KEY,
   });
   return client.buildURL(url, opts);

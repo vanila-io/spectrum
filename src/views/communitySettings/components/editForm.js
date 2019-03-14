@@ -337,7 +337,7 @@ class EditForm extends React.Component<Props, State> {
             Name
           </Input>
           <UnderlineInput defaultValue={slug} disabled>
-            spectrum.chat/
+            community.vanila.io/
           </UnderlineInput>
 
           {nameError && (

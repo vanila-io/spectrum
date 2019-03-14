@@ -25,7 +25,7 @@ class Support extends React.Component<{}> {
     return (
       <Wrapper data-cy="support-page">
         <Head
-          title={'Spectrum · Support'}
+          title={'Vanila Community · Support'}
           description={'Questions, feedback, or just need to get in touch?'}
         />
 
@@ -48,7 +48,7 @@ class Support extends React.Component<{}> {
                 </PlanDescription>
               </div>
 
-              <Link to={'/spectrum/hugs-n-bugs'}>
+              <Link to={'/vanila/hugs-n-bugs'}>
                 <Button
                   gradientTheme={'warn'}
                   icon={'bug'}
@@ -68,7 +68,7 @@ class Support extends React.Component<{}> {
                 </PlanDescription>
               </div>
 
-              <Link to={'/spectrum/feature-requests'}>
+              <Link to={'/vanila/feature-requests'}>
                 <Button
                   gradientTheme={'space'}
                   icon={'idea'}
@@ -83,13 +83,13 @@ class Support extends React.Component<{}> {
               <div>
                 <PlanPrice>What we’ve been working on</PlanPrice>
                 <PlanDescription>
-                  We post news, release notes, and threads from all over
-                  Spectrum on Twitter, or directly in our community.
+                  We post news, release notes, and threads from all over Vanila
+                  Community on Twitter, or directly in our community.
                 </PlanDescription>
               </div>
 
               <a
-                href={'https://twitter.com/withspectrum'}
+                href={'https://twitter.com/vanila_io'}
                 target={'_blank'}
                 rel={'noopener noreferrer'}
               >
@@ -102,7 +102,7 @@ class Support extends React.Component<{}> {
                 </Button>
               </a>
 
-              <Link to={'/spectrum'}>
+              <Link to={'/vanila'}>
                 <Button
                   gradientTheme={'brand'}
                   icon={'logo'}
@@ -119,8 +119,8 @@ class Support extends React.Component<{}> {
               <div>
                 <PlanPrice>Anything else?</PlanPrice>
                 <PlanDescription>
-                  Concerned about something on Spectrum? Shoot us an email and
-                  we’ll take care of it right away.
+                  Concerned about something on Vanila Community? Shoot us an
+                  email and we’ll take care of it right away.
                 </PlanDescription>
               </div>
 

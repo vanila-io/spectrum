@@ -21,7 +21,7 @@ const Share = ({ community, history, onboarding }) => {
             community.slug
           )}&t=Come hang out with me in the ${
             community.name
-          } community on Spectrum!`}
+          } community on Vanila!`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -37,7 +37,7 @@ const Share = ({ community, history, onboarding }) => {
         <a
           href={`https://twitter.com/share?text=Come hang out with me in the ${
             community.name
-          } community on @withspectrum!&url=https://${
+          } community on @vanila_io!&url=https://${
             process.env.REACT_APP_PROD_DOMAIN
           }/${encodeURIComponent(community.slug)}`}
           target="_blank"

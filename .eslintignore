@@ -29,3 +29,4 @@ stats.json
 iris/.env
 api/.env
 test-results.json
+hyperion/renderer/html-template.js

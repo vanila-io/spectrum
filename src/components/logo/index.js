@@ -35,7 +35,7 @@ const LogoTxt = styled.span`
 export const Logo = () => {
   return (
     <SvgWrapper>
-      <Img src="/img/logos/logo-mark.png" alt="Vanila community logo" />
+      <Img src="/img/logo-mark.png" alt="Vanila community logo" />
       <LogoTxt>community.vanila</LogoTxt>
     </SvgWrapper>
   );

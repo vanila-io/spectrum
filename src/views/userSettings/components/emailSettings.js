@@ -69,7 +69,7 @@ const parseNotificationTypes = notifications => {
         return {
           type,
           emailValue: notifications.types[type].email,
-          label: 'Email me if someone @mentions me on Spectrum',
+          label: 'Email me if someone @mentions me on Vanila Community',
           display: 'flex-start',
         };
       default:
@@ -110,7 +110,12 @@ class EmailSettings extends React.Component<Props> {
   };
 
   render() {
-    const { user: { settings: { notifications } }, user } = this.props;
+    const {
+      user: {
+        settings: { notifications },
+      },
+      user,
+    } = this.props;
 
     const settings = parseNotificationTypes(notifications).filter(
       notification => notification.hasOwnProperty('emailValue')
@@ -126,8 +131,8 @@ class EmailSettings extends React.Component<Props> {
           <ListContainer>
             <Description>
               You can customize your email notifications to keep up to date on
-              what’s important to you on Spectrum. Enter your email below and
-              we’ll send you a confirmation link.
+              what’s important to you on Vanila Community. Enter your email
+              below and we’ll send you a confirmation link.
             </Description>
 
             <UserEmailConfirmation user={user} />

@@ -30,7 +30,7 @@ type BodyProps = {
 
 // This regexp matches /community/channel/slug~id, /?thread=id, /?t=id etc.
 // see https://regex101.com/r/aGamna/2/
-const MATCH_SPECTRUM_URLS = /(?:(?:https?:\/\/)?|\B)(?:spectrum\.chat|localhost:3000)\/.*?(?:~|(?:\?|&)t=|(?:\?|&)thread=)([^&\s]*)/gim;
+const MATCH_SPECTRUM_URLS = /(?:(?:https?:\/\/)?|\B)(?:community\.vanila\.io|localhost:3000)\/.*?(?:~|(?:\?|&)t=|(?:\?|&)thread=)([^&\s]*)/gim;
 const getSpectrumThreadIds = (text: string) => {
   let ids = [];
   let match;

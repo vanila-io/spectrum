@@ -1,3 +1,4 @@
 flow-typed
 package.json
 shared/analytics/event-types/*
+hyperion/renderer/html-template.js

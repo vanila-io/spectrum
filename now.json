@@ -61,6 +61,7 @@
     "DATADOG_API_KEY": "@datadog-api-key",
     "PROD_DOMAIN": "@prod-domain",
     "REACT_APP_PROD_DOMAIN": "@prod-domain",
-    "IMGIX_SUB_DOMAIN": "@imgix-sub-domain"
+    "IMGIX_SUB_DOMAIN": "@imgix-sub-domain",
+    "IMGIX_PROXY_SUB_DOMAIN": "@imgix-proxy-sub-domain"
   }
 }

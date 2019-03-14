@@ -105,9 +105,9 @@ class UpsellNewUser extends Component {
           </LargeEmoji>
           <Title>Howdy, {user.name}!</Title>
           <Subtitle>
-            Spectrum is a place where communities live. It's easy to follow the
-            things that you care about most, or even create your own community
-            to share with the world.
+            Vanila Community is a place where communities live. It's easy to
+            follow the things that you care about most, or even create your own
+            community to share with the world.
           </Subtitle>
         </Section>
 
@@ -118,7 +118,7 @@ class UpsellNewUser extends Component {
 
           <SmallTitle>Set your username</SmallTitle>
           <SmallSubtitle>
-            Pick a username so that people can find you on Spectrum!
+            Pick a username so that people can find you on Vanila Community!
           </SmallSubtitle>
 
           <SetUsername user={user} usernameSaved={() => this.savedUsername()} />
@@ -153,7 +153,7 @@ class UpsellNewUser extends Component {
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=https://${
                 process.env.REACT_APP_PROD_DOMAIN
-              }&t=Come hang out with me on Spectrum, a new place on the internet for communities!`}
+              }&t=Come hang out with me on Vanila Community, hub for designers, makers, developers, growth hackers!`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -167,7 +167,7 @@ class UpsellNewUser extends Component {
               </Button>
             </a>
             <a
-              href={`https://twitter.com/share?text=Come hang out with me on @withspectrum, a new place on the internet for communities!&url=https://${
+              href={`https://twitter.com/share?text=Come hang out with me on @vanila_io, hub for designers, makers, developers, growth hackers!&url=https://${
                 process.env.REACT_APP_PROD_DOMAIN
               }`}
               target="_blank"

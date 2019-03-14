@@ -43,10 +43,10 @@ export const getHeader = ({
           <link rel="mask-icon" href="/img/pinned-tab.svg" color="#171A21">
           <meta name="theme-color" content="#171A21">
           <link rel="manifest" href="/manifest.json">
-          <meta property="og:site_name" content="Spectrum">
+          <meta property="og:site_name" content="Vanila Community">
           <meta name="twitter:card" content="summary">
-          <meta name="twitter:site" content="@withspectrum">
-          <meta name="twitter:image:alt" content="Where communities are built">
+          <meta name="twitter:site" content="@vanila_io">
+          <meta name="twitter:image:alt" content="Hub for Designers, Makers, Developers, Growth Hackers">
           <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-icon-57x57-precomposed.png" />
           <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-icon-72x72-precomposed.png" />
           <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-icon-114x114-precomposed.png" />
