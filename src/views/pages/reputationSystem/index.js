@@ -111,7 +111,9 @@ class ReputationSystem extends React.Component {
         body: JSON.stringify(data),
         method: 'POST',
         mode: 'cors',
-      });
+      })
+        .then(data => data.json())
+        .then(data => data.data.communities);
     }
 
     // we use a dummy data for local development
