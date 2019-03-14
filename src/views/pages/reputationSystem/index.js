@@ -53,7 +53,7 @@ class ReputationSystem extends React.Component {
 
     return memberEdges.map(member => {
       return (
-        <MemberEach key={member.node.reputation}>
+        <MemberEach key={member.node.user.username}>
           <WidgetWrapper>
             <WidgetAvatar
               src={member.node.user.profilePhoto}
