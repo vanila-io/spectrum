@@ -35,7 +35,6 @@ export const Wrapper = styled(FlexCol)`
   width: 100%;
   max-width: 100vw;
   background-color: ${theme.bg.default};
-  overflow: hidden;
   z-index: ${zIndex.base};
 `;
 
@@ -291,8 +290,19 @@ export const Footer = styled.div`
   flex: none;
   position: relative;
   padding: 32px;
-  background-color: ${theme.bg.reverse};
+  background: rgb(21, 20, 25);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 20, 25, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   color: ${theme.text.reverse};
+  margin-top: -2px;
+`;
+
+export const FooterText = styled.p`
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 `;
 
 export const FooterGrid = styled.div`
@@ -502,9 +512,13 @@ export const Tabs = styled.div`
   z-index: ${zIndex.chrome + 1};
   line-height: 1;
 
+  @media (max-width: 1200px) {
+    padding: 70px 40px 0;
+  }
   @media (max-width: 768px) {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 'logo . menu';
+    padding: 20px;
   }
 
   ${props =>

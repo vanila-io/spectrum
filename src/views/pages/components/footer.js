@@ -8,10 +8,12 @@ import {
   Apps,
   Safety,
   SocialLinks,
+  FooterText,
 } from '../style';
 import { Link } from 'react-router-dom';
 import { IconButton } from 'src/components/buttons';
 import { Logo } from 'src/components/logo';
+
 import { track, events } from 'src/helpers/analytics';
 
 export default () => {
@@ -22,6 +24,10 @@ export default () => {
           <Link to="/">
             <Logo />
           </Link>
+          <FooterText>
+            Hub for developers, designers, growth hackers, one word makers
+          </FooterText>
+          <FooterText>© Copyright 2019 Vanila.io</FooterText>
           <SocialLinks>
             <a
               href="https://github.com/vanila-io"

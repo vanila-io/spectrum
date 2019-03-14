@@ -3,8 +3,8 @@ import theme from 'shared/theme';
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Icon from '../../components/icons';
 import { UserAvatar } from '../../components/avatar';
+
 import {
   Shadow,
   Gradient,
@@ -49,8 +49,10 @@ export const Overview = (props: Props) => {
     padding-top: 0;
     padding-bottom: 80px;
     background: transparent;
-    @media (max-width: 640px) {
+
+    @media (max-width: 768px) {
       margin-bottom: 40px;
+      padding-bottom: 0px;
     }
   `;
 
@@ -62,10 +64,10 @@ export const Overview = (props: Props) => {
     font-family: 'Lato', sans-serif;
 
     @media (max-width: 768px) {
-      margin-top: 0;
+      margin-top: 100px;
       margin-bottom: 16px;
-      text-align: center;
-      align-items: center;
+      text-align: left;
+      align-items: left;
     }
   `;
 
@@ -77,8 +79,16 @@ export const Overview = (props: Props) => {
     font-weight: 300;
     font-size: 28px;
     margin: 0 auto;
+    @media (max-width: 1400px) {
+      font-size: 22px;
+    }
     @media (max-width: 768px) {
-      text-align: center;
+      -webkit-align-items: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      align-items: left;
+      text-align: left;
+      font-size: 18px;
     }
   `;
 
@@ -88,8 +98,18 @@ export const Overview = (props: Props) => {
     font-family: 'Lato', sans-serif;
 
     font-weight: 300;
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
     @media (max-width: 768px) {
-      font-size: 24px;
+      font-size: 26px;
+
+      -webkit-align-items: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      align-items: left;
+      text-align: left;
     }
   `;
 
@@ -99,7 +119,11 @@ export const Overview = (props: Props) => {
     justify-content: center;
 
     @media (max-width: 768px) {
-      align-items: center;
+      align-items: left;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      justify-content: left;
     }
   `;
 
@@ -110,8 +134,9 @@ export const Overview = (props: Props) => {
     border: 1px solid #fff;
     font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
-      margin-left: 0;
-      margin-top: 16px;
+      padding: 8px;
+      font-size: 18px;
+      margin-left: 10px;
     }
   `;
 
@@ -119,11 +144,9 @@ export const Overview = (props: Props) => {
     position: relative;
     font-family: 'Lato', sans-serif;
     @media (max-width: 1400px) {
-      right: 15vw;
     }
 
     @media (max-width: 1200px) {
-      right: 0;
     }
   `;
 
@@ -135,6 +158,10 @@ export const Overview = (props: Props) => {
     border-radius: 9px;
     color: #fff;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 18px;
+    }
   `;
 
   const Img = styled.img`
@@ -142,19 +169,16 @@ export const Overview = (props: Props) => {
     padding-bottom: 200px;
 
     @media (max-width: 1400px) {
-      left: calc(20vw + 480px);
+      max-width: 80%;
     }
 
     @media (max-width: 1200px) {
-      display: none;
     }
 
     @media (max-width: 768px) {
       display: none;
     }
   `;
-
-  /* custom */
 
   const BoldText = styled.span`
     font-weight: 900;
@@ -178,20 +202,25 @@ export const Overview = (props: Props) => {
       margin-bottom: 40px;
     }
   `;
+  const Br = styled.br`
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `;
   return (
     <Section>
       <ThisWrapper>
         <ThisContent>
           <ThisText>
             <ThisTagline>
-              Hub for <BoldText>Designers</BoldText>, <br />{' '}
+              Hub for <BoldText>Designers</BoldText>, <Br />{' '}
               <BoldText>Makers</BoldText>, <BoldText>Developers</BoldText>,{' '}
               <BoldText>Growth Hackers</BoldText>
             </ThisTagline>
             <ThisCopy>
-              The maker culture is a contemporary culture or subculture <br />
+              The maker culture is a contemporary culture or subculture <Br />
               representing a <BoldText>technology-based</BoldText> extension of{' '}
-              <BoldText>DIY culture</BoldText> <br /> that intersects with
+              <BoldText>DIY culture</BoldText> <Br /> that intersects with
               hacker culture.
             </ThisCopy>
 
@@ -214,7 +243,7 @@ export const Overview = (props: Props) => {
           </ThisText>
         </ThisContent>
         <ThisContent>
-          <Img src="img/home-hero.png" alt="" />
+          <Img src="img/home-hero.png" alt="Home hero screenshot" />
         </ThisContent>
       </ThisWrapper>
     </Section>
@@ -227,13 +256,23 @@ export const DiscoverCommunites = (props: Props) => {
     img {
       margin: 24px 0;
     }
+
+    @media (max-width: 992px) {
+      display: block !important;
+    }
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   `;
 
   const Text = styled(FlexCol)`
     margin: 40px 100px 200px;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1400px) {
+      margin: 0 40px;
+    }
     @media (max-width: 768px) {
-      margin-top: 20px;
+      margin-top: 0px;
       margin-bottom: 44px;
     }
   `;
@@ -243,6 +282,17 @@ export const DiscoverCommunites = (props: Props) => {
     font-size: 28px;
     margin-top: 16px;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1400px) {
+      font-size: 22px;
+    }
+    @media (max-width: 768px) {
+      -webkit-align-items: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      align-items: left;
+      text-align: left;
+      font-size: 18px;
+    }
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -254,12 +304,16 @@ export const DiscoverCommunites = (props: Props) => {
     padding: 20px;
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 18px;
+    }
   `;
 
   const Actions = styled.div`
     @media (max-width: 768px) {
       display: flex;
-      justify-content: center;
+      justify-content: start;
     }
   `;
 
@@ -267,8 +321,17 @@ export const DiscoverCommunites = (props: Props) => {
     font-size: 50px;
     font-weight: 300;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
     @media (max-width: 768px) {
+      font-size: 26px;
       margin-bottom: 0;
+      -webkit-align-items: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      align-items: left;
+      text-align: left;
     }
   `;
 
@@ -302,11 +365,35 @@ export const DiscoverCommunites = (props: Props) => {
     max-width: 700px;
 
     @media (max-width: 1400px) {
-      left: calc(20vw + 480px);
+      width: 50%;
+      margin: 0 40px !important;
     }
 
     @media (max-width: 1200px) {
+    }
+    @media (max-width: 992px) {
       display: none;
+    }
+    @media (max-width: 768px) {
+      display: block;
+      width: 80%;
+      max-width: 80%;
+      margin: 0 40px !important;
+      padding-bottom: 60px;
+    }
+  `;
+
+  const ImgHideForDesktop = styled.img`
+    max-width: 1350px;
+    padding-bottom: 200px;
+    display: none;
+    @media (max-width: 1400px) {
+      max-width: 80%;
+    }
+
+    @media (max-width: 992px) {
+      display: block;
+      margin: 40px auto !important;
     }
 
     @media (max-width: 768px) {
@@ -314,6 +401,11 @@ export const DiscoverCommunites = (props: Props) => {
     }
   `;
 
+  const Br = styled.br`
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `;
   return (
     <Section>
       <ThisContent>
@@ -323,9 +415,9 @@ export const DiscoverCommunites = (props: Props) => {
             Discover <BoldText>Communities</BoldText>
           </ThisTagline>
           <ThisCopy>
-            Every community is built to cover specific skills or group of <br />
+            Every community is built to cover specific skills or group of <Br />
             people. Be part of communities that fits your skills or If you{' '}
-            <br /> don't find yours community, go and{' '}
+            <Br /> don't find yours community, go and{' '}
             <BoldText>build one</BoldText>.
           </ThisCopy>
           <Actions>
@@ -338,6 +430,10 @@ export const DiscoverCommunites = (props: Props) => {
             </Link>
           </Actions>
         </Text>
+        <ImgHideForDesktop
+          src="/img/home2.png"
+          alt="Discover communities screenshot"
+        />
       </ThisContent>
     </Section>
   );
@@ -354,9 +450,13 @@ export const SearchThread = (props: Props) => {
     background-repeat: no-repeat;
     margin-top: 20px;
     padding-top: 300px;
-
+    @media (max-width: 992px) {
+      display: block !important;
+    }
     @media (max-width: 768px) {
-      margin-bottom: 40px;
+      margin-bottom: 0px;
+      padding: 200px 0 40px;
+      margin-top: -90px;
     }
   `;
 
@@ -367,6 +467,12 @@ export const SearchThread = (props: Props) => {
     font-weight: 300;
     margin-top: 16px;
     color: #fff;
+    @media (max-width: 1400px) {
+      font-size: 22px;
+    }
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -378,12 +484,17 @@ export const SearchThread = (props: Props) => {
     padding: 20px;
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 18px;
+    }
   `;
 
   const Actions = styled.div`
     @media (max-width: 768px) {
       display: flex;
-      justify-content: center;
+      justify-content: start;
+      font-size: 18px;
     }
   `;
 
@@ -392,8 +503,12 @@ export const SearchThread = (props: Props) => {
     font-weight: 300;
     color: #fff;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1200px) {
+      font-size: 40px;
+    }
     @media (max-width: 768px) {
       margin-bottom: 0;
+      font-size: 26px;
     }
   `;
 
@@ -404,6 +519,9 @@ export const SearchThread = (props: Props) => {
   const Text = styled(FlexCol)`
     margin-left: 100px;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1400px) {
+      margin: 0 40px;
+    }
   `;
 
   const Img = styled.img`
@@ -411,13 +529,22 @@ export const SearchThread = (props: Props) => {
     max-width: 700px;
 
     @media (max-width: 1400px) {
-      left: calc(20vw + 480px);
+      margin: 0 40px !important;
+      width: 50%;
     }
 
-    @media (max-width: 1200px) {
-      display: none;
+    @media (max-width: 992px) {
+      margin: 0 auto !important;
+      display: block;
     }
 
+    @media (max-width: 768px) {
+      width: 80%;
+      max-width: 80%;
+      padding-bottom: 60px;
+    }
+  `;
+  const Br = styled.br`
     @media (max-width: 768px) {
       display: none;
     }
@@ -431,14 +558,14 @@ export const SearchThread = (props: Props) => {
             All your <BoldText>communities</BoldText> in one place
           </ThisTagline>
           <ThisCopy>
-            Compact design give you ability to have all your communities <br />
+            Compact design give you ability to have all your communities <Br />
             and threads in <BoldText>one place</BoldText>.
           </ThisCopy>
           <ThisCopy>
-            Conversations are threaded and easy searchable using
+            Conversations are threaded and easy searchable
             <BoldText>
               {' '}
-              Algolia <br />
+              Algolia <Br />
               search
             </BoldText>{' '}
             power.
@@ -458,206 +585,13 @@ export const SearchThread = (props: Props) => {
   );
 };
 
-export const ReputationSystem = (props: Props) => {
-  const ThisContent = styled(Content)`
-    overflow: hidden;
-    background-color: #fff;
-    padding: 200px 0;
-    @media (max-width: 768px) {
-      margin-bottom: 40px;
-    }
-  `;
-
-  const ThisCopy = styled(Copy)`
-    font-weight: 300;
-    margin-top: 16px;
-    color: #000000;
-    font-size: 28px;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const ThisPrimaryCTA = styled(PrimaryCTA)`
-    margin-top: 32px;
-    font-size: 20px;
-    background: #3d57ff;
-    border-radius: 9px;
-    color: #fff;
-    padding: 20px;
-    font-weight: normal;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const Actions = styled.div`
-    @media (max-width: 768px) {
-      display: flex;
-      justify-content: center;
-    }
-  `;
-
-  const ThisTagline = styled(Tagline)`
-    font-size: 50px;
-    font-weight: 300;
-    color: #000000;
-    font-family: 'Lato', sans-serif;
-
-    @media (max-width: 768px) {
-      margin-bottom: 0;
-    }
-  `;
-
-  const BoldText = styled.span`
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const Text = styled(FlexCol)`
-    margin-right: 100px;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const WidgetWrapper = styled.div`
-    padding: 10px 15px;
-    border-radius: 9px;
-    box-shadow: firebrick;
-    -webkit-box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
-    margin-bottom: 70px;
-  `;
-  const WidgetAvatar = styled.img`
-    float: left;
-    display: block;
-    overflow: hidden;
-    width: 60px;
-    height: 60px;
-  `;
-  const WidgetInfo = styled.div`
-    display: block;
-    overflow: hidden;
-    float: left;
-    margin-left: 20px;
-  `;
-  const WidgetUserName = styled.p`
-    color: #070707;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const WidgetUserReputation = styled.p`
-    font-size: 0.8em;
-    font-weight: 300;
-    font-family: 'Lato', sans-serif;
-  `;
-
-  const WidgetUserReputationScore = styled.p`
-    font-size: 0.8em;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-  `;
-  return (
-    <Section>
-      <ThisContent>
-        <Text>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-        </Text>
-        <Text>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-        </Text>
-        <Text>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
-            <WidgetInfo>
-              <WidgetUserName>Stefi Jecko</WidgetUserName>
-              <WidgetUserReputation>Reputation</WidgetUserReputation>
-              <WidgetUserReputationScore>875</WidgetUserReputationScore>
-            </WidgetInfo>
-          </WidgetWrapper>
-        </Text>
-        <Text>
-          <ThisTagline>
-            <BoldText>Reputation</BoldText> System
-          </ThisTagline>
-          <ThisCopy>
-            You gain reputations each time you create, respond or give a <br />{' '}
-            like to thread.
-          </ThisCopy>
-          <ThisCopy>
-            Reputation gives you sense of how active is some member in <br />{' '}
-            overall Vanila Community or specific one.
-          </ThisCopy>
-        </Text>
-      </ThisContent>
-    </Section>
-  );
-};
-
 export const PublicProfile = (props: Props) => {
   const ThisContent = styled(Content)`
     overflow: hidden;
     margin-bottom: 120px;
-
+    @media (max-width: 992px) {
+      display: block !important;
+    }
     @media (max-width: 768px) {
       margin-bottom: 40px;
     }
@@ -668,6 +602,12 @@ export const PublicProfile = (props: Props) => {
     margin-top: 16px;
     font-size: 28px;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1400px) {
+      font-size: 22px;
+    }
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -679,12 +619,17 @@ export const PublicProfile = (props: Props) => {
     padding: 20px;
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      padding: 8px;
+    }
   `;
 
   const Actions = styled.div`
     @media (max-width: 768px) {
       display: flex;
-      justify-content: center;
+      justify-content: start;
+      font-size: 18px;
     }
   `;
 
@@ -693,8 +638,13 @@ export const PublicProfile = (props: Props) => {
     font-weight: 300;
     margin-top: -130px;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1200px) {
+      font-size: 40px;
+      margin-top: 0px;
+    }
     @media (max-width: 768px) {
       margin-bottom: 0;
+      font-size: 26px;
     }
   `;
 
@@ -706,6 +656,9 @@ export const PublicProfile = (props: Props) => {
   const Text = styled(FlexCol)`
     margin: 0 100px;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 1400px) {
+      margin: 0 40px;
+    }
   `;
 
   const ThisWrapper = styled.div`
@@ -718,12 +671,13 @@ export const PublicProfile = (props: Props) => {
     align-self: stretch;
     background: #fff;
     background-image: url('/img/sectionTwoBg.svg');
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 350px;
-    @media (max-width: 640px) {
-      margin-bottom: 40px;
+    padding-top: 615px;
+
+    @media (max-width: 768px) {
+      padding-top: 0;
     }
   `;
   const Img = styled.img`
@@ -731,13 +685,56 @@ export const PublicProfile = (props: Props) => {
     max-width: 700px;
 
     @media (max-width: 1400px) {
-      left: calc(20vw + 480px);
+      width: 50%;
     }
 
     @media (max-width: 1200px) {
-      display: none;
     }
 
+    @media (max-width: 992px) {
+      margin: 0 auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      width: 80%;
+      max-width: 80%;
+      margin-top: 60px;
+      padding-bottom: 60px;
+    }
+  `;
+
+  const ImgHideForMob = styled.img`
+    padding-bottom: 100px;
+    max-width: 700px;
+    @media (max-width: 1400px) {
+      max-width: 80%;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+    @media (max-width: 768px) {
+    }
+  `;
+
+  const ImgHideForDesktop = styled.img`
+    max-width: 1350px;
+    display: none;
+    @media (max-width: 1400px) {
+      max-width: 80%;
+    }
+
+    @media (max-width: 992px) {
+      display: block;
+      margin: 40px auto;
+    }
+    @media (max-width: 768px) {
+      width: auto;
+      max-width: 80%;
+    }
+  `;
+  const Br = styled.br`
     @media (max-width: 768px) {
       display: none;
     }
@@ -746,16 +743,16 @@ export const PublicProfile = (props: Props) => {
     <Section goop={0} background={'reverse'}>
       <ThisWrapper>
         <ThisContent>
-          <Img src="/img/home4.png" alt="" />
+          <Img src="/img/home4.png" alt="Public profiles screenshot" />
           <Text>
             <ThisTagline>
-              Public <BoldText>Profiles</BoldText> Showing <br />{' '}
+              Public <BoldText>Profiles</BoldText> Showing <Br />{' '}
               <BoldText>Contribution</BoldText>
             </ThisTagline>
             <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, <br />{' '}
-              community software has hardly improved since the heyday of <br />{' '}
+              But, as the web has changed and improved radically, <Br />{' '}
+              community software has hardly improved since the heyday of <Br />{' '}
               messageboards and IRC.
             </ThisCopy>
             <Actions>
@@ -770,19 +767,26 @@ export const PublicProfile = (props: Props) => {
           </Text>
         </ThisContent>
         <ThisContent>
+          <ImgHideForDesktop
+            src="/img/home5.png"
+            alt="Mobile Friendly - PWA screenshot"
+          />
           <Text>
             <ThisTagline>
-              It's Mobile Friendly (PWA), <br />
+              It's Mobile Friendly (PWA), <Br />
               <BoldText>Native Apps Coming Soon</BoldText>
             </ThisTagline>
             <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, <br />{' '}
-              community software has hardly improved since the heyday of <br />{' '}
+              But, as the web has changed and improved radically, <Br />{' '}
+              community software has hardly improved since the heyday of <Br />{' '}
               messageboards and IRC.
             </ThisCopy>
           </Text>
-          <img src="/img/home5.png" alt="" />
+          <ImgHideForMob
+            src="/img/home5.png"
+            alt="Mobile Friendly - PWA screenshot"
+          />
         </ThisContent>
       </ThisWrapper>
     </Section>
