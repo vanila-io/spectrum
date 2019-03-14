@@ -16,6 +16,9 @@ export const ThisContent = styled.div`
   background-color: rgb(255, 255, 255);
   overflow: hidden;
   padding: 200px 0px;
+  @media (max-width: 768px) {
+    padding: 60px 0px;
+  }
 `;
 export const ThisCopy = styled.p`
   font-weight: 300;
@@ -134,4 +137,9 @@ export const WidgetUserReputationScore = styled.p`
   font-size: 0.8em;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
+`;
+export const Br = styled.br`
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

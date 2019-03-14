@@ -134,8 +134,9 @@ export const Overview = (props: Props) => {
     border: 1px solid #fff;
     font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
-      margin-left: 10px;
+      padding: 8px;
       font-size: 18px;
+      margin-left: 10px;
     }
   `;
 
@@ -158,6 +159,7 @@ export const Overview = (props: Props) => {
     color: #fff;
     font-family: 'Lato', sans-serif;
     @media (max-width: 768px) {
+      padding: 8px;
       font-size: 18px;
     }
   `;
@@ -177,8 +179,6 @@ export const Overview = (props: Props) => {
       display: none;
     }
   `;
-
-  /* custom */
 
   const BoldText = styled.span`
     font-weight: 900;
@@ -202,20 +202,25 @@ export const Overview = (props: Props) => {
       margin-bottom: 40px;
     }
   `;
+  const Br = styled.br`
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `;
   return (
     <Section>
       <ThisWrapper>
         <ThisContent>
           <ThisText>
             <ThisTagline>
-              Hub for <BoldText>Designers</BoldText>, <br />{' '}
+              Hub for <BoldText>Designers</BoldText>, <Br />{' '}
               <BoldText>Makers</BoldText>, <BoldText>Developers</BoldText>,{' '}
               <BoldText>Growth Hackers</BoldText>
             </ThisTagline>
             <ThisCopy>
-              The maker culture is a contemporary culture or subculture <br />
+              The maker culture is a contemporary culture or subculture <Br />
               representing a <BoldText>technology-based</BoldText> extension of{' '}
-              <BoldText>DIY culture</BoldText> <br /> that intersects with
+              <BoldText>DIY culture</BoldText> <Br /> that intersects with
               hacker culture.
             </ThisCopy>
 
@@ -234,19 +239,11 @@ export const Overview = (props: Props) => {
                   Explore
                 </ThisSecondaryCTA>
               </Link>
-              {/* <Link
-              to="/new/community"
-              onClick={() => track(events.HOME_PAGE_CREATE_COMMUNITY_CLICKED)}
-            >
-              <ThisSecondaryCTA icon="plus-fill">
-                Create your community
-              </ThisSecondaryCTA>
-            </Link> */}
             </Actions>
           </ThisText>
         </ThisContent>
         <ThisContent>
-          <Img src="img/home-hero.png" alt="" />
+          <Img src="img/home-hero.png" alt="Home hero screenshot" />
         </ThisContent>
       </ThisWrapper>
     </Section>
@@ -275,7 +272,7 @@ export const DiscoverCommunites = (props: Props) => {
       margin: 0 40px;
     }
     @media (max-width: 768px) {
-      margin-top: 20px;
+      margin-top: 0px;
       margin-bottom: 44px;
     }
   `;
@@ -288,6 +285,14 @@ export const DiscoverCommunites = (props: Props) => {
     @media (max-width: 1400px) {
       font-size: 22px;
     }
+    @media (max-width: 768px) {
+      -webkit-align-items: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      align-items: left;
+      text-align: left;
+      font-size: 18px;
+    }
   `;
 
   const ThisPrimaryCTA = styled(PrimaryCTA)`
@@ -299,6 +304,10 @@ export const DiscoverCommunites = (props: Props) => {
     padding: 20px;
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 18px;
+    }
   `;
 
   const Actions = styled.div`
@@ -316,7 +325,13 @@ export const DiscoverCommunites = (props: Props) => {
       font-size: 40px;
     }
     @media (max-width: 768px) {
+      font-size: 26px;
       margin-bottom: 0;
+      -webkit-align-items: left;
+      -webkit-box-align: left;
+      -ms-flex-align: left;
+      align-items: left;
+      text-align: left;
     }
   `;
 
@@ -364,7 +379,7 @@ export const DiscoverCommunites = (props: Props) => {
       width: 80%;
       max-width: 80%;
       margin: 0 40px !important;
-      padding-bottom: 0;
+      padding-bottom: 60px;
     }
   `;
 
@@ -385,6 +400,12 @@ export const DiscoverCommunites = (props: Props) => {
       display: none;
     }
   `;
+
+  const Br = styled.br`
+    @media (max-width: 768px) {
+      display: none;
+    }
+  `;
   return (
     <Section>
       <ThisContent>
@@ -394,9 +415,9 @@ export const DiscoverCommunites = (props: Props) => {
             Discover <BoldText>Communities</BoldText>
           </ThisTagline>
           <ThisCopy>
-            Every community is built to cover specific skills or group of <br />
+            Every community is built to cover specific skills or group of <Br />
             people. Be part of communities that fits your skills or If you{' '}
-            <br /> don't find yours community, go and{' '}
+            <Br /> don't find yours community, go and{' '}
             <BoldText>build one</BoldText>.
           </ThisCopy>
           <Actions>
@@ -433,9 +454,9 @@ export const SearchThread = (props: Props) => {
       display: block !important;
     }
     @media (max-width: 768px) {
-      margin-bottom: 40px;
+      margin-bottom: 0px;
       padding: 200px 0 40px;
-      margin-top: 0px;
+      margin-top: -90px;
     }
   `;
 
@@ -463,6 +484,10 @@ export const SearchThread = (props: Props) => {
     padding: 20px;
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 18px;
+    }
   `;
 
   const Actions = styled.div`
@@ -516,6 +541,12 @@ export const SearchThread = (props: Props) => {
     @media (max-width: 768px) {
       width: 80%;
       max-width: 80%;
+      padding-bottom: 60px;
+    }
+  `;
+  const Br = styled.br`
+    @media (max-width: 768px) {
+      display: none;
     }
   `;
   return (
@@ -527,14 +558,14 @@ export const SearchThread = (props: Props) => {
             All your <BoldText>communities</BoldText> in one place
           </ThisTagline>
           <ThisCopy>
-            Compact design give you ability to have all your communities <br />
+            Compact design give you ability to have all your communities <Br />
             and threads in <BoldText>one place</BoldText>.
           </ThisCopy>
           <ThisCopy>
             Conversations are threaded and easy searchable
             <BoldText>
               {' '}
-              Algolia <br />
+              Algolia <Br />
               search
             </BoldText>{' '}
             power.
@@ -588,6 +619,10 @@ export const PublicProfile = (props: Props) => {
     padding: 20px;
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      padding: 8px;
+    }
   `;
 
   const Actions = styled.div`
@@ -634,7 +669,7 @@ export const PublicProfile = (props: Props) => {
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
-    background: #fff;
+    background: transparent;
     background-image: url('/img/sectionTwoBg.svg');
     background-position: top;
     background-size: cover;
@@ -664,7 +699,8 @@ export const PublicProfile = (props: Props) => {
     @media (max-width: 768px) {
       width: 80%;
       max-width: 80%;
-      margin-top: 200px;
+      margin-top: 60px;
+      padding-bottom: 60px;
     }
   `;
 
@@ -694,24 +730,29 @@ export const PublicProfile = (props: Props) => {
       margin: 40px auto;
     }
     @media (max-width: 768px) {
-      width: 80%;
+      width: auto;
       max-width: 80%;
+    }
+  `;
+  const Br = styled.br`
+    @media (max-width: 768px) {
+      display: none;
     }
   `;
   return (
     <Section goop={0} background={'reverse'}>
       <ThisWrapper>
         <ThisContent>
-          <Img src="/img/home4.png" alt="" />
+          <Img src="/img/home4.png" alt="Public profiles screenshot" />
           <Text>
             <ThisTagline>
-              Public <BoldText>Profiles</BoldText> Showing <br />{' '}
+              Public <BoldText>Profiles</BoldText> Showing <Br />{' '}
               <BoldText>Contribution</BoldText>
             </ThisTagline>
             <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, <br />{' '}
-              community software has hardly improved since the heyday of <br />{' '}
+              But, as the web has changed and improved radically, <Br />{' '}
+              community software has hardly improved since the heyday of <Br />{' '}
               messageboards and IRC.
             </ThisCopy>
             <Actions>
@@ -726,20 +767,26 @@ export const PublicProfile = (props: Props) => {
           </Text>
         </ThisContent>
         <ThisContent>
-          <ImgHideForDesktop src="/img/home5.png" alt="" />
+          <ImgHideForDesktop
+            src="/img/home5.png"
+            alt="Mobile Friendly - PWA screenshot"
+          />
           <Text>
             <ThisTagline>
-              It's Mobile Friendly (PWA), <br />
+              It's Mobile Friendly (PWA), <Br />
               <BoldText>Native Apps Coming Soon</BoldText>
             </ThisTagline>
             <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, <br />{' '}
-              community software has hardly improved since the heyday of <br />{' '}
+              But, as the web has changed and improved radically, <Br />{' '}
+              community software has hardly improved since the heyday of <Br />{' '}
               messageboards and IRC.
             </ThisCopy>
           </Text>
-          <ImgHideForMob src="/img/home5.png" alt="" />
+          <ImgHideForMob
+            src="/img/home5.png"
+            alt="Mobile Friendly - PWA screenshot"
+          />
         </ThisContent>
       </ThisWrapper>
     </Section>

@@ -19,20 +19,32 @@ import {
   BoldText,
   ThisContent,
   ThisCopy,
+  Br,
 } from './style';
 
-import myData from '../../../sample-data.json';
+class ReputationSystem extends React.Component {
+  constructor() {
+    super();
+    this.state = { communityData: [] };
+  }
 
-class ReputationSystem extends React.Component<Props, State> {
-  state = {
-    communityData: myData,
-  };
+  componentDidMount() {
+    getData().then(data => {
+      this.setState({
+        communityData: data,
+      });
+    });
+  }
+
+  async getData() {
+    return fetch(
+      'https://gist.githubusercontent.com/entrptaher/4a62b93e59170e880691eae9723fb299/raw/d48d621fa5f8c8c454d8a49ec623b3217d848f1a/sample-data.json'
+    )
+      .then(data => data.json())
+      .then(data => this.setState({ communityData: data }));
+  }
 
   render() {
-    const communityInfo = this.state.communityData.data.communities[0].members
-      .edges;
-    console.log(communityInfo);
-
     return (
       <Section>
         <ThisContent>
@@ -41,7 +53,10 @@ class ReputationSystem extends React.Component<Props, State> {
               return (
                 <MemberEach key={member.node.reputation}>
                   <WidgetWrapper>
-                    <WidgetAvatar src="img/logos/logo-mark.png" alt="" />
+                    <WidgetAvatar
+                      src={member.node.user.profilePhoto}
+                      alt={member.node.user.username}
+                    />
                     <WidgetInfo>
                       <WidgetUserName>
                         {member.node.user.username}
@@ -62,10 +77,10 @@ class ReputationSystem extends React.Component<Props, State> {
             </ThisTagline>
             <ThisCopy>
               You gain reputations each time you create, respond or give a{' '}
-              <br /> like to thread.
+              <Br /> like to thread.
             </ThisCopy>
             <ThisCopy>
-              Reputation gives you sense of how active is some member in <br />{' '}
+              Reputation gives you sense of how active is some member in <Br />{' '}
               overall Vanila Community or specific one.
             </ThisCopy>
           </Text>

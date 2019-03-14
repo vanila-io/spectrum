@@ -188,7 +188,7 @@ class Navbar extends React.Component<Props, State> {
             onClick={() => this.trackNavigationClick('logo')}
             data-cy="navbar-logo"
           >
-            <img src="img/logos/logomark.png" />
+            <Icon glyph="logo" />
           </Logo>
 
           <SkipLink
@@ -286,7 +286,7 @@ class Navbar extends React.Component<Props, State> {
             ishidden={this.state.isSkipLinkFocused || undefined}
             data-cy="navbar-logo"
           >
-            <img src="img/logos/logomark.png" />
+            <Icon glyph="logo" />
           </Logo>
 
           <SkipLink

@@ -290,7 +290,7 @@ export const Footer = styled.div`
   flex: none;
   position: relative;
   padding: 32px;
-  background-color: #151419;
+  background-color: ${theme.bg.reverse};
   color: ${theme.text.reverse};
 `;
 
