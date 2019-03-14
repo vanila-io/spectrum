@@ -99,14 +99,14 @@ class ReputationSystem extends React.Component {
         `,
       };
 
-      return fetch(`https://${REACT_APP_PROD_DOMAIN}/api`, {
+      return fetch(`https://${process.env.REACT_APP_PROD_DOMAIN}/api`, {
         credentials: 'include',
         headers: {
           accept: '*/*',
           'accept-language': 'en-US,en;q=0.9',
           'content-type': 'application/json',
         },
-        referrer: `https://${REACT_APP_PROD_DOMAIN}/explore`,
+        referrer: `https://${process.env.REACT_APP_PROD_DOMAIN}/explore`,
         referrerPolicy: 'no-referrer-when-downgrade',
         body: JSON.stringify(data),
         method: 'POST',
