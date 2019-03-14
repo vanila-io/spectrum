@@ -36,7 +36,7 @@ class ReputationSystem extends React.Component {
       const memberEdges = communityData[0].members.edges;
       this.setState({ communityData, memberEdges });
     } catch (e) {
-      console.log('Reputation data not loaded');
+      console.log('Reputation data not loaded', e);
     }
   }
 
