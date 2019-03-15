@@ -19,6 +19,9 @@ export const ThisContent = styled.div`
   @media (max-width: 768px) {
     padding: 60px 0px;
   }
+  @media (max-width: 420px) {
+    padding: 0px;
+  }
 `;
 export const ThisCopy = styled.p`
   font-weight: 300;
@@ -59,6 +62,9 @@ export const Text = styled.div`
     width: auto;
     display: block;
   }
+  @media (max-width: 420px) {
+    margin: 0 20px;
+  }
 `;
 
 export const ThisTagline = styled.h2`
@@ -98,6 +104,10 @@ export const MemberEach = styled.li`
     width: 177px;
     padding: 15px 3px;
     margin-right: 10px;
+  }
+  @media (max-width: 420px) {
+    margin-bottom: 0px;
+    width: 100%;
   }
 `;
 

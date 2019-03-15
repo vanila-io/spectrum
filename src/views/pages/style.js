@@ -296,8 +296,12 @@ export const Footer = styled.div`
     rgba(21, 20, 25, 1) 0%,
     rgba(0, 0, 0, 1) 100%
   );
+  border-top: 1px solid #3f3e41;
   color: ${theme.text.reverse};
   margin-top: -2px;
+  @media (max-width: 420px) {
+    padding: 40px 20px;
+  }
 `;
 
 export const FooterText = styled.p`
