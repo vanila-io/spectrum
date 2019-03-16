@@ -30,7 +30,7 @@ export default () => {
           <FooterText>© Copyright 2019 Vanila.io</FooterText>
           <SocialLinks>
             <a
-              href="https://github.com/vanila-io"
+              href="https://github.com/vanila-io/spectrum"
               target="_blank"
               rel="noopener noreferrer"
             >

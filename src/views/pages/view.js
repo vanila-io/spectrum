@@ -54,6 +54,9 @@ export const Overview = (props: Props) => {
       margin-bottom: 40px;
       padding-bottom: 0px;
     }
+    @media (max-width: 420px) {
+      margin-bottom: 20px;
+    }
   `;
 
   const Text = styled(FlexCol)`
@@ -68,6 +71,10 @@ export const Overview = (props: Props) => {
       margin-bottom: 16px;
       text-align: left;
       align-items: left;
+    }
+    @media (max-width: 420px) {
+      margin-left: 20px;
+      margin-right: 20px;
     }
   `;
 
@@ -138,6 +145,10 @@ export const Overview = (props: Props) => {
       font-size: 18px;
       margin-left: 10px;
     }
+    @media (max-width: 420px) {
+      padding: 4px;
+      font-size: 16px;
+    }
   `;
 
   const ThisText = styled(Text)`
@@ -161,6 +172,10 @@ export const Overview = (props: Props) => {
     @media (max-width: 768px) {
       padding: 8px;
       font-size: 18px;
+    }
+    @media (max-width: 420px) {
+      padding: 4px;
+      font-size: 16px;
     }
   `;
 
@@ -275,6 +290,9 @@ export const DiscoverCommunites = (props: Props) => {
       margin-top: 0px;
       margin-bottom: 44px;
     }
+    @media (max-width: 420px) {
+      margin: 0 20px;
+    }
   `;
 
   const ThisCopy = styled(Copy)`
@@ -381,6 +399,9 @@ export const DiscoverCommunites = (props: Props) => {
       margin: 0 40px !important;
       padding-bottom: 60px;
     }
+    @media (max-width: 420px) {
+      margin: 0 20px;
+    }
   `;
 
   const ImgHideForDesktop = styled.img`
@@ -408,7 +429,7 @@ export const DiscoverCommunites = (props: Props) => {
   `;
   return (
     <Section>
-      <ThisContent>
+      <ThisContent id="sectionTwo">
         <Img src="/img/home2.png" alt="Discover communities screenshot" />
         <Text>
           <ThisTagline>
@@ -522,6 +543,9 @@ export const SearchThread = (props: Props) => {
     @media (max-width: 1400px) {
       margin: 0 40px;
     }
+    @media (max-width: 420px) {
+      margin: 0 20px;
+    }
   `;
 
   const Img = styled.img`
@@ -542,6 +566,9 @@ export const SearchThread = (props: Props) => {
       width: 80%;
       max-width: 80%;
       padding-bottom: 60px;
+    }
+    @media (max-width: 420px) {
+      margin: 0 20px;
     }
   `;
   const Br = styled.br`
@@ -594,6 +621,9 @@ export const PublicProfile = (props: Props) => {
     }
     @media (max-width: 768px) {
       margin-bottom: 40px;
+    }
+    @media (max-width: 420px) {
+      margin-bottom: 0px;
     }
   `;
 
@@ -658,6 +688,9 @@ export const PublicProfile = (props: Props) => {
     font-family: 'Lato', sans-serif;
     @media (max-width: 1400px) {
       margin: 0 40px;
+    }
+    @media (max-width: 420px) {
+      margin: 0 20px;
     }
   `;
 
@@ -743,17 +776,26 @@ export const PublicProfile = (props: Props) => {
     <Section goop={0} background={'reverse'}>
       <ThisWrapper>
         <ThisContent>
-          <Img src="/img/home4.png" alt="Public profiles screenshot" />
+          <ImgHideForMob
+            src="/img/home4.png"
+            alt="Public profiles screenshot"
+          />
+          <ImgHideForDesktop
+            src="/img/profile-mobile.jpeg"
+            alt="Public profiles screenshot"
+          />
           <Text>
             <ThisTagline>
               Public <BoldText>Profiles</BoldText> Showing <Br />{' '}
               <BoldText>Contribution</BoldText>
             </ThisTagline>
-            <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, <Br />{' '}
-              community software has hardly improved since the heyday of <Br />{' '}
-              messageboards and IRC.
+              Compact design give you ability to have all your <Br />{' '}
+              communities and threads in one place.
+            </ThisCopy>
+            <ThisCopy>
+              Conversations are threaded and easy searchable <Br /> using
+              Algolia search power.
             </ThisCopy>
             <Actions>
               <Link to="/explore">
@@ -776,11 +818,13 @@ export const PublicProfile = (props: Props) => {
               It's Mobile Friendly (PWA), <Br />
               <BoldText>Native Apps Coming Soon</BoldText>
             </ThisTagline>
-            <ThisCopy>The internet was built for communities.</ThisCopy>
             <ThisCopy>
-              But, as the web has changed and improved radically, <Br />{' '}
-              community software has hardly improved since the heyday of <Br />{' '}
-              messageboards and IRC.
+              You can have native like app experience by installing <Br />
+              mobile and desktop PWA.
+            </ThisCopy>
+            <ThisCopy>
+              It will help you staying productive, <Br />
+              in focus and not losing among the multiple tabs.
             </ThisCopy>
           </Text>
           <ImgHideForMob
