@@ -51,15 +51,15 @@ export default () => {
         </Apps>
         <Support>
           <span>Support</span>
-          <Link to={`/spectrum`}>Community</Link>
-          <Link to={`/spectrum/hugs-n-bugs`}>Bug reports</Link>
-          <Link to={`/spectrum/feature-requests`}>Feature requests</Link>
+          <Link to={`/vanila`}>Community</Link>
+          <Link to={`/vanila/hugs-n-bugs`}>Bug reports</Link>
+          <Link to={`/vanila/feature-requests`}>Feature requests</Link>
           <a href="mailto:community@vanila.io">Email support</a>
         </Support>
         <Safety>
           <span>Safety</span>
           <a
-            href="https://github.com/withspectrum/code-of-conduct"
+            href="https://github.com/vanila-io/code-of-conduct"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() =>
