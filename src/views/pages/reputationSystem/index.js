@@ -45,18 +45,7 @@ class ReputationSystem extends React.Component {
       const data = {
         operationName: 'getCommunitiesBySlugs',
         variables: {
-          slugs: [
-            'vanila',
-            'uiux',
-            'frontend-hub',
-            'growth-hackers',
-            'javascript',
-            'startup-space',
-            'wekan',
-            'uxstore',
-            'wireflow',
-            'moonly',
-          ],
+          slugs: ['vanila'],
         },
         query: `
         query getCommunitiesBySlugs($slugs: [LowercaseString]) {
