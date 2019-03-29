@@ -13,6 +13,7 @@ export const collections = [
       'uxstore',
       'wireflow',
       'moonly',
+      'masters-of-ux',
     ],
   },
   {
