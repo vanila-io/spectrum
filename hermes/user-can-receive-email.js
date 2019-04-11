@@ -14,6 +14,7 @@ const VANILA_BLACKLIST = [
   '@live.ca',
   '@live.com',
   '@hotmail.com',
+  '@outlook.com',
   '@qq.com',
 
   // list of emails used on migration scripts
