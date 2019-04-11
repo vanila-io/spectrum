@@ -9,6 +9,26 @@ type Props = {
   userId?: string,
 };
 
+const VANILA_BLACKLIST = [
+  // list of domains from sendgrid spambox and error list
+  '@live.ca',
+  '@live.com',
+  '@hotmail.com',
+  '@qq.com',
+
+  // list of emails used on migration scripts
+  // Spectrum staff complained about daily digest
+  'contact@mxstbr.com',
+  'briandlovin@gmail.com',
+  'hi@bryn.io',
+  'hi@quietuser.com',
+  'hi@blockeduser.com',
+  'hi@previousboy.io',
+  'hi@channelmoderatorboy.io',
+  'hi@communitymoderatorboy.io',
+  'hi@singlecommunity.io',
+];
+
 export const userCanReceiveEmail = async ({ to, userId }: Props) => {
   if (!to) {
     if (userId) {
@@ -22,10 +42,8 @@ export const userCanReceiveEmail = async ({ to, userId }: Props) => {
     return false;
   }
 
-  // qq.com email addresses are isp blocked, which raises our error rate
-  // on sendgrid. prevent sending these emails at all
   to = to.filter(toType => {
-    return toType.email.substr(to.length - 7) !== '@qq.com';
+    return !VANILA_BLACKLIST.includes(toType.email);
   });
 
   if (!userId) return false;
