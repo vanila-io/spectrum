@@ -1,6 +1,8 @@
 // @flow
 import toobusy from 'toobusy-js';
 
+toobusy.maxLag(200);
+
 // Middleware which blocks requests when the Node server is too busy
 // now automatically retries the request at another instance of the server if it's too busy
 export default (
